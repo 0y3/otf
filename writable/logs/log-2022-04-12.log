@@ -1,0 +1,169 @@
+CRITICAL - 2022-04-12 15:39:06 --> Undefined constant "App\Controllers\Api\VENDOR_REST"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-12 15:44:40 --> Undefined variable $filterBiz
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 47)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-12 16:11:08 --> syntax error, unexpected token "{", expecting "("
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-12 16:11:20 --> syntax error, unexpected token "{", expecting "("
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-12 16:11:35 --> Undefined variable $filterBiz
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 48)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-12 16:29:31 --> Undefined variable $filterBiz
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 54)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-12 16:29:43 --> Undefined variable $filterBiz
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 54)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-04-12 19:15:37 --> Unknown column 'idd' in 'order clause'
+CRITICAL - 2022-04-12 19:15:37 --> Unknown column 'idd' in 'order clause'
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(2, 0)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(1088): CodeIgniter\BaseModel->findAll(2, 0)
+#7 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(65): CodeIgniter\BaseModel->paginate(2)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#10 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+ERROR - 2022-04-12 19:17:02 --> Unknown column 'idd' in 'order clause'
+CRITICAL - 2022-04-12 19:17:02 --> Unknown column 'idd' in 'order clause'
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(20, 0)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(1088): CodeIgniter\BaseModel->findAll(20, 0)
+#7 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(64): CodeIgniter\BaseModel->paginate(20)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#10 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-04-12 20:46:28 --> syntax error, unexpected token "if"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(23): helper(Array)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(809): App\Controllers\Api\BizController->__construct()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-04-12 22:00:48 --> Cookie object with name "cookieBizTypes" and prefix "" was not found in the collection.
+CRITICAL - 2022-04-12 22:03:11 --> Too few arguments to function CodeIgniter\Cookie\CookieStore::get(), 0 passed in C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php on line 72 and at least 1 expected
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(72): CodeIgniter\Cookie\CookieStore->get()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-12 22:03:40 --> Too few arguments to function CodeIgniter\Cookie\CookieStore::get(), 0 passed in C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php on line 73 and at least 1 expected
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(73): CodeIgniter\Cookie\CookieStore->get()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-12 22:04:43 --> Cookie object with name "cookieBizTypes" and prefix "" was not found in the collection.
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Cookie\CookieStore.php(114): CodeIgniter\Cookie\Exceptions\CookieException::forUnknownCookieInstance(Array)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(73): CodeIgniter\Cookie\CookieStore->get('cookieBizTypes')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-12 22:04:52 --> Cookie object with name "cookieBizType" and prefix "" was not found in the collection.
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Cookie\CookieStore.php(114): CodeIgniter\Cookie\Exceptions\CookieException::forUnknownCookieInstance(Array)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(73): CodeIgniter\Cookie\CookieStore->get('cookieBizType')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-12 22:50:27 --> Object of class DateTime could not be converted to string
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-12 23:29:15 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::response()
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-12 23:29:30 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::response()
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-12 23:30:47 --> Call to undefined function App\Controllers\Api\et_cookie()
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-12 23:38:10 --> Call to a member function NestedCategories() on array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}

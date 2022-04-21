@@ -1,0 +1,186 @@
+CRITICAL - 2022-04-09 09:33:27 --> Undefined property: App\Controllers\Api\BizController::$filter
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 35)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-04-09 10:08:23 --> Unknown column 'sort' in 'order clause'
+CRITICAL - 2022-04-09 10:08:23 --> Unknown column 'sort' in 'order clause'
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(36): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-04-09 10:09:14 --> Unknown column 'sort' in 'order clause'
+CRITICAL - 2022-04-09 10:09:14 --> Unknown column 'sort' in 'order clause'
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(36): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-04-09 10:11:45 --> Unknown column 'sort' in 'order clause'
+CRITICAL - 2022-04-09 10:11:45 --> Unknown column 'sort' in 'order clause'
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(36): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-04-09 11:05:31 --> Object of class App\Entities\BizEntity could not be converted to string
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->show('oyinmons_bites')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-09 11:06:41 --> Object of class App\Entities\BizEntity could not be converted to string
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->show('oyinmons_bites')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-09 11:08:14 --> Object of class App\Entities\BizEntity could not be converted to string
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->show('oyinmons_bites')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-09 11:08:31 --> Object of class App\Entities\BizEntity could not be converted to string
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->show('oyinmons_bites')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-09 11:25:02 --> Call to a member function NestedCategories() on null
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->show('oyinmons_bitess')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-09 11:26:39 --> App\Controllers\Api\BizController::respondNoContent(): Argument #1 ($message) must be of type string, array given, called in C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php on line 91
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(91): App\Controllers\Api\BizController->respondNoContent(Array)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->show('oyinmons_bitess')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-09 11:27:48 --> App\Controllers\Api\BizController::failNotFound(): Argument #1 ($description) must be of type string, array given, called in C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php on line 91
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(91): App\Controllers\Api\BizController->failNotFound(Array)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->show('oyinmons_bitess')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-09 11:32:30 --> Too few arguments to function App\Controllers\Api\BizController::fail(), 0 passed in C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php on line 82 and at least 1 expected
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(82): App\Controllers\Api\BizController->fail()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->show('oyinmons_bites')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-09 11:56:32 --> syntax error, unexpected identifier "StateModel", expecting variable or "$"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-09 11:57:11 --> syntax error, unexpected identifier "StateModel", expecting variable or "$"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-09 11:57:42 --> Class "App\Models" not found
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->show('oyinmons_bites')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-09 11:59:19 --> Undefined property: App\Controllers\Api\BizController::$state
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 73)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->show('oyinmons_bites')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-09 11:59:57 --> Call to a member function toArray() on array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->show('oyinmons_bites')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-09 12:02:08 --> Attempt to read property "id" on array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 74)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->show('oyinmons_bites')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-09 12:24:51 --> Call to undefined method App\Controllers\Api\BizController::getCity()
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(809): App\Controllers\Api\BizController->__construct()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-09 12:25:07 --> Undefined array key "state_name"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(170): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 170)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(32): App\Controllers\Api\BizController->getCity()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(809): App\Controllers\Api\BizController->__construct()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-09 12:30:46 --> Call to a member function toArray() on array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(32): App\Controllers\Api\BizController->getCity()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(809): App\Controllers\Api\BizController->__construct()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

@@ -1,0 +1,52 @@
+CRITICAL - 2022-04-06 10:37:54 --> Attempt to read property "id" on array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 37)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-06 10:38:40 --> Undefined array key "id"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 37)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-06 10:49:00 --> Attempt to assign property "menuCategory" on array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-06 10:49:39 --> Attempt to assign property "menuCategory" on array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-06 10:50:16 --> Attempt to assign property "menuCategory" on array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-06 10:56:18 --> Undefined array key "id"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 44)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-06 11:23:53 --> Call to undefined function App\Controllers\Api\hasCookie()
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\UserController->index()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\UserController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}

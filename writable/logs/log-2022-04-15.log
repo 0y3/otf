@@ -1,0 +1,175 @@
+CRITICAL - 2022-04-15 19:01:16 --> Undefined property: App\Controllers\Web\BizController::$menuslug
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 102)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Web\BizController->Menu('the_place', 'chinese_rice')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-15 19:08:59 --> Call to a member function where() on null
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Entities\BizMenuEntity.php(49): App\Entities\BizMenuEntity->getAddupCategories()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(111): App\Entities\BizMenuEntity->addupCateMenu()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Web\BizController->Menu('the_place', 'chinese_rice')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-15 19:55:23 --> Call to undefined method App\Entities\BizMenuEntity::AddupCategories()
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(111): App\Entities\BizMenuEntity->addupCateMenu()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Web\BizController->Menu('the_place', 'chinese_rice')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-15 19:56:50 --> Call to undefined method App\Entities\BizMenuEntity::addupCateMenu()
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Web\BizController->Menu('the_place', 'chinese_rice')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-15 19:57:25 --> Call to a member function where() on null
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Entities\BizMenuEntity.php(49): App\Entities\BizMenuEntity->getAddupCategories()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Entity\Entity.php(490): App\Entities\BizMenuEntity->getAddupCateMenu()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(111): CodeIgniter\Entity\Entity->__get('addupCateMenu')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Web\BizController->Menu('the_place', 'chinese_rice')
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-15 19:58:13 --> Call to a member function where() on null
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Entities\BizMenuEntity.php(49): App\Entities\BizMenuEntity->getAddupCategories()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Entity\Entity.php(490): App\Entities\BizMenuEntity->getAddupCateMenu()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(111): CodeIgniter\Entity\Entity->__get('addupCateMenu')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Web\BizController->Menu('the_place', 'chinese_rice')
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-15 20:02:20 --> Call to a member function where() on null
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Entity\Entity.php(490): App\Entities\BizMenuEntity->getAddupCategories()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(111): CodeIgniter\Entity\Entity->__get('AddupCategories')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Web\BizController->Menu('the_place', 'chinese_rice')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-15 20:02:40 --> Call to a member function where() on null
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Entities\BizMenuEntity.php(49): App\Entities\BizMenuEntity->getAddupCategories()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Entity\Entity.php(490): App\Entities\BizMenuEntity->getAddupCateMenu()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(111): CodeIgniter\Entity\Entity->__get('AddupCateMenu')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Web\BizController->Menu('the_place', 'chinese_rice')
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-15 20:07:08 --> Attempt to read property "AddupCateMenu" on null
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 62)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-04-15 20:08:08 --> Unknown column 'slugg' in 'where clause'
+CRITICAL - 2022-04-15 20:08:08 --> Unknown column 'slugg' in 'where clause'
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(55): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-04-15 20:12:07 --> Call to undefined method App\Controllers\Api\BizController::bizMenus()
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-15 20:18:34 --> Call to a member function where() on null
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Entities\BizMenuEntity.php(49): App\Entities\BizMenuEntity->getAddupCategories()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Entity\Entity.php(490): App\Entities\BizMenuEntity->getAddupCateMenu()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(62): CodeIgniter\Entity\Entity->__get('AddupCateMenu')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-15 20:20:43 --> Call to a member function where() on null
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Entity\Entity.php(490): App\Entities\BizMenuEntity->getAddupCategories()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(62): CodeIgniter\Entity\Entity->__get('AddupCategories')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-15 20:20:58 --> Call to a member function where() on null
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Entity\Entity.php(490): App\Entities\BizMenuEntity->getAddupCategories()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(62): CodeIgniter\Entity\Entity->__get('AddupCategories')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-15 20:21:28 --> Call to a member function where() on null
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Entity\Entity.php(490): App\Entities\BizMenuEntity->getAddupCategories()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(62): CodeIgniter\Entity\Entity->__get('AddupCategories')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-15 20:22:29 --> Undefined array key "biz_menu_id"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Entities\BizMenuEntity.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 30)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Entity\Entity.php(490): App\Entities\BizMenuEntity->getAddupCategories()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(62): CodeIgniter\Entity\Entity->__get('AddupCategories')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-15 20:23:49 --> Array to string conversion
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Entities\BizMenuEntity.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'C:\\xampp\\htdocs...', 30)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Entity\Entity.php(490): App\Entities\BizMenuEntity->getAddupCategories()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(62): CodeIgniter\Entity\Entity->__get('AddupCategories')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-04-15 20:26:36 --> Call to a member function where() on null
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Entity\Entity.php(490): App\Entities\BizMenuEntity->getAddupCategories()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\BizController.php(62): CodeIgniter\Entity\Entity->__get('AddupCategories')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\BizController->index()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\BizController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-04-15 20:43:23 --> Undefined variable $data
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 118)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Web\BizController->Menu('the_place', 'fried_rices')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

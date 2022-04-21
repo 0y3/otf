@@ -1,0 +1,9 @@
+ERROR - 2022-03-24 10:47:56 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
+ERROR - 2022-03-24 10:49:09 --> Invalid default value for 'created_at'
+ERROR - 2022-03-24 11:11:28 --> Specified key was too long; max key length is 3072 bytes
+ERROR - 2022-03-24 11:13:07 --> Specified key was too long; max key length is 3072 bytes
+ERROR - 2022-03-24 11:32:13 --> Specified key was too long; max key length is 3072 bytes
+ERROR - 2022-03-24 11:38:26 --> Specified key was too long; max key length is 3072 bytes
+ERROR - 2022-03-24 11:40:08 --> Specified key was too long; max key length is 3072 bytes
+ERROR - 2022-03-24 11:41:06 --> Invalid default value for 'created_at'
+ERROR - 2022-03-24 11:43:15 --> Specified key was too long; max key length is 3072 bytes

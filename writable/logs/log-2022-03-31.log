@@ -1,0 +1,186 @@
+ERROR - 2022-03-31 14:55:05 --> Table 'otfonline.users' doesn't exist
+CRITICAL - 2022-03-31 14:55:05 --> Table 'otfonline.users' doesn't exist
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\AuthenticationController.php(125): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\AuthenticationController->login()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AuthenticationController))
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-03-31 14:55:52 --> OauthFilter filter must have a matching alias defined.
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('OauthFilter')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(384): CodeIgniter\Filters\Filters->enableFilter('OauthFilter', 'before')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2022-03-31 14:57:36 --> Table 'otfonline.users' doesn't exist
+CRITICAL - 2022-03-31 14:57:36 --> Table 'otfonline.users' doesn't exist
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\AuthenticationController.php(125): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\AuthenticationController->login()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AuthenticationController))
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2022-03-31 15:01:10 --> Table 'otfonline.users' doesn't exist
+CRITICAL - 2022-03-31 15:01:10 --> Table 'otfonline.users' doesn't exist
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\AuthenticationController.php(166): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\AuthenticationController->login()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AuthenticationController))
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-03-31 15:01:41 --> Undefined property: App\Controllers\Api\AuthenticationController::$users
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\AuthenticationController.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 166)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\AuthenticationController->login()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AuthenticationController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-31 15:02:06 --> Call to a member function where() on string
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\AuthenticationController->login()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AuthenticationController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-31 15:03:04 --> syntax error, unexpected token ","
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-31 15:04:20 --> syntax error, unexpected token ","
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-31 15:04:54 --> syntax error, unexpected token "else"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-31 15:05:29 --> syntax error, unexpected token ","
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-31 15:07:25 --> syntax error, unexpected token ","
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2022-03-31 15:10:11 --> Unknown column 'email' in 'where clause'
+CRITICAL - 2022-03-31 15:10:11 --> Unknown column 'email' in 'where clause'
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\AuthenticationController.php(166): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\AuthenticationController->login()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AuthenticationController))
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-03-31 15:12:57 --> file_get_contents(C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api/../../privkey.pem): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 164)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\AuthenticationController.php(164): file_get_contents('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\AuthenticationController->login()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AuthenticationController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-03-31 15:22:26 --> file_get_contents(C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api/../../privkey.pem): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 164)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\AuthenticationController.php(164): file_get_contents('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\AuthenticationController->login()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AuthenticationController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-03-31 15:24:28 --> file_get_contents(C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api/../../privkey.pem): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 164)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\AuthenticationController.php(164): file_get_contents('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\AuthenticationController->login()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AuthenticationController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-03-31 15:25:13 --> file_get_contents(C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api/../../privkey.pem): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 164)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Api\AuthenticationController.php(164): file_get_contents('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(832): App\Controllers\Api\AuthenticationController->login()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Api\AuthenticationController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2022-03-31 17:09:17 --> Can't create table `otfonline`.`vendors` (errno: 150 "Foreign key constraint is incorrectly formed")
+ERROR - 2022-03-31 18:37:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '('restaurants','grocery','party') NOT NULL,
+	`description` varchar(225) NOT N...' at line 5
+ERROR - 2022-03-31 18:39:50 --> Can't create table `otfonline`.`user_address` (errno: 150 "Foreign key constraint is incorrectly formed")
+ERROR - 2022-03-31 18:42:45 --> Can't create table `otfonline`.`user_address` (errno: 150 "Foreign key constraint is incorrectly formed")
+ERROR - 2022-03-31 18:44:35 --> Can't create table `otfonline`.`user_address` (errno: 150 "Foreign key constraint is incorrectly formed")
+ERROR - 2022-03-31 18:53:11 --> Can't create table `otfonline`.`user_address` (errno: 150 "Foreign key constraint is incorrectly formed")
+ERROR - 2022-03-31 19:07:46 --> Can't create table `otfonline`.`user_address` (errno: 150 "Foreign key constraint is incorrectly formed")
+ERROR - 2022-03-31 19:10:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CONSTRAINT biz_ibfk_1 FOREIGN KEY(biz_id) REFERENCES biz (biz_id)' at line 2
+ERROR - 2022-03-31 19:11:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CONSTRAINT biz_ibfk_1 FOREIGN KEY(biz_id) REFERENCES biz (id)' at line 2
+ERROR - 2022-03-31 19:15:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CONSTRAINT vendor_biz_id_foreign FOREIGN KEY(biz_id) REFERENCES biz (id) ON D...' at line 2
+ERROR - 2022-03-31 19:18:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CONSTRAINT vendor_biz_id_foreign FOREIGN KEY (biz_id) REFERENCES biz (id) ON ...' at line 2
+ERROR - 2022-03-31 19:19:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CONSTRAINT `vendor_biz_id_foreign` FOREIGN KEY (`biz_id`) REFERENCES `biz`(`i...' at line 2
+ERROR - 2022-03-31 19:20:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CONSTRAINT `vendor_biz_id_foreign` FOREIGN KEY (`biz_id`) REFERENCES `biz`(`i...' at line 2
+ERROR - 2022-03-31 19:21:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CONSTRAINT `vendor_biz_id_foreign` FOREIGN KEY (`biz_id`) REFERENCES `biz`(`i...' at line 2
+ERROR - 2022-03-31 19:21:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CONSTRAINT `vendor_biz_id_foreign` FOREIGN KEY (`biz_id`) REFERENCES `biz`(`i...' at line 2
+ERROR - 2022-03-31 19:21:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CONSTRAINT vendors_biz_id_foreign FOREIGN KEY (biz_id) REFERENCES biz (id) ON...' at line 2
+ERROR - 2022-03-31 19:22:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'CONSTRAINT vendors_biz_id_foreign FOREIGN KEY (biz_id) REFERENCES biz (id) ON...' at line 2
