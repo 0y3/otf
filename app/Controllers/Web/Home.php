@@ -29,6 +29,6 @@ class Home extends BaseController
         'title' => "OTF :- Home",
         'currentMenu'   => 'home',
     ];
-        return view('main/index', $data);
+        return view('main/index',$data);
     }
 }

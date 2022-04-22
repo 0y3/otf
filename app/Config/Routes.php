@@ -84,7 +84,7 @@ $routes->setAutoRoute(true);
   });
 
 
-$routes->group('api', ['namespace' => 'App\Controllers\API'],function ($routes) {
+$routes->group('api', ['namespace' => 'App\Controllers\Api'],function ($routes) {
     $routes->post("signup", "AuthenticationController::signup");
     $routes->post("authentication", "AuthenticationController::login");
     $routes->get("users", "UserController::index"/*, ['filter' => 'authTokenFilter']*/);

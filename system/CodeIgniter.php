@@ -165,6 +165,7 @@ class CodeIgniter
      */
     public function initialize()
     {
+        
         // Define environment variables
         $this->detectEnvironment();
         $this->bootstrapEnvironment();
@@ -178,7 +179,12 @@ class CodeIgniter
         }
 
         // Set default locale on the server
-        locale_set_default($this->config->defaultLocale ?? 'en');
+        if( function_exists('locale_set_default' ) ) :
+            locale_set_default($this->config->defaultLocale ?? 'en');
+        endif; 
+
+        // Set default locale on the server
+        //locale_set_default($this->config->defaultLocale ?? 'en');
 
         // Set default timezone on the server
         date_default_timezone_set($this->config->appTimezone ?? 'UTC');
