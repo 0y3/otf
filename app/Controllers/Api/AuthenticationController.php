@@ -78,8 +78,7 @@ class AuthenticationController extends ResourceController
                     'min_length' => 'Your {field} must match with Password Input',
                 ],
             ]
-        ]
-    );
+        ]);
 
         if (!$this->validation->run()) {
 

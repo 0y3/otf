@@ -1,0 +1,39 @@
+CRITICAL - 2022-04-30 00:08:11 --> Undefined property: CodeIgniter\HTTP\IncomingRequest::$getRawInput
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(217): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 217)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->addToCart()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-30 00:08:47 --> Undefined property: CodeIgniter\HTTP\IncomingRequest::$getRawInput
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(217): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 217)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->addToCart()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-30 00:09:05 --> Undefined property: CodeIgniter\HTTP\IncomingRequest::$getRawInput
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(217): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 217)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->addToCart()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-30 00:11:19 --> Undefined property: CodeIgniter\HTTP\IncomingRequest::$getRawInput
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(217): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 217)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->addToCart()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-30 00:35:55 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->addToCart()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}

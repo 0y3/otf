@@ -25,10 +25,11 @@ class Home extends BaseController
         
     }
     public function index()
-    {$data = [
-        'title' => "OTF :- Home",
-        'currentMenu'   => 'home',
-    ];
+    {
+        $data = [
+            'title' => "OTF :- Home",
+            'currentMenu'   => 'home',
+        ];
         return view('main/index',$data);
     }
 }

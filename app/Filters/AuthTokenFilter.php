@@ -50,6 +50,7 @@ class AuthTokenFilter implements FilterInterface
  
         try {
             $decoded = JWT::decode($token, new Key($publicKey, 'RS256'));
+            return $decoded;
         } catch (Exception $ex) {
             return $this->failUnauthorized('Invalid Auth token');
         }

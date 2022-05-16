@@ -1,0 +1,41 @@
+CRITICAL - 2022-05-09 06:51:12 --> Undefined array key "userPhone"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\user\sidebar.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 9)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(424): CodeIgniter\View\View->render('user/sidebar', NULL, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\user\orders.php(7): CodeIgniter\View\View->include('user/sidebar')
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('user/orders', Array, true)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\UsersController.php(39): view('user/orders', Array)
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\UsersController->order()
+#10 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\UsersController))
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+ERROR - 2022-05-09 07:13:45 --> An invalid name was submitted as the product name: Chicken Shawarma (Single) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-09 07:15:04 --> An invalid name was submitted as the product name: Salad (Coleslaw) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-09 07:15:45 --> An invalid name was submitted as the product name: Chicken Shawarma (Single) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-09 07:16:03 --> An invalid name was submitted as the product name: Chicken Shawarma (Single) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-09 07:18:56 --> An invalid name was submitted as the product name: Chicken Shawarma (Single) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-09 07:23:22 --> An invalid name was submitted as the product name: Beef Shawarma (Double) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-09 07:23:28 --> An invalid name was submitted as the product name: Chicken Shawarma (Double) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-09 07:23:46 --> An invalid name was submitted as the product name: Grilled Chicken (Medium) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-09 07:23:53 --> An invalid name was submitted as the product name: Salad (Coleslaw) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-09 07:26:32 --> An invalid name was submitted as the product name: 
+Spicy Avocado Mushroom Salad The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-09 07:26:43 --> An invalid name was submitted as the product name: 
+Spicy Avocado Mushroom Salad The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-09 07:26:58 --> An invalid name was submitted as the product name: 
+Original - Large cup without toppings The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-09 07:27:09 --> An invalid name was submitted as the product name: 
+Original - Large cup without toppings The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-09 08:02:10 --> An invalid name was submitted as the product name: Chicken Shawarma (Single) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+CRITICAL - 2022-05-09 23:26:26 --> Call to undefined method CodeIgniter\HTTP\RedirectResponse::value()
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->checkOut('oyinmons_bites')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}

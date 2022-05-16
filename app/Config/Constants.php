@@ -83,3 +83,29 @@ defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest auto
 define('VENDOR_REST',            'restaurant'); // Restorant Vendor Id
 define('VENDOR_GROC',               'grocery'); // Party Vendor Id
 define('VENDOR_PART',                 'party'); // Grocery Vendor Id
+
+//Order Status
+define('ORDER_PEN',            'Pending'); // Pending Order
+define('ORDER_PRO',            'Processing'); // Processing Order
+define('ORDER_DIS',            'Dispatched'); // Dispatched Order
+define('ORDER_DEL',            'Delivered'); // Delivered Order
+define('ORDER_CAN',            'Canceled'); // Canceled Order
+
+/************************** EMAIL CONSTANTS *****************************/
+
+define('EMAIL_FROM',                            'noreply@vdoc.com.ng');		// e.g. email@example.com
+define('EMAIL_BCC_C',                           'trivin98@gmail.com, info@afritech.com.ng,info@vdoc.com.ng,e.gabriel@afritech.com.ng,
+												j.blessing@afritech.com.ng,a.kolawole@afritech.com.ng,m.fatima@afritech.com.ng
+												sa.mohammed@afritech.com.ng,o.john@afritech.com.ng,o.priscilla@afritech.com.ng
+												l.bintu@afritech.com.ng,ministergabi@gmail.com');		// e.g. email@example.com
+define('EMAIL_BCC',                           	'info@afritech.com.ng, info@vdoc.com.ng, m.fatima@afritech.com.ng, o.john@afritech.com.ng,
+												o.priscilla@afritech.com.ng');	
+define('FROM_NAME',                             'Vdoc Vehicle Services Admin System');	// Your system name
+define('EMAIL_PASS',                            'Your email password');	// Your email password
+define('PROTOCOL',                             	'sendmail');				// mail, sendmail, smtp
+define('SMTP_HOST',                             'vdoc.com.ng');		// your smtp host e.g. smtp.gmail.com
+define('SMTP_PORT',                             '25');					// your smtp port e.g. 25, 587
+define('SMTP_USER',                             '_mainaccount@vdoc.com.ng');		// your smtp user
+define('SMTP_PASS',                             'NewP@$$w0rd');//'Afritechnew1$$@1');	// your smtp password
+define('MAIL_PATH',                             '/usr/sbin/sendmail');
+

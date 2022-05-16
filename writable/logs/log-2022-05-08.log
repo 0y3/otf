@@ -1,0 +1,87 @@
+CRITICAL - 2022-05-08 00:02:33 --> Decrypting: authentication failed.
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Encryption\Handlers\OpenSSLHandler.php(98): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\AuthenticationController.php(256): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('g\xEF\xBF\xBD\xEF\xBF\xBDk\x054\xEF\xBF\xBD\xEF\xBF...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\AuthenticationController->activateConfirmUser('7302c855f07d960...', '\xEF\xBF\xBDZE\xEF\xBF\xBD\xEF\xBF\xBD\xEF\xBF\xBDZ...', 'A')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\AuthenticationController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2022-05-08 13:59:38 --> An invalid name was submitted as the product name: Chicken Shawarma (Single) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-08 13:59:47 --> An invalid name was submitted as the product name: Salad (Coleslaw) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-08 14:31:56 --> An invalid name was submitted as the product name: Beef (Small) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-08 14:32:34 --> An invalid name was submitted as the product name: Grilled Turkey Wings (Small) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-08 14:33:02 --> An invalid name was submitted as the product name: Grilled Turkey Wings (Medium) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+CRITICAL - 2022-05-08 14:41:00 --> syntax error, unexpected token ";", expecting ")"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(803): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-05-08 14:43:36 --> Attempt to read property "id" on array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\AuthenticationController.php(273): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 273)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\AuthenticationController->activateConfirmUser('7302c855f07d960...', 'admin@otf.com.n...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\AuthenticationController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-08 14:47:08 --> Attempt to read property "id" on array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\AuthenticationController.php(273): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 273)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\AuthenticationController->activateConfirmUser('7302c855f07d960...', 'admin@otf.com.n...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\AuthenticationController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-08 14:48:56 --> Attempt to read property "id" on array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\AuthenticationController.php(273): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 273)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\AuthenticationController->activateConfirmUser('7302c855f07d960...', 'admin@otf.com.n...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\AuthenticationController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-08 14:49:28 --> There is no data to update.
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\AuthenticationController.php(273): CodeIgniter\Model->update(Array, Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\AuthenticationController->activateConfirmUser('7302c855f07d960...', 'admin@otf.com.n...')
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\AuthenticationController))
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-05-08 14:49:59 --> There is no data to update.
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(1574): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\Model.php(651): CodeIgniter\BaseModel->update(Array, NULL)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\AuthenticationController.php(273): CodeIgniter\Model->update(Array)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\AuthenticationController->activateConfirmUser('7302c855f07d960...', 'admin@otf.com.n...')
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\AuthenticationController))
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-05-08 14:52:57 --> There is no data to update.
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\BaseModel.php(846): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\AuthenticationController.php(273): CodeIgniter\Model->update(Array, Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\AuthenticationController->activateConfirmUser('7302c855f07d960...', 'admin@otf.com.n...')
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\AuthenticationController))
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-05-08 15:39:13 --> Attempt to read property "password" on array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\AuthenticationController.php(194): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 194)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\AuthenticationController->login_()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\AuthenticationController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

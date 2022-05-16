@@ -1,0 +1,52 @@
+CRITICAL - 2022-05-02 00:07:27 --> Attempt to read property "total" on array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\bizcategorymenu.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 155)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/bizcategor...', Array, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(102): view('main/bizcategor...', Array)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->bizCategoryMenu('the_place')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-05-02 08:19:08 --> Undefined variable $checkcart
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 86)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->bizCategoryMenu('the_place')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-05-02 08:22:31 --> An invalid name was submitted as the product name: 
+Spicy Avocado Mushroom Salad The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-02 08:23:05 --> An invalid name was submitted as the product name: 
+Spicy Avocado Mushroom Salad The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-02 08:24:11 --> An invalid name was submitted as the product name: 
+Spicy Avocado Mushroom Salad The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-02 08:24:55 --> An invalid name was submitted as the product name: 
+Spicy Avocado Mushroom Salad The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-02 08:43:49 --> An invalid name was submitted as the product name: Beef (Small) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-02 08:47:09 --> An invalid name was submitted as the product name: 
+Chicken in Stew The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-02 08:55:51 --> An invalid name was submitted as the product name: Grilled Turkey Wings (large) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+CRITICAL - 2022-05-02 09:07:19 --> Undefined variable $total_items
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\bizcategorymenu.php(154): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 154)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/bizcategor...', Array, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(102): view('main/bizcategor...', Array)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->bizCategoryMenu('the_place')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-05-02 09:26:43 --> An invalid name was submitted as the product name: 
+Chicken in Stew The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-02 09:38:03 --> An invalid name was submitted as the product name: Grilled Turkey Wings (Medium) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-02 09:49:32 --> An invalid name was submitted as the product name: 
+Spicy Avocado Mushroom Salad The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-02 09:50:04 --> An invalid name was submitted as the product name: 
+Original - Large cup without toppings The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-02 10:05:08 --> An invalid name was submitted as the product name: Grilled Turkey Wings (large) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces

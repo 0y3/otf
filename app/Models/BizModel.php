@@ -73,7 +73,7 @@ class BizModel extends Model
 		$slug = url_title($data['data']['name'], '-', true);
 		$name = trim($data['data']['name']);
 
-		$data = $this->where('slug', $slug)->orderBy('id', 'DESC')->first();
+		$data = $this->where('slug', $slug)->first();
 		if ($data) {
 			$slugs = explode('-', $data->slug);
 			$slugNumber = !(empty($slugs[1])) ? ((int)$slugs[1] + 1) : 1;

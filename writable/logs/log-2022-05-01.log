@@ -1,0 +1,181 @@
+ERROR - 2022-05-01 06:19:04 --> The cart array must contain a product ID, quantity, price, and name.
+ERROR - 2022-05-01 06:20:09 --> The cart array must contain a product ID, quantity, price, and name.
+ERROR - 2022-05-01 06:22:47 --> The cart array must contain a product ID, quantity, price, and name.
+ERROR - 2022-05-01 06:23:16 --> The cart array must contain a product ID, quantity, price, and name.
+ERROR - 2022-05-01 06:23:49 --> The cart array must contain a product ID, quantity, price, and name.
+ERROR - 2022-05-01 06:24:12 --> The cart array must contain a product ID, quantity, price, and name.
+CRITICAL - 2022-05-01 09:46:28 --> Undefined array key "subtotal"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Libraries\Cart.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 325)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Libraries\Cart.php(116): App\Libraries\Cart->saveCart()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(232): App\Libraries\Cart->insert(Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->addToCart()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-05-01 09:53:54 --> Undefined array key "subtotal"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Libraries\Cart.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 325)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Libraries\Cart.php(116): App\Libraries\Cart->saveCart()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(232): App\Libraries\Cart->insert(Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->addToCart()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-05-01 10:00:18 --> Undefined array key "subtotal"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Libraries\Cart.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 325)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Libraries\Cart.php(116): App\Libraries\Cart->saveCart()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(232): App\Libraries\Cart->insert(Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->addToCart()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2022-05-01 10:25:25 --> An invalid name was submitted as the product name: Beef (Small) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-01 14:32:03 --> An invalid name was submitted as the product name: Grilled Turkey Wings (Small) The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+CRITICAL - 2022-05-01 20:45:36 --> Undefined variable $cart
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\bizcategorymenu.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/bizcategor...', Array, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(91): view('main/bizcategor...', Array)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->bizCategoryMenu('the_place')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-05-01 20:45:58 --> Undefined variable $cart
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\bizcategorymenu.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/bizcategor...', Array, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(91): view('main/bizcategor...', Array)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->bizCategoryMenu('the_place')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-05-01 21:20:33 --> Undefined variable $cart
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\bizcategorymenu.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/bizcategor...', Array, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(91): view('main/bizcategor...', Array)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->bizCategoryMenu('the_place')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-05-01 21:23:15 --> Undefined array key 0
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 108)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->menu('the_place', 'chinese_rice')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-01 21:23:35 --> Undefined array key 0
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 108)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->menu('the_place', 'chinese_rice')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-01 21:31:35 --> Undefined array key 0
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 81)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->bizCategoryMenu('the_place')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-01 21:31:51 --> syntax error, unexpected token "public"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(803): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-05-01 21:32:48 --> Cannot use [] for reading
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->bizCategoryMenu('the_place')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-05-01 23:24:20 --> Undefined variable $biz
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\bizcategorymenu.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 7)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/bizcategor...', Array, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(95): view('main/bizcategor...', Array)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->bizCategoryMenu('the_place')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-05-01 23:37:38 --> Undefined variable $cart
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\bizcategorymenu.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/bizcategor...', Array, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(100): view('main/bizcategor...', Array)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->bizCategoryMenu('the_place')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-05-01 23:38:19 --> Undefined variable $data
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\bizcategorymenu.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/bizcategor...', Array, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(100): view('main/bizcategor...', Array)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->bizCategoryMenu('the_place')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-05-01 23:40:27 --> Unclosed '[' does not match '}'
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(803): class_exists('\\App\\Controller...', true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->startController()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-05-01 23:41:46 --> Undefined variable $cart
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\bizcategorymenu.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 152)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/bizcategor...', Array, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(100): view('main/bizcategor...', Array)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->bizCategoryMenu('the_place')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-05-01 23:51:53 --> Undefined property: App\Controllers\Web\BizController::$data
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(86): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 86)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->bizCategoryMenu('the_place')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

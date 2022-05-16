@@ -11,7 +11,7 @@
             <div class="row d-flex align-items-end">
                 <div class="col-md-8">
                     <div class="restaurant-detailed-header-left">
-                        <img class="img-fluid mr-3 float-left" alt="osahan" src="<?=  ($biz->logo) ?  site_url('img/vendor/'.$biz->id.'/logo/'.$biz->logo) : site_url('img/logo_1.jpg') ?> ">
+                        <img class="img-fluid mr-3 float-left" alt="<?= esc(ucwords($biz->name)) ?>" src="<?=  ($biz->logo) ?  site_url('img/vendor/'.$biz->id.'/logo/'.$biz->logo) : site_url('img/logo_1.jpg') ?> ">
                         <h2 class="text-white"><?= esc(ucwords($biz->name)) ?></h2>
                         <p class="text-white mb-1"><i class="icofont-location-pin"></i> <?= esc(ucwords($biz->address.', '.$city['city_name'].', '.$state['state_name'] )) ?> </p>
                         <!-- <p class="text-white mb-0"><i class="icofont-food-cart"></i> North Indian, Chinese, Fast Food, South Indian</p> -->
@@ -61,7 +61,7 @@
 
                         <div class="tab-pane fade show active" id="pills-order-online" role="tabpanel" aria-labelledby="pills-order-online-tab">
 
-                            <div id="#menu" class="bg-white rounded shadow-sm p-4 mb-4 explore-outlets">
+                            <!-- <div id="#menu" class="bg-white rounded shadow-sm p-4 mb-4 explore-outlets">
                                 <h5 class="mb-4">Recommended</h5>
                                 <form class="explore-outlets-search mb-4">
                                     <div class="input-group">
@@ -73,7 +73,7 @@
                                         </div>
                                     </div>
                                 </form>
-                            </div>
+                            </div> -->
 
                             <div class="row">
                              <?php foreach ($menuByCategory as $cate) :?>  
@@ -82,9 +82,9 @@
                                     <div class="bg-white rounded border shadow-sm mb-4">
                                      <?php foreach ($cate['menu'] as $menu) :?> 
                                         <div class="menu-list p-3 border-bottom">
-                                            <a class="btn btn-outline-secondary btn-sm  float-right" href="#">ADD</a>
+                                            <a class="btn btn-outline-secondary btn-sm  float-right addup-menu" data-toggle="modal" data-target="#addupMenuModal" data-menu="<?= base64_encode($encrypter->encrypt($menu->id))?>" data-name="<?= $menu->name ?>" data-mi="<?= $menu->slug ?>" data-bi="<?= $biz->slug ?>">ADD</a>
                                             <div class="media">
-                                                <?= ($menu->image) ? '<img class="mr-3 rounded-pill" src= "'.site_url('img/vendor/'.$biz->id.'/menus/'.$menu->image). '">' : '<div class="mr-3"><i class="icofont-ui-press text-danger food-item"></i></div>' ?> 
+                                                <?= ($menu->image) ? '<img class="mr-3 rounded-pill" src= "'.site_url('img/vendor/'.$biz->id.'/menus/'.$menu->image). '">' : '<div class="mr-3"><i class="icofont-restaurant text-danger food-itemm"></i></div>' ?> 
                                                 <div class="media-body">
                                                     <h6 class="mb-1"><?= esc(ucwords($menu->name))?></h6>
                                                     <p class="text-gray mb-0"><?= esc(number_to_currency($menu->price,'NGN','en_NG',2))?></p>
@@ -115,7 +115,7 @@
                                 <p class="mb-2 text-black"><i class="icofont-phone-circle text-primary mr-2"></i> <?= esc($biz->phone)?></p>
                                 <p class="mb-2 text-black">
                                     <i class="icofont-email text-primary mr-2"></i>
-                                    <a href="" class="__cf_email__" data-cfemail="cea7afa3a1bdafa6afa08ea9a3afa7a2e0ada1a3">[<?= esc($biz->email)?>]</a>
+                                    <a href="" class="__cf_email__" data-cfemail="">[<?= esc($biz->email)?>]</a>
                                 </p>
                                 <p class="mb-2 text-black">
                                     <i class="icofont-clock-time text-primary mr-2"></i> 
@@ -150,72 +150,47 @@
             <div class="col-md-4">
                 <div class="generator-bg rounded shadow-sm mb-4 p-4 osahan-cart-item">
                     <h5 class="mb-1 text-white">Your Order</h5>
-                    <p class="mb-4 text-white">6 ITEMS</p>
-                    <div class="bg-white rounded shadow-sm mb-2">
+                    <?php if(isset($cart) && !empty($cart)):?>
+                    <p id="order-count" class="mb-4 text-white"><?= $total_items?> Quantity</p>
+                    <div id = "checkout" class="bg-white rounded shadow-sm mb-2">
+                    <?php foreach ($cart as $data) :?> 
                         <div class="gold-members p-2 border-bottom">
-                            <p class="text-gray mb-0 float-right ml-2">$314</p>
-                            <span class="count-number float-right">
-                                <button class="btn btn-outline-secondary  btn-sm left dec"> <i class="icofont-minus"></i> </button>
-                                <input class="count-number-input" type="text" value="1" readonly="">
-                                <button class="btn btn-outline-secondary btn-sm right inc"> <i class="icofont-plus"></i> </button>
+                            <p class="text-gray mb-0 float-right ml-2">₦<?= number_format($data['total'],2)?></p>
+                            <span id="<?=$data['rowid']?>" class="count-number float-right" data-row="<?=$data['rowid']?>">
+                                <!-- <a href="javascript:;" class="btn btn-outline-info btn-sm left edi" data-toggle="tooltip" title="Edit!"><i class="icofont-edit-alt"></i> </a> -->
+                                <a href="javascript:;" class="btn btn-outline-danger btn-sm right del" data-toggle="tooltipp" title="Delete!"> <i class="icofont-ui-delete"></i> </a>
                             </span>
-                            <div class="media">
-                                <div class="mr-2"><i class="icofont-ui-press text-danger food-item"></i></div>
-                                <div class="media-body">
-                                    <p class="mt-1 mb-0 text-black">Chicken Tikka Sub</p>
-                                </div>
+                            <div class="media" data-toggle="tooltip" title="<?=ucwords($data['name']) ?> x <?=$data['qty'] ?>qty">
+                                <div class="mr-2"><i class="icofont-food-cart text-success food-item"></i></div>
+                                <div class="media-body"><p class="mt-1 mb-0 text-black"><?=ucwords($data['name']) ?> x <?=$data['qty'] ?> Qty</p></div>
                             </div>
                         </div>
-                        <div class="gold-members p-2 border-bottom">
-                            <p class="text-gray mb-0 float-right ml-2">$260</p>
-                            <span class="count-number float-right">
-                                <button class="btn btn-outline-secondary  btn-sm left dec"> <i class="icofont-minus"></i> </button>
-                                <input class="count-number-input" type="text" value="1" readonly="">
-                                <button class="btn btn-outline-secondary btn-sm right inc"> <i class="icofont-plus"></i> </button>
-                            </span>
-                            <div class="media">
-                                <div class="mr-2"><i class="icofont-ui-press text-success food-item"></i></div>
-                                <div class="media-body">
-                                    <p class="mt-1 mb-0 text-black">Cheese corn Roll</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gold-members p-2 border-bottom">
-                            <p class="text-gray mb-0 float-right ml-2">$260</p>
-                            <span class="count-number float-right">
-                                <button class="btn btn-outline-secondary  btn-sm left dec"> <i class="icofont-minus"></i> </button>
-                                <input class="count-number-input" type="text" value="1" readonly="">
-                                <button class="btn btn-outline-secondary btn-sm right inc"> <i class="icofont-plus"></i> </button>
-                            </span>
-                            <div class="media">
-                                <div class="mr-2"><i class="icofont-ui-press text-success food-item"></i></div>
-                                <div class="media-body">
-                                    <p class="mt-1 mb-0 text-black">Cheese corn Roll</p>
-                                </div>
-                            </div>
-                        </div>
+                    <?php endforeach; ?>
+                    </div>
+                    <div class="mb-2 bg-white rounded p-2 clearfix">
+                        <!-- <img class="img-fluid float-left" src="img/wallet-icon.png"> -->
+                        <h6 class="font-weight-bold text-right mb-2">Subtotal : <span class="text-danger subtotal">₦<?= number_format($sum_total,2)?></span></h6>
+                    </div>
+                    <div class="pad">
+                        <a id="btn-checkout" href="<?= current_url()?>/checkout" class="btn btn-success btn-block btn-lg btn-checkout">Checkout <i class="icofont-long-arrow-right"></i></a>
+                    </div>
+                  <?php else: ?>
+                    <p id="order-count" class="mb-4 text-white">0 ITEM</p>
+                    <div id="checkout" class="bg-white rounded shadow-sm mb-2">
                         <div class="gold-members p-2">
-                            <p class="text-gray mb-0 float-right ml-2">$122</p>
-                            <span class="count-number float-right">
-                                <button class="btn btn-outline-secondary  btn-sm left dec"> <i class="icofont-minus"></i> </button>
-                                <input class="count-number-input" type="text" value="1" readonly="">
-                                <button class="btn btn-outline-secondary btn-sm right inc"> <i class="icofont-plus"></i> </button>
-                            </span>
-                            <div class="media">
-                                <div class="mr-2"><i class="icofont-ui-press text-danger food-item"></i></div>
-                                <div class="media-body">
-                                    <p class="mt-1 mb-0 text-black">Mixed Veg</p>
-                                </div>
+                            <div class="media-body">
+                                <h6 class="mt-1 mb-0 text-black">No Order</h6>
                             </div>
                         </div>
                     </div>
                     <div class="mb-2 bg-white rounded p-2 clearfix">
                         <!-- <img class="img-fluid float-left" src="img/wallet-icon.png"> -->
-                        <h6 class="font-weight-bold text-right mb-2">Subtotal : <span class="text-danger">$456.4</span></h6>
-                        <p class="seven-color mb-1 text-right">Extra charges may apply</p>
-                        <p class="text-black mb-0 text-right">You have saved $955 on the bill</p>
+                        <h6 class="font-weight-bold text-right mb-2">Subtotal : <span class="text-danger subtotal">₦00.00</span></h6>
                     </div>
-                    <a href="checkout.html" class="btn btn-success btn-block btn-lg">Checkout <i class="icofont-long-arrow-right"></i></a>
+                    <div id="pad">
+                        
+                    </div>
+                  <?php endif;?>
                 </div>
                 <div class="text-center pt-2 mb-4">
                     <img class="img-fluid" src="https://dummyimage.com/352x600/ccc/ffffff.png&amp;text=Google+ads">
@@ -229,5 +204,6 @@
     </div>
 <section>
 
+<?= $this->include('main/menu_modal') ?>
 
 <?= $this->endsection() ?>

@@ -22,6 +22,10 @@
       <!-- Owl Carousel -->
       <link rel="stylesheet" href="/vendor/owl-carousel/owl.carousel.css">
       <link rel="stylesheet" href="/vendor/owl-carousel/owl.theme.css">
+      <script>var base_url = '<?=base_url()?>';</script>
+      <script>var current_url = '<?=current_url()?>';</script>
+      <script>var previous_url = '<?=previous_url()?>';</script>
+      <script>var main_url = '<?=site_url(uri_string())?>';</script>
    </head>
    <body>
        <!-- Header with logos -->
@@ -48,6 +52,10 @@
       <script src="/vendor/select2/js/select2.min.js"></script>
       <!-- Owl Carousel -->
       <script src="/vendor/owl-carousel/owl.carousel.js"></script>
+      <!-- axios -->
+      <script src="/vendor/axios/axios.min.js"></script>
+      <!-- lodash -->
+      <script src="/vendor/lodash/lodash.js"></script>
       <!-- Custom scripts for all pages-->
       <script src="/js/custom.js"></script>
    </body>

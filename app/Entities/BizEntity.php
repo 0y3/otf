@@ -62,7 +62,7 @@ class BizEntity extends Entity
        return $data_;
     }
 
-    public function geCategoryByMenus()
+    public function getCategoryByMenus()
     {
         $data_ = [];
         $categories = $this->MenusCate

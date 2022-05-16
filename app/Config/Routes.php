@@ -66,6 +66,16 @@ $routes->setAutoRoute(true);
   $routes->group('', ['namespace' => 'App\Controllers\Web'],function ($routes) {
     $routes->get('/', 'Home::index');
 
+    
+    $routes->get("signup", "AuthenticationController::signup");
+    $routes->get("login", "AuthenticationController::login");
+    $routes->get("logout", "AuthenticationController::logout");
+    $routes->get("authentication/activationemail/(:any)/(:any)", "AuthenticationController::activateConfirmUser/$1/$2");
+    $routes->get("authentication/resetpasswordemail/(:any)/(:any)", "AuthenticationController::resetPasswordConfirmUser/$1/$2");
+    $routes->post("signup", "AuthenticationController::signup_");
+    $routes->post("login", "AuthenticationController::login_");
+
+
     // get all vendor
     $routes->get(VENDOR_REST, 'BizController::index/'.VENDOR_REST);
     $routes->get(VENDOR_GROC, 'BizController::index/'.VENDOR_GROC);
@@ -76,13 +86,32 @@ $routes->setAutoRoute(true);
     $routes->get(VENDOR_GROC.'/(:slug)', 'BizController::bizCategoryMenu/$1');
     $routes->get(VENDOR_PART.'/(:slug)', 'BizController::bizCategoryMenu/$1');
 
+    // get vendor Checkout
+    $routes->get(VENDOR_REST.'/(:slug)/checkout', 'BizController::checkOut/$1');
+    $routes->get(VENDOR_GROC.'/(:slug)/checkout', 'BizController::checkOut/$1');
+    $routes->get(VENDOR_PART.'/(:slug)/checkout', 'BizController::checkOut/$1');
+    
     // get vendor menu
     $routes->get(VENDOR_REST.'/(:slug)/(:any)', 'BizController::menu/$1/$2');
-    $routes->get(VENDOR_GROC.'/(:slug)/(:any)', 'BizController::menu/$1/$2');
-    $routes->get(VENDOR_PART.'/(:slug)/(:any)', 'BizController::menu/$1/$2');
+    $routes->get(VENDOR_GROC.'/(:slug)/(:any)', 'BizController::groceryMenu/$1/$2');
+    $routes->get(VENDOR_PART.'/(:slug)/(:any)', 'BizController::partyMenu/$1/$2');
+
+    
+
+    // Add to Cart
+    $routes->post('addtocart', 'BizController::addToCart');
+    // Remove from Cart
+    $routes->get('removecart/(:any)', 'BizController::removeCart/$1');
     
   });
 
+  $routes->group('user', ['namespace' => 'App\Controllers\Web','filter' => 'authGuard'], function ($routes) {
+
+    $routes->get('profile', 'UsersController::index');
+    $routes->get('order', 'UsersController::order');
+    $routes->get('order/(:any)', 'UsersController::orderDetails/$1');
+
+  });
 
 $routes->group('api', ['namespace' => 'App\Controllers\Api'],function ($routes) {
     $routes->post("signup", "AuthenticationController::signup");
