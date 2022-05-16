@@ -153,7 +153,7 @@ class AuthenticationController extends BaseController
         
         if($this->session->get('isLoggedIn')){
             if(previous_url() == site_url('login')){ 
-                return redirect()->to('user/orders');}
+                return redirect()->to('user/order');}
             else{
             return redirect()->to(previous_url());}
         }
@@ -217,9 +217,7 @@ class AuthenticationController extends BaseController
                     ];
 
                     $this->session->set($sessionArray);
-                    return (getBackUrl()) ? getBackUrl() : redirect()->to('user/orders');
-                    
-
+                    return (getBackUrl()) ? getBackUrl() : redirect()->to('user/order');
                 }
                 else{
                     $this->session->setFlashdata('error', 'error');
@@ -234,7 +232,7 @@ class AuthenticationController extends BaseController
         }
     }
     // This function used to reset the password 
-    function resetPasswordConfirmUser($activation_id, $email)
+    public function resetPasswordConfirmUser($activation_id, $email)
     {
         // Get email and activation code from URL values at index 3-4
         $email = urldecode($email);
