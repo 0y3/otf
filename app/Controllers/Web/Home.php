@@ -14,22 +14,26 @@ class Home extends BaseController
     
     function __construct()
     {
-        $this->request      = service('request');
-        $this->session      = service('session'); # or \Config\Services::session();
-        $this->encrypter      = service('encrypter');
-        $this->biz         = model('BizModel'); # or \App\Models::UserModel(); or (new UserModel); or new UserModel 
-        $this->bizMenus     = model('BizMenuModel');
-        $this->bizMenusAddupCate     = model('BizMenuAddupCategoryModel');
+        $this->request          = service('request');
+        $this->session          = service('session'); # or \Config\Services::session();
+        $this->deliveryLocate     = model('DeliveryLocationsModel');
+        $this->encrypter        = service('encrypter');
+        // $this->biz              = model('BizModel'); # or \App\Models::UserModel(); or (new UserModel); or new UserModel 
+        // $this->bizMenus         = model('BizMenuModel');
+        // $this->bizMenusAddupCate     = model('BizMenuAddupCategoryModel');
 
         
         
     }
     public function index()
     {
-        $data = [
+        $this->data = [
             'title' => "OTF :- Home",
             'currentMenu'   => 'home',
+            'encrypter'     => $this->encrypter,
+            'deliveryloc'   => $this->deliveryLocate->getDeliveryLocate(),
         ];
-        return view('main/index',$data);
+        //print("<pre>".print_r($deliveryloc,true)."</pre>");die;
+        return view('main/index',$this->data);
     }
 }

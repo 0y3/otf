@@ -247,6 +247,50 @@ if(!function_exists('setBackUrl'))
     }
 }
 
+if(!function_exists('getDeliveryLocationTemp'))
+{
+    // Function created by 0y3 to get User Delivery Location
+    function getDeliveryLocationTemp()
+    {
+        $session = Services::session();
+        if($session->getTempdata('delivery_location_data')){
+            $data = $session->getTempdata('delivery_location_data');
+            return $data;
+        }
+        else{return false;}
+    }
+}
+
+
+if(!function_exists('setDeliveryLocationTemp'))
+{
+    // Function created by 0y3 to set User Delivery Location temp for 20min (60sec x 30min = 1800)
+    function setDeliveryLocationTemp($id)
+    {
+        $session          = Services::session();
+        $deliveryLocate   = model('DeliveryLocationsModel');
+
+        $data = $deliveryLocate
+                ->select('delivery_locations.*, state_cities.city_name, states.state_name')
+                ->join('state_cities', 'delivery_locations.city_id = state_cities.id', 'left')
+                ->join('states', 'delivery_locations.state_id = states.id', 'left')
+                ->where(['delivery_locations.id' => $id, 'delivery_locations.status' => 1, 'delivery_locations.isdeleted' => 0])
+                ->first();
+        if($data)
+        {
+            $locationArray = [
+                    'deliveryLocateId'      => service('encrypter')->encrypt($id),
+                    'deliveryLocateState'   => $data['state_name'],
+                    'deliveryLocateCity'    => $data['city_name']
+            ];
+            
+        $session->setTempdata('delivery_location_data', $locationArray, 1800); 
+        return true;
+        }
+        else{return false;}
+    }
+}
+
 if(!function_exists('getBackUrl'))
 {
     function getBackUrl()

@@ -18,8 +18,8 @@
             <div class="row d-none-m">
                 <div class="col-md-12">
                     <div class="dropdown float-right mt-0 mb-3">
-                        <a class="btn btn-outline-info dropdown-toggle btn-sm border-white-btn" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Sort by: <span class="text-theme">Delivery Location</span> &nbsp;&nbsp;
+                        <a class="btn btn-outline-info dropdown-toggle btn-sm border-white-btn" href="#" data-toggle="modal" data-target="#deliveryLocateModal">
+                        <small>Delivery Location:</small> <span class="text-theme span-delivery-location"> <?= (getDeliveryLocationTemp()) ? getDeliveryLocationTemp()['deliveryLocateCity'].' (<small>'.getDeliveryLocationTemp()['deliveryLocateState'].'</small>)' : 'None' ?></span> &nbsp;&nbsp;
                         </a>
                         <div class="dropdown-menu dropdown-menu-right shadow-sm border-0 ">
                             <a class="dropdown-item" href="#">Distance</a>
@@ -98,5 +98,9 @@
             </div>
         </div>
     </section>
+
+<!-- location modal -->
+<?= $this->include('main/delivery_location_modal') ?>
+<!-- /location modal -->
 
 <?= $this->endsection() ?>

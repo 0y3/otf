@@ -11,6 +11,48 @@ Version: 1.0
 
     // ===========Select2============
     $('select').select2();
+    $(".locationselection").select2();
+
+    // on click delivery location dropdown set session and hid modal
+    $('.locationselection').on('select2:select', function(e) {
+        $('.error_loc').text('');
+        $(".locationselection").prop("disabled", true);
+        axios.post(base_url + '/deliverylocation', {
+                deliveryId: $(".locationselection").select2("val")
+            })
+            .then(function(response) {
+                $('.span-delivery-location').html(response.data.deliveryLocateCity + ' (<small>' + response.data.deliveryLocateState + '</small>)');
+            })
+            .catch(function(error) {
+                console.log(error);
+            })
+            .then(function() {
+                $('#deliveryLocateModal').modal('hide');
+            });
+        //$('#deliveryLocateModal').modal('hide');
+    });
+
+    $('#deliveryLocateModal').on('show.bs.modal', function(event) {
+        $(".locationselection").prop("disabled", false);
+    });
+
+    axios.get('/deliverylocation')
+        .then(function(response) {
+            if (response.data !== '' && response.data.constructor === Object) {} else { $('#deliveryLocateModal').modal('show'); }
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+
+
+
+    $('.osahan-category-item-a').on('click', function(e) {
+        if (!$(".locationselection").select2("val")) {
+            e.preventDefault();
+            $('.locationselection').prop('required', true);
+            $('.error_loc').text('You need to Select your delivery location First');
+        }
+    })
 
     // ===========My Account Tabs============
     /*

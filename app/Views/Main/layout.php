@@ -16,7 +16,7 @@
       <!-- Font Awesome-->
       <link href="/vendor/icofont/icofont.min.css" rel="stylesheet">
       <!-- Select2 CSS-->
-      <link href="/vendor/select2/css/select2.min.css" rel="stylesheet">
+      <link href="/vendor/select2/css/css/select2.min.css" rel="stylesheet">
       <!-- Custom styles for this template-->
       <link href="/css/style.css" rel="stylesheet">
       <!-- Owl Carousel -->
@@ -49,7 +49,7 @@
       <!-- Bootstrap core JavaScript-->
       <script src="/vendor/bootstrap/js/bootstrap.bundle.js"></script>
       <!-- Select2 JavaScript-->
-      <script src="/vendor/select2/js/select2.min.js"></script>
+      <script src="/vendor/select2/js/js/select2.min.js"></script>
       <!-- Owl Carousel -->
       <script src="/vendor/owl-carousel/owl.carousel.js"></script>
       <!-- axios -->

@@ -19,22 +19,22 @@ class BizController extends BaseController
     
     function __construct()
     {
-        $this->request      = service('request');
-        $this->session      = service('session'); # or \Config\Services::session();
-        $this->encrypter      = service('encrypter');
-        $this->biz         = model('BizModel'); # or \App\Models::UserModel(); or (new UserModel); or new UserModel 
-        $this->bizMenus     = model('BizMenuModel');
+        $this->request          = service('request');
+        $this->session          = service('session'); # or \Config\Services::session();
+        $this->encrypter        = service('encrypter');
+        $this->biz              = model('BizModel'); # or \App\Models::UserModel(); or (new UserModel); or new UserModel 
+        $this->bizMenus         = model('BizMenuModel');
         $this->bizMenusCate     = model('BizMenuCategoryModel');
-        $this->bizMenusAddup     = model('BizMenuAddupModel');
-        $this->bizMenusAddupCate     = model('BizMenuAddupCategoryModel');
-        $this->stateModel =  model('StateModel');
-        $this->cityModel =  model('StateCityModel');
-        $this->cart = cart();
+        $this->bizMenusAddup    = model('BizMenuAddupModel');
+        $this->bizMenusAddupCate = model('BizMenuAddupCategoryModel');
+        $this->stateModel       =  model('StateModel');
+        $this->cityModel        =  model('StateCityModel');
+        $this->deliveryLocate   = model('DeliveryLocationsModel');
+        $this->cart             = cart();
         
     }
     public function index($slug = null)
     {
-        
         if ($slug === false) {
             return redirect()->to('');
         }
@@ -49,11 +49,14 @@ class BizController extends BaseController
                     ->orderBy('id')
                     ->paginate(24);
         }
+
         $this->data = [
-            'title' => "OTF Vendors:- ".$slug,
+            'encrypter'     => $this->encrypter,
+            'title'         => "OTF Vendors:- ".$slug,
             'currentMenu'   => $slug,
-            'biz'   => $bizs,
-            'pager'   => $this->biz->pager,
+            'biz'           => $bizs,
+            'pager'         => $this->biz->pager,
+            'deliveryloc'   => $this->deliveryLocate->getDeliveryLocate(),
         ];
 
         //return view('layout', $data);
@@ -88,16 +91,17 @@ class BizController extends BaseController
             }
                 
             $this->data = [
-                'encrypter' => $this->encrypter,
-                'title' => "OTF Vendors:- ".$biz->name,
+                'encrypter'     => $this->encrypter,
+                'title'         => "OTF Vendors:- ".$biz->name,
                 'currentMenu'   => $biztype,
-                'biz'   => $biz,
-                'state'    => $this->stateModel->find($biz->state_id),
-                'city'    => $this->cityModel->find($biz->city_id),
+                'biz'           => $biz,
+                'state'         => $this->stateModel->find($biz->state_id),
+                'city'          => $this->cityModel->find($biz->city_id),
                 'menuByCategory'  => $biz->NestedCategories(),
-                'cart' => $this->cart->contents(), 
-                'sum_total' => $this->cart->total(),
-                'total_items'   => $this->cart->totalItems()
+                'cart'          => $this->cart->contents(), 
+                'sum_total'     => $this->cart->total(),
+                'total_items'   => $this->cart->totalItems(),
+                'deliveryloc'   => $this->deliveryLocate->getDeliveryLocate(),
             ];
             
             
@@ -287,6 +291,9 @@ class BizController extends BaseController
                     ->first();
         if($biz)
         {
+            //check delivery location
+            if(!getDeliveryLocationTemp()){ return redirect()->to($where['biz_type'].'/'.$slug);}
+
             // check cart not empty
             if(empty($this->cart->contents()) ){ return redirect()->to($where['biz_type'].'/'.$slug);}
             else{
@@ -318,12 +325,41 @@ class BizController extends BaseController
                 'delivery_fee'  => $delivery_fee,
                 'sum_total'     => $sum_total,
                 'grand_total'   => $grand_total,
+                'deliveryloc'   => $this->deliveryLocate->getDeliveryLocate(),
             ];
                 // print("<pre>".print_r($this->data['cart'],true)."</pre>");
                 //print("<pre>".print_r(json_encode($this->data['cart']['d33443769121f404c7c87015223dac57']['addups'],JSON_PRETTY_PRINT),true)."</pre>");die;
-                print("<pre>".print_r($this->data['cart'],true)."</pre>");die;
+                //print("<pre>".print_r($this->data['cart'],true)."</pre>");die;
                 return view('main/checkout', $this->data);
         }
         else{ throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();}
+    }
+
+    public function deliveryLocation_($id=null)
+    {
+        if($this->request->getVar('deliveryId')){$id = $this->request->getVar('deliveryId');}
+        setDeliveryLocationTemp($id);
+        $data = [
+            'deliveryLocateId'    => $id,
+            'deliveryLocateState' => getDeliveryLocationTemp()['deliveryLocateState'],
+            'deliveryLocateCity'  => getDeliveryLocationTemp()['deliveryLocateCity'],
+
+        ];
+        return $this->respond($data);
+    }
+
+    public function getDeliveryLocation()
+    {
+        if(getDeliveryLocationTemp())
+        {
+            $data = [
+                'deliveryLocateId'    => $this->encrypter->decrypt(getDeliveryLocationTemp()['deliveryLocateId']),
+                'deliveryLocateState' => getDeliveryLocationTemp()['deliveryLocateState'],
+                'deliveryLocateCity'  => getDeliveryLocationTemp()['deliveryLocateCity'],
+
+            ];
+            return $this->respond($data);
+        }
+        else{return false;}
     }
 }

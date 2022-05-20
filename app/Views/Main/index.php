@@ -1,8 +1,12 @@
-    
+
 <?= $this->extend('main/layout') ?>
 
 <?= $this->section('content') ?>
-
+<style>
+ .select2-selection__rendered{
+   display: unset !important;
+}
+</style> 
     <section class="pt-5 pb-5 homepage-search-block position-relative">
          <div class="banner-overlay"></div>
          <div class="container">
@@ -33,15 +37,18 @@
                            <div class="col-lg-10 col-md-10 col-sm-12 form-group">
                               <div class="location-dropdown">
                                  <i class="icofont-location-arrow"></i>
-                                 <select class="custom-select form-control-lg">
-                                    <option> Select your delivery location </option>
-                                    <option> Breakfast </option>
-                                    <option> Lunch </option>
-                                    <option> Dinner </option>
-                                    <option> Cafés </option>
-                                    <option> Delivery </option>
+                                 <select class="custom-select form-control-lg locationselection select2" data-placeholder="Select your delivery location" name="delivery" value ="<?= !empty(getDeliveryLocationTemp()) ? $encrypter->decrypt(getDeliveryLocationTemp()['deliveryLocateId']) : '' ?>" required>
+                                    <option value=""> Select your delivery location </option>
+                                 <?php foreach ($deliveryloc as $data) :?>
+                                 <?php if(getDeliveryLocationTemp()): ?>
+                                    <option value="<?=$data['id']?>" <?= ($data['id'] == $encrypter->decrypt(getDeliveryLocationTemp()['deliveryLocateId'])) ? 'selected' : '' ?> > <?= ucwords($data['city_name']) ?> <small>(<?= ucwords($data['state_name']) ?>)</small> </option>
+                                 <?php else: ?>
+                                 <option value="<?=$data['id']?>"> <?= ucwords($data['city_name']) ?> <small>(<?= ucwords($data['state_name']) ?>)</small> </option>
+                                 <?php endif; ?>
+                                 <?php endforeach;?>
                                  </select>
                               </div>
+                              <span class="badge badge-pill badge-warning error_loc"></span>
                               <!-- <input type="text" placeholder="Enter your delivery location" class="form-control form-control-lg">
                               <a class="locate-me" href="#"><i class="icofont-ui-pointer"></i> Locate Me</a> -->
                            </div>
@@ -50,29 +57,29 @@
                   </div>
                   <div class="row justify-content-center">
                      <div class="item">
-                        <div class="osahan-category-item" style="width:150px; height:auto">
-                           <a href="<?=site_url('restaurant')?>">
+                        <a class="osahan-category-item-a" href="<?=site_url('restaurant')?>" >
+                           <div class="osahan-category-item" style="width:150px; height:auto">
                               <img class="img-fluid" src="img/res_s.png" alt="" style="background:linear-gradient(to top,#830190,#c8a3cc); border-radius: 10%">
                               <h6>Restaurants <i class="icofont-search-2" style="font-size:10px;"></i></h6>
-                           </a>
-                        </div>
+                           </div>
+                        </a>
                      </div>
                      <div class="item">
-                        <div class="osahan-category-item" style="width:150px; height:auto">
-                           <a href="<?=site_url('grocery')?>">
+                        <a class="osahan-category-item-a" href="<?=site_url('grocery')?>">
+                           <div class="osahan-category-item" style="width:150px; height:auto">
                               <!-- <img class="img-fluid" src="img/04.png" alt="" style="background:linear-gradient(to top,#009bfe,#00e9f0); border-radius: 10%;"> -->
                               <i class="icofont-grocery" style="background:linear-gradient(to top,#656d67,#79c792); border-radius: 10%;font-size: 42px; color: #fff; box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;"></i> <h6 class="pt-2">Grocery  <i class="icofont-search-2" style="font-size:10px;"></i></h6>
-                           </a>
-                        </div>
+                           </div>
+                        </a>
                      </div>
                      
                      <div class="item">
-                        <div class="osahan-category-item" style="width:150px; height:auto">
-                           <a href="<?=site_url('party')?>">
+                        <a class="osahan-category-item-a" href="<?=site_url('party')?>">
+                           <div class="osahan-category-item" style="width:150px; height:auto">
                               <img class="img-fluid" src="img/04.png" alt="" style="background:linear-gradient(to top,#ff9472,#900000e0); border-radius: 10%;">
                               <h6>Party  <i class="icofont-search-2" style="font-size:10px;"></i></h6>
-                           </a>
-                        </div>
+                           </div>
+                        </a>
                      </div>
                   </div>
                </div>

@@ -148,6 +148,11 @@
 
             <!-- Cart -->
             <div class="col-md-4">
+                <div class="dropdown mt-0 mb-3">
+                    <a class="btn btn-outline-info dropdown-toggle btn-sm border-white-btn" href="#" data-toggle="modal" data-target="#deliveryLocateModal">
+                    <small>Delivery Location:</small> <span class="text-theme span-delivery-location"> <?= (getDeliveryLocationTemp()) ? getDeliveryLocationTemp()['deliveryLocateCity'].' (<small>'.getDeliveryLocationTemp()['deliveryLocateState'].'</small>)' : 'None' ?></span> &nbsp;&nbsp;
+                    </a>
+                </div>
                 <div class="generator-bg rounded shadow-sm mb-4 p-4 osahan-cart-item">
                     <h5 class="mb-1 text-white">Your Order</h5>
                     <?php if(isset($cart) && !empty($cart)):?>
@@ -205,5 +210,9 @@
 <section>
 
 <?= $this->include('main/menu_modal') ?>
+
+<!-- location modal -->
+<?= $this->include('main/delivery_location_modal') ?>
+<!-- /location modal -->
 
 <?= $this->endsection() ?>

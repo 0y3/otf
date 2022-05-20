@@ -1,0 +1,252 @@
+CRITICAL - 2022-05-20 02:12:07 --> Undefined array key "state_name"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Helpers\utility_helper.php(278): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 278)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(337): setDeliveryLocationTemp('2')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->deliveryLocation_()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-05-20 02:14:20 --> Undefined array key "cart"
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Helpers\utility_helper.php(276): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 276)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(337): setDeliveryLocationTemp('1')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->deliveryLocation_()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-05-20 02:31:03 --> Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded".
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(99): App\Controllers\Web\BizController->format(Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(338): App\Controllers\Web\BizController->respond(Array)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->deliveryLocation_()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-05-20 02:31:03 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Format\Exceptions\FormatException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-05-20 02:33:59 --> Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded".
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(99): App\Controllers\Web\BizController->format(Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(341): App\Controllers\Web\BizController->respond(Array)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->deliveryLocation_()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-05-20 02:33:59 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Format\Exceptions\FormatException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-05-20 02:34:38 --> Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded".
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(99): App\Controllers\Web\BizController->format(Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(341): App\Controllers\Web\BizController->respond(Array)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->deliveryLocation_()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-05-20 02:34:38 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Format\Exceptions\FormatException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-05-20 02:44:10 --> Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded".
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(99): App\Controllers\Web\BizController->format(Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(338): App\Controllers\Web\BizController->respond(Array)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->deliveryLocation_()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-05-20 02:44:10 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Format\Exceptions\FormatException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-05-20 02:45:11 --> Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded".
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(99): App\Controllers\Web\BizController->format(Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(338): App\Controllers\Web\BizController->respond(Array)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->deliveryLocation_()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-05-20 02:45:11 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Debug\Exceptions.php(115): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Format\Exceptions\FormatException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-05-20 03:01:07 --> Undefined variable $encrypter
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\delivery_location_modal.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 18)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(424): CodeIgniter\View\View->render('main/delivery_l...', NULL, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\biz.php(103): CodeIgniter\View\View->include('main/delivery_l...')
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/biz', Array, true)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(63): view('main/biz', Array)
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->index('restaurant')
+#10 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-05-20 03:01:17 --> Undefined variable $encrypter
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\delivery_location_modal.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 18)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(424): CodeIgniter\View\View->render('main/delivery_l...', NULL, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\biz.php(103): CodeIgniter\View\View->include('main/delivery_l...')
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/biz', Array, true)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(63): view('main/biz', Array)
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->index('restaurant')
+#10 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-05-20 03:08:18 --> Undefined variable $encrypter
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\delivery_location_modal.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 18)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(424): CodeIgniter\View\View->render('main/delivery_l...', NULL, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\biz.php(103): CodeIgniter\View\View->include('main/delivery_l...')
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/biz', Array, true)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(63): view('main/biz', Array)
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->index('restaurant')
+#10 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-05-20 03:08:26 --> Undefined variable $encrypter
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\delivery_location_modal.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 18)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(424): CodeIgniter\View\View->render('main/delivery_l...', NULL, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\biz.php(103): CodeIgniter\View\View->include('main/delivery_l...')
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/biz', Array, true)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(63): view('main/biz', Array)
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->index('restaurant')
+#10 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-05-20 03:08:38 --> Undefined variable $encrypter
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\delivery_location_modal.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 18)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(424): CodeIgniter\View\View->render('main/delivery_l...', NULL, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\biz.php(103): CodeIgniter\View\View->include('main/delivery_l...')
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/biz', Array, true)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(63): view('main/biz', Array)
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->index('restaurant')
+#10 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-05-20 03:11:12 --> Undefined variable $encrypter
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\delivery_location_modal.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 18)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(424): CodeIgniter\View\View->render('main/delivery_l...', NULL, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\biz.php(103): CodeIgniter\View\View->include('main/delivery_l...')
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/biz', Array, true)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(63): view('main/biz', Array)
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->index('restaurant')
+#10 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-05-20 03:57:39 --> Trying to access array offset on value of type bool
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(351): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to acces...', 'C:\\xampp\\htdocs...', 351)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->getDeliveryLocation()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-20 04:11:20 --> Undefined variable $encrypter
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\delivery_location_modal.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 15)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(424): CodeIgniter\View\View->render('main/delivery_l...', NULL, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\biz.php(103): CodeIgniter\View\View->include('main/delivery_l...')
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/biz', Array, true)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\BizController.php(63): view('main/biz', Array)
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\BizController->index('restaurant')
+#10 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\BizController))
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+ERROR - 2022-05-20 04:17:20 --> An invalid name was submitted as the product name: 
+Spicy Avocado Mushroom Salad The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+ERROR - 2022-05-20 04:17:34 --> An invalid name was submitted as the product name: 
+Spicy Avocado Mushroom Salad The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces

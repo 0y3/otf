@@ -74,6 +74,8 @@ $routes->setAutoRoute(true);
     $routes->get("authentication/resetpasswordemail/(:any)/(:any)", "AuthenticationController::resetPasswordConfirmUser/$1/$2");
     $routes->post("signup", "AuthenticationController::signup_");
     $routes->post("login", "AuthenticationController::login_");
+    $routes->post("deliverylocation", 'BizController::deliveryLocation_');
+    $routes->get("deliverylocation", 'BizController::getDeliveryLocation');
 
 
     // get all vendor
