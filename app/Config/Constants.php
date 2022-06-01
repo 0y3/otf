@@ -91,6 +91,10 @@ define('ORDER_DIS',            'Dispatched'); // Dispatched Order
 define('ORDER_DEL',            'Delivered'); // Delivered Order
 define('ORDER_CAN',            'Canceled'); // Canceled Order
 
+
+
+define('BG_NAME',            ["info","danger","warning","success","secondary","primary","dark"]); // Canceled Order
+
 /************************** EMAIL CONSTANTS *****************************/
 
 define('EMAIL_FROM',                            'noreply@vdoc.com.ng');		// e.g. email@example.com

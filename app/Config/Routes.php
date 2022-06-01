@@ -115,6 +115,13 @@ $routes->setAutoRoute(true);
 
   });
 
+
+  $routes->group('otfadmin', ['namespace' => 'App\Controllers\Web\Superadmin'], function ($routes) {
+
+    $routes->get('dashboard', 'DashboardController::index');
+
+  });
+
 $routes->group('api', ['namespace' => 'App\Controllers\Api'],function ($routes) {
     $routes->post("signup", "AuthenticationController::signup");
     $routes->post("authentication", "AuthenticationController::login");

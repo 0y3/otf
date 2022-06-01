@@ -26,7 +26,7 @@
                         <img alt="" src="<?=base_url("img/user/4.png")?>" class="nav-osahan-pic rounded-pill"></i>My Account
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow-sm border-0">
-                        <a class="dropdown-item <?=  ($currentMenu == 'orders') ? 'active' : '' ?>" href="<?= site_url('user/orders')?>"><i class="icofont-food-cart"></i> Orders</a>
+                        <a class="dropdown-item <?=  ($currentMenu == 'order') ? 'active' : '' ?>" href="<?= site_url('user/order')?>"><i class="icofont-food-cart"></i> Orders</a>
                         <a class="dropdown-item  <?=  ($currentMenu == 'trackorder') ? 'active' : '' ?>" href="<?=site_url('user/trackorder')?>"><i class="icofont-user-alt-1"></i> Track Order</a>
                         <a class="dropdown-item" href="<?= site_url('logout')?>"><i class="icofont-logout"></i> Logout</a>
                     </div> 

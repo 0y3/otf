@@ -16,7 +16,7 @@ Version: 1.0
     // on click delivery location dropdown set session and hid modal
     $('.locationselection').on('select2:select', function(e) {
         $('.error_loc').text('');
-        $(".locationselection").prop("disabled", true);
+        $("#deliveryLocateModal .locationselection").prop("disabled", true);
         axios.post(base_url + '/deliverylocation', {
                 deliveryId: $(".locationselection").select2("val")
             })

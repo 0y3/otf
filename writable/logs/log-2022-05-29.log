@@ -1,0 +1,28 @@
+CRITICAL - 2022-05-29 04:48:11 --> Invalid file: suberadmin/layout.php
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('suberadmin/layo...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(226): CodeIgniter\View\View->render('suberadmin/layo...', Array, true)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('superadmin/dash...', Array, true)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\Superadmin\DashboardController.php(30): view('superadmin/dash...', Array)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\Superadmin\DashboardController->index()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Superadmin\DashboardController))
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-05-29 05:47:43 --> array_rand(): Argument #1 ($array) must be of type array, string given
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\superadmin\sidebar.php(18): array_rand('[info,danger,wa...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(424): CodeIgniter\View\View->render('superadmin/side...', NULL, true)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\superadmin\layout.php(54): CodeIgniter\View\View->include('superadmin/side...')
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(226): CodeIgniter\View\View->render('superadmin/layo...', Array, true)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('superadmin/dash...', Array, true)
+#9 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\Superadmin\DashboardController.php(30): view('superadmin/dash...', Array)
+#10 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\Superadmin\DashboardController->index()
+#11 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Superadmin\DashboardController))
+#12 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#15 {main}
