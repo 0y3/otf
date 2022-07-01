@@ -21,8 +21,8 @@ class DashboardController extends BaseController
     public function index()
     {
         $this->data = [
-            'title' => "OTF :- Home",
-            'currentMenu'   => 'home',
+            'title' => "OTF :- Dashboard Super Admin",
+            'currentMenu'   => 'dashboard',
             'encrypter'     => $this->encrypter,
             'deliveryloc'   => $this->deliveryLocate->getDeliveryLocate(),
         ];

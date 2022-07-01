@@ -36,6 +36,7 @@
 		<!--begin::Global Stylesheets Bundle(used by all pages)-->
 		<link href="/admin/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="/admin/css/style.bundle.css" rel="stylesheet" type="text/css" />
+      <?= $this->renderSection("styles"); ?>
       
       <script>var base_url = '<?=base_url()?>';</script>
       <script>var current_url = '<?=current_url()?>';</script>
@@ -104,12 +105,22 @@
 		<script src="../../../../cdn.amcharts.com/lib/5/themes/Animated.js"></script> -->
 		<script src="/admin/plugins/custom/datatables/datatables.bundle.js"></script>
 		<!--end::Page Vendors Javascript-->
+
+      
+      <!-- axios -->
+      <script src="/vendor/axios/axios.min.js"></script>
+      <!-- lodash -->
+      <script src="/vendor/lodash/lodash.js"></script>
+      
 		<!--begin::Page Custom Javascript(used by this page)-->
 		<script src="/admin/js/widgets.bundle.js"></script>
 		<script src="/admin/js/custom/widgets.js"></script>
 		<script src="/admin/js/custom/apps/chat/chat.js"></script>
 		<script src="/admin/js/custom/intro.js"></script>
 		<!--end::Page Custom Javascript-->
+      <!-- <script src="/admin/js/custom/datatable/vendor.js"></script> -->
 		<!--end::Javascript-->
+
+      <?= $this->renderSection("scripts"); ?>
    </body>
 </html>

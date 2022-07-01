@@ -40,7 +40,7 @@ $routes->setAutoRoute(true);
  *  [a-z0-9]+     # One or more repetition of given characters
  *  (?:           # A non-capture group.
  *    -           # A hyphen
- *    [a-z0-9]+   # One or more repetition of given characters
+ *    [A-Z0-9]+   # One or more repetition of given characters
  *  )*            # Zero or more repetition of previous group
  *
  *  This will match:
@@ -70,8 +70,8 @@ $routes->setAutoRoute(true);
     $routes->get("signup", "AuthenticationController::signup");
     $routes->get("login", "AuthenticationController::login");
     $routes->get("logout", "AuthenticationController::logout");
-    $routes->get("authentication/activationemail/(:any)/(:any)", "AuthenticationController::activateConfirmUser/$1/$2");
-    $routes->get("authentication/resetpasswordemail/(:any)/(:any)", "AuthenticationController::resetPasswordConfirmUser/$1/$2");
+    $routes->get("authentication/activationemail/(:segment)/(:segment)", "AuthenticationController::activateConfirmUser/$1/$2");
+    $routes->get("authentication/resetpasswordemail/(:segment)/(:segment)", "AuthenticationController::resetPasswordConfirmUser/$1/$2");
     $routes->post("signup", "AuthenticationController::signup_");
     $routes->post("login", "AuthenticationController::login_");
     $routes->post("deliverylocation", 'BizController::deliveryLocation_');
@@ -84,26 +84,26 @@ $routes->setAutoRoute(true);
     $routes->get(VENDOR_PART, 'BizController::index/'.VENDOR_PART);
 
     //get details of vendor by slug
-    $routes->get(VENDOR_REST.'/(:slug)', 'BizController::bizCategoryMenu/$1');
-    $routes->get(VENDOR_GROC.'/(:slug)', 'BizController::bizCategoryMenu/$1');
-    $routes->get(VENDOR_PART.'/(:slug)', 'BizController::bizCategoryMenu/$1');
+    $routes->get(VENDOR_REST.'/(:segment)', 'BizController::bizCategoryMenu/$1');
+    $routes->get(VENDOR_GROC.'/(:segment)', 'BizController::bizCategoryMenu/$1');
+    $routes->get(VENDOR_PART.'/(:segment)', 'BizController::bizCategoryMenu/$1');
 
     // get vendor Checkout
-    $routes->get(VENDOR_REST.'/(:slug)/checkout', 'BizController::checkOut/$1');
-    $routes->get(VENDOR_GROC.'/(:slug)/checkout', 'BizController::checkOut/$1');
-    $routes->get(VENDOR_PART.'/(:slug)/checkout', 'BizController::checkOut/$1');
+    $routes->get(VENDOR_REST.'/(:segment)/checkout', 'BizController::checkOut/$1');
+    $routes->get(VENDOR_GROC.'/(:segment)/checkout', 'BizController::checkOut/$1');
+    $routes->get(VENDOR_PART.'/(:segment)/checkout', 'BizController::checkOut/$1');
     
     // get vendor menu
-    $routes->get(VENDOR_REST.'/(:slug)/(:any)', 'BizController::menu/$1/$2');
-    $routes->get(VENDOR_GROC.'/(:slug)/(:any)', 'BizController::groceryMenu/$1/$2');
-    $routes->get(VENDOR_PART.'/(:slug)/(:any)', 'BizController::partyMenu/$1/$2');
+    $routes->get(VENDOR_REST.'/(:segment)/(:segment)', 'BizController::menu/$1/$2');
+    $routes->get(VENDOR_GROC.'/(:segment)/(:segment)', 'BizController::groceryMenu/$1/$2');
+    $routes->get(VENDOR_PART.'/(:segment)/(:segment)', 'BizController::partyMenu/$1/$2');
 
     
 
     // Add to Cart
     $routes->post('addtocart', 'BizController::addToCart');
     // Remove from Cart
-    $routes->get('removecart/(:any)', 'BizController::removeCart/$1');
+    $routes->get('removecart/(:segment)', 'BizController::removeCart/$1');
     
   });
 
@@ -111,14 +111,45 @@ $routes->setAutoRoute(true);
 
     $routes->get('profile', 'UsersController::index');
     $routes->get('order', 'UsersController::order');
-    $routes->get('order/(:any)', 'UsersController::orderDetails/$1');
+    $routes->get('order/(:segment)', 'UsersController::orderDetails/$1');
 
   });
 
 
   $routes->group('otfadmin', ['namespace' => 'App\Controllers\Web\Superadmin'], function ($routes) {
+    
+    $routes->get("login", "AuthenticationController::login");
+    $routes->post("login", "AuthenticationController::_login");
+    $routes->get("logout", "AuthenticationController::logout");
 
     $routes->get('dashboard', 'DashboardController::index');
+
+    // view All Vendor
+    $routes->get('vendor', 'BizController::index');
+    $routes->get('vendor/(:segment)', 'BizController::overview/$1', ['as' => 'vendor']);
+
+    
+    $routes->post('add/vendor', 'BizController::add');
+    $routes->put('edit/vendor/(:segment)', 'BizController::edit/$1', ['as' => 'vendor_edit']);
+
+    $routes->get('checkbizname', 'AuthenticationController::checkbizname');
+
+    
+
+    $routes->get('vendor/(:segment)/menus', 'BizController::menus/$1', ['as' => 'vendor_menus']);
+    $routes->get('vendor/(:segment)/menus/(:segment)', 'BizController::menus/$1/$2', ['as' => 'vendor_menus_details']);
+
+    // Generate the relative URL to link to user ID 15, gallery 12
+    // Generates: /vendor/the_place/menus/jollof_rice
+    // <a href= route_to('vendor_menus_details', 15, 12) >View Menu</a>
+
+    // view All Customer
+    $routes->get('customer', 'CustomersController::index');
+    $routes->get('customer/(:segment)', 'CustomersController::overview/$1', ['as' => 'customer']);
+
+  
+
+
 
   });
 
@@ -129,9 +160,11 @@ $routes->group('api', ['namespace' => 'App\Controllers\Api'],function ($routes) 
 
     # Biz Routes
     $routes->get('biz', 'BizController::index');
-    $routes->get('biz/(:slug)', 'BizController::show/$1');
-    $routes->get('biz/(:slug)/(:slug)', 'BizController::menu/$1/$2');
-    //$routes->get('biz/(:slug)', 'BizController::bizBySlug/$1');
+    $routes->get('biz/(:segment)', 'BizController::show/$1');
+    $routes->get('biz/(:segment)/(:segment)', 'BizController::menu/$1/$2');
+    //$routes->get('biz/(:segment)', 'BizController::bizBySlug/$1');
+
+    $routes->get('vendor', 'BizController::bizSuperAdminDataTable');
 });
 
 /*

@@ -201,8 +201,7 @@ class AuthenticationController extends BaseController
             $email  = $this->request->getVar('email',FILTER_SANITIZE_EMAIL);
             $password = $this->request->getVar('password');
             
-            $user = $this->users->where('email', $email)->first();
-    
+            $user = $this->users->asArray()->where('email', $email)->first();
             if($user){
                 $pwd_verify = verifyHashedPassword($password, $user['password']);
                 if($pwd_verify){

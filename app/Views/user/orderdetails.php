@@ -8,7 +8,7 @@
             <div class="col-md-9">
                 <div class="shadow-sm bg-white p-4 h-10000">
                     <h5 class="font-weight-bold mt-0 mb-2"><a href="<?= site_url($order->biz->biz_type.'/'.$order->biz->slug) ?>"><i class="icofont-food-cartt"></i></i><?=$order->biz->name?></a></h5>
-                    <p class="mb-1 text-blackk text-gray"><span class="text-black font-weight-bold"><i class="icofont-list"></i> Ref:</span> <?=$order->reference?></p>
+                    <p class="mb-1 text-blackk text-gray"><span class="text-black font-weight-bold"><i class="icofont-list"></i> Ref:</span> <?=$order->pi_reference?></p>
                     <p class="mb-1 text-black text-primary"><span class="text-black font-weight-bold"><i class="icofont-fast-delivery"></i> Delivered Fee:</span> ₦<?= number_format($order->delivery_fee,2)?>
                     <p class="mb-3 text-black text-primary"><span class="text-black font-weight-bold"><i class="icofont-pay"></i> Grand Total:</span> ₦<?= number_format($order->grand_total,2)?>
                     <?php foreach ($order->order_details as $orders) :?>

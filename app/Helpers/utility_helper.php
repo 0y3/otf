@@ -363,3 +363,16 @@ if (! function_exists('formatNumber'))
         return $number;
     }
 }
+
+if (! function_exists('mk_dir_vendor'))
+{
+    function mk_dir_vendor($file_path)
+    {
+        if(!file_exists($file_path)){
+            // Create a new file or direcotry
+            mkdir($file_path, 0777, true); 
+            return true;
+        }
+        else{return false;}
+    }
+}

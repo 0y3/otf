@@ -58,4 +58,5 @@ class BizMenuEntity extends Entity
 
 		return $data_;
 	}
+
 }

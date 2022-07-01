@@ -59,7 +59,7 @@ class UsersController extends BaseController
         ];
         $order = $this->order
                       ->where(self::filter)
-                      ->where(['user_id' => $_SESSION['userId'],'reference' => $ref])
+                      ->where(['user_id' => $_SESSION['userId'],'pi_reference' => $ref])
                       ->first();
         if($order)
         {

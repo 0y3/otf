@@ -218,7 +218,7 @@ class BizController extends ResourceController
         return $data;
     }
 
-    private function checkBizType()
+    public function checkBizType()
     {   
         //set biz type via session
 
@@ -232,5 +232,52 @@ class BizController extends ResourceController
 
         $data = isset($_SESSION['sessionBizType']) ? true : false;
         return $data;
+        
+        // $this->cachePage(60); // 60 seconds
+
+    }
+
+    public function bizSuperAdminDataTable()
+    {   
+        $params['draw'] = $_REQUEST['draw'];
+        $start = $_REQUEST['start'];
+        $length = $_REQUEST['length'];
+
+        /* Value we will get from typing in search */
+        $search_value = $_REQUEST['search']['value'];
+
+        if(!empty($search_value)){
+
+            $bizs = $this->biz
+                        ->where('isdeleted', 0)
+                        ->like('name', $search_value)->orlike('phone', $search_value)->orlike('email', $search_value)->orlike('biz_type', $search_value)
+                        ->orderBy('created_at','DESC')
+                        ->findAll();
+                        
+            $total_count = $this->biz->where('isdeleted', 0)
+                                ->like('name', $search_value)->orlike('phone', $search_value)->orlike('email', $search_value)->orlike('biz_type', $search_value)
+                                ->countAllResults();
+        }
+        else{
+
+            $bizs = $this->biz
+                        ->where('isdeleted', 0)
+                        ->limit($start, $length)
+                        ->orderBy('created_at','DESC')
+                        ->findAll(); 
+
+            $total_count = $this->biz->where('isdeleted', 0)->countAllResults();
+        }
+
+        $response = [
+            "draw" => intval($params['draw']),
+            'recordsTotal'     => $total_count,
+            'recordsFiltered'  => $total_count,
+            'data'      => $bizs
+        ];
+        
+        // $this->cachePage(60); // 60 seconds
+
+        return $this->respondCreated($response);
     }
 }
