@@ -8,6 +8,12 @@ dist/
 yarn.lock
 package-lock.json
 
+#session
+ci_session*
+
+#debug
+debugbar_*
+
 # Logs
 logs
 *.log
@@ -19,10 +25,10 @@ npm-debug.log*
 # Optional npm cache directory
 .npm
 
-# Optional REPL history
-.node_repl_history
+### VS Code ###
+.vscode/
 
-# Jest Coverage
-coverage
 
-.history/
+user_guide/
+
+HELP.md
