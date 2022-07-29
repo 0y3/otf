@@ -19,6 +19,8 @@ logs
 *.log
 npm-debug.log*
 
+.env
+
 # node-waf configuration
 .lock-wscript
 
