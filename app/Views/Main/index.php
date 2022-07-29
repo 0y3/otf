@@ -53,7 +53,7 @@
                               <a class="locate-me" href="#"><i class="icofont-ui-pointer"></i> Locate Me</a> -->
                            </div>
                         </div>
-                     </form>
+                     </form> 
                   </div>
                   <div class="row justify-content-center">
                      <div class="item">
