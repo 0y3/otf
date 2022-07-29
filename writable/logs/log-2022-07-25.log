@@ -1,0 +1,2932 @@
+ALERT - 2022-07-25 14:27:01 --> SELECT *
+FROM `admins`
+WHERE `email` = 'admin@otfonline.com.ng'
+AND `admins`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 14:27:02 --> SELECT `delivery_locations`.*, `state_cities`.`city_name`, `states`.`state_name`
+FROM `delivery_locations`
+LEFT JOIN `state_cities` ON `delivery_locations`.`city_id` = `state_cities`.`id`
+LEFT JOIN `states` ON `delivery_locations`.`state_id` = `states`.`id`
+WHERE `delivery_locations`.`deleted_at` IS NULL
+ORDER BY `state_name` ASC, `city_name` ASC
+ALERT - 2022-07-25 14:27:07 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 14:27:07 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 14:27:07 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 14:27:08 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 14:27:08 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 14:27:08 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 14:27:08 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 14:27:08 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 14:27:08 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 14:27:08 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 14:27:08 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 14:27:08 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 14:27:08 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 14:27:08 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 14:27:31 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'r'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 14:27:36 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'm'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 14:27:38 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'm'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 14:27:39 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'ma'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 14:27:40 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'mai'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 14:27:41 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'main'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 14:28:40 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'main'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 14:28:41 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 16:48:49 --> SELECT *
+FROM `admins`
+WHERE `email` = 'admin@otfonline.com.ng'
+AND `admins`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 16:48:51 --> SELECT `delivery_locations`.*, `state_cities`.`city_name`, `states`.`state_name`
+FROM `delivery_locations`
+LEFT JOIN `state_cities` ON `delivery_locations`.`city_id` = `state_cities`.`id`
+LEFT JOIN `states` ON `delivery_locations`.`state_id` = `states`.`id`
+WHERE `delivery_locations`.`deleted_at` IS NULL
+ORDER BY `state_name` ASC, `city_name` ASC
+ALERT - 2022-07-25 16:49:16 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 16:49:16 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 16:49:16 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 16:49:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 16:49:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 16:49:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 16:49:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 16:49:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 16:49:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 16:49:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 16:49:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 16:49:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 16:49:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 16:49:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 16:52:22 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 16:52:22 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 16:52:22 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 16:52:22 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 16:52:22 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 16:52:22 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 16:52:22 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 16:52:22 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 16:52:22 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 16:52:22 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 16:52:22 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 16:52:22 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 16:52:22 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 16:52:22 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:03:51 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:03:51 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:03:51 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:03:51 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:03:51 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:03:51 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:03:51 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:03:51 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:03:51 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:03:51 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:03:51 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:03:52 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:03:52 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:03:52 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:04:59 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:04:59 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:04:59 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:04:59 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:04:59 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:04:59 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:04:59 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:04:59 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:04:59 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:04:59 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:04:59 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:04:59 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:04:59 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:04:59 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:07:08 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:07:08 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:07:08 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:07:08 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:07:08 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:07:08 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:07:08 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:07:08 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:07:08 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:07:08 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:07:08 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:07:08 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:07:08 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:07:08 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:07:20 --> SELECT *
+FROM `admins`
+WHERE `email` = 'admin@otfonline.com.ng'
+AND `admins`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:07:22 --> SELECT `delivery_locations`.*, `state_cities`.`city_name`, `states`.`state_name`
+FROM `delivery_locations`
+LEFT JOIN `state_cities` ON `delivery_locations`.`city_id` = `state_cities`.`id`
+LEFT JOIN `states` ON `delivery_locations`.`state_id` = `states`.`id`
+WHERE `delivery_locations`.`deleted_at` IS NULL
+ORDER BY `state_name` ASC, `city_name` ASC
+ALERT - 2022-07-25 17:07:34 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:07:34 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:07:34 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:07:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:07:34 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:07:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:07:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:07:34 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:07:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:07:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:07:34 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:07:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:07:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:07:34 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:09:09 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:09:09 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:09:09 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:09:09 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:09:09 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:09:09 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:09:09 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:09:09 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:09:09 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:09:09 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:09:09 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:09:09 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:09:09 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:09:09 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:10:13 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:10:13 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:10:13 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:10:13 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:10:13 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:10:13 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:10:13 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:10:13 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:10:13 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:10:13 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:10:13 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:10:13 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:10:13 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:10:13 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:12:34 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:12:34 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:12:34 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:12:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:12:35 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:12:35 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:12:35 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:12:35 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:12:35 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:12:35 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:12:35 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:12:35 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:12:35 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:12:35 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:13:31 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:13:31 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:13:31 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:13:31 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:13:31 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:13:31 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:13:31 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:13:31 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:13:31 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:13:31 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:13:31 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:13:31 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:13:31 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:13:31 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:14:10 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:14:10 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:14:10 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:14:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:14:10 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:14:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:14:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:14:10 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:14:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:14:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:14:10 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:14:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:14:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:14:10 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:15:42 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:15:42 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:15:42 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:15:42 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:15:43 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:15:43 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:15:43 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:15:43 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:15:43 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:15:43 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:15:43 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:15:43 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:15:43 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:15:43 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:16:29 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:16:29 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:16:29 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:16:29 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:16:29 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:16:29 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:16:29 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:16:29 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:16:29 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:16:29 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:16:29 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:16:29 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:16:29 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:16:29 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:18:16 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:18:16 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:18:16 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:18:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:18:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:18:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:18:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:18:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:18:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:18:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:18:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:18:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:18:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:18:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:19:07 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:19:07 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:19:07 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:19:07 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:19:07 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:19:07 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:19:07 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:19:07 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:19:07 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:19:07 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:19:07 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:19:07 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:19:07 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:19:07 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:22:16 --> SELECT *
+FROM `bizs`
+WHERE `status` = 1
+AND `isdeleted` = 0
+AND `biz_type` = 'restaurant'
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:22:16 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:22:16 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:22:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:22:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:22:16 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:22:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:22:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:22:16 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:22:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:22:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:22:16 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:22:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:22:16 --> SELECT `delivery_locations`.*, `state_cities`.`city_name`, `states`.`state_name`
+FROM `delivery_locations`
+LEFT JOIN `state_cities` ON `delivery_locations`.`city_id` = `state_cities`.`id`
+LEFT JOIN `states` ON `delivery_locations`.`state_id` = `states`.`id`
+WHERE `delivery_locations`.`deleted_at` IS NULL
+ORDER BY `state_name` ASC, `city_name` ASC
+ALERT - 2022-07-25 17:32:10 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:32:10 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:32:10 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:32:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:32:10 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:32:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:32:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:32:10 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:32:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:32:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:32:10 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:32:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:32:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:32:10 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:38:16 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:38:16 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:38:16 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:38:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:38:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:38:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:38:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:38:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:38:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:38:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:38:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:38:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:38:16 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:38:16 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:39:21 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:39:21 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:39:21 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:39:21 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:39:21 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:39:21 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:39:21 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:39:21 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:39:21 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:39:21 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:39:21 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:39:21 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:39:21 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:39:21 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:49:57 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:49:57 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:49:57 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:49:57 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:49:57 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:49:57 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:49:57 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:49:57 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:49:57 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:49:57 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:49:57 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:49:57 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:49:57 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:49:57 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:50:33 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:50:33 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:50:33 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:50:33 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:50:33 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:50:33 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:50:33 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:50:33 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:50:33 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:50:33 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:50:33 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:50:33 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:50:33 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:50:33 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:50:58 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:50:58 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:50:58 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:50:58 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:50:58 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:50:58 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:50:58 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:50:58 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:50:58 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:50:58 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:50:58 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:50:58 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:50:58 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:50:58 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:51:19 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:51:19 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:51:19 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:51:19 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:51:19 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:51:19 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:51:19 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:51:19 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:51:19 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:51:19 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:51:19 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:51:19 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:51:19 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:51:19 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:53:59 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:53:59 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:53:59 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:53:59 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:53:59 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:53:59 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:53:59 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:53:59 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:53:59 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:53:59 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:53:59 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:53:59 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:53:59 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:53:59 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:55:10 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:55:10 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:55:10 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:55:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:55:10 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:55:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:55:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:55:10 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:55:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:55:10 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:55:10 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:55:11 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:55:11 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:55:11 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:55:44 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:55:44 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 17:55:44 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 17:55:44 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:55:44 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:55:44 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:55:44 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:55:44 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:55:44 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:55:44 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:55:44 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:55:44 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:55:44 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 17:55:44 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 17:59:39 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'Wilson'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:59:43 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'Wilson'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 17:59:45 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:00:12 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:00:12 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 18:00:12 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 18:00:12 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:00:12 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:00:12 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:00:12 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:00:12 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:00:12 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:00:12 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:00:12 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:00:12 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:00:12 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:00:12 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:00:56 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:00:56 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 18:00:56 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 18:00:56 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:00:56 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:00:56 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:00:56 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:00:56 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:00:56 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:00:56 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:00:56 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:00:57 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:00:57 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:00:57 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:02:36 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:02:36 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 18:02:36 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 18:02:36 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:02:36 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:02:36 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:02:36 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:02:36 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:02:37 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:02:37 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:02:37 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:02:37 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:02:37 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:02:37 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:03:53 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:03:53 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 18:03:53 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 18:03:53 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:03:53 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:03:53 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:03:53 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:03:53 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:03:53 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:03:53 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:03:53 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:03:53 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:03:53 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:03:53 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:04:46 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:04:46 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 18:04:46 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 18:04:46 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:04:46 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:04:46 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:04:46 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:04:46 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:04:46 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:04:46 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:04:46 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:04:46 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:04:46 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:04:46 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:06:11 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:06:11 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 18:06:11 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 18:06:11 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:06:11 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:06:11 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:06:11 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:06:11 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:06:11 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:06:11 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:06:11 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:06:11 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:06:11 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:06:11 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:06:34 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:06:34 --> SELECT *
+FROM `states`
+WHERE `states`.`id` = '32'
+ALERT - 2022-07-25 18:06:34 --> SELECT *
+FROM `state_cities`
+WHERE `state_cities`.`id` = '637'
+ALERT - 2022-07-25 18:06:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_menus`.`biz_id` = '3'
+AND `biz_menus`.`isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:06:34 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = 0
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:06:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '11'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:06:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '11'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:06:34 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '11'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:06:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '12'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:06:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '12'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:06:34 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '12'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:06:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `biz_menu_category_id` = '13'
+AND `biz_menus`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:06:34 --> SELECT COUNT(*) AS `numrows`
+FROM `biz_menu_categories`
+WHERE `biz_id` = '3'
+AND `menu_parent_id` = '13'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ALERT - 2022-07-25 18:06:34 --> SELECT *
+FROM `biz_menu_categories`
+WHERE `menu_parent_id` = '13'
+AND `status` = 1
+AND `isdeleted` = 0
+AND `biz_id` = '3'
+AND `biz_menu_categories`.`deleted_at` IS NULL
+ORDER BY `sort` ASC
+ALERT - 2022-07-25 18:06:51 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'images'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:07:00 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'images'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:07:02 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:07:17 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'images'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:07:19 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:31:34 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'images'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:31:35 --> SELECT *
+FROM `bizs`
+WHERE `isdeleted` = 0
+AND `slug` = 'the_place'
+AND `bizs`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:39:41 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'images'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+CRITICAL - 2022-07-25 18:39:42 --> Attempt to read property "addupctgy" on array
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\Superadmin\MenuController.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 117)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\Superadmin\MenuController->add_('the_place')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Superadmin\MenuController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ALERT - 2022-07-25 18:41:42 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'images'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:42:40 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'images'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:48:26 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'images'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:48:59 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'images'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 18:50:20 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'images'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 23:26:15 --> SELECT *
+FROM `admins`
+WHERE `email` = 'admin@otfonline.com.ng'
+AND `admins`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 23:26:17 --> SELECT `delivery_locations`.*, `state_cities`.`city_name`, `states`.`state_name`
+FROM `delivery_locations`
+LEFT JOIN `state_cities` ON `delivery_locations`.`city_id` = `state_cities`.`id`
+LEFT JOIN `states` ON `delivery_locations`.`state_id` = `states`.`id`
+WHERE `delivery_locations`.`deleted_at` IS NULL
+ORDER BY `state_name` ASC, `city_name` ASC
+ALERT - 2022-07-25 23:27:53 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'images'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 23:29:06 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'images'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 23:39:50 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'images'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1
+ALERT - 2022-07-25 23:47:59 --> SELECT *
+FROM `biz_menus`
+WHERE `biz_id` = '3'
+AND `name` = 'images'
+AND `isdeleted` = 0
+AND `biz_menus`.`deleted_at` IS NULL
+ LIMIT 1

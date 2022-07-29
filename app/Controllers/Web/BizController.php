@@ -30,6 +30,7 @@ class BizController extends BaseController
         $this->stateModel       =  model('StateModel');
         $this->cityModel        =  model('StateCityModel');
         $this->deliveryLocate   = model('DeliveryLocationsModel');
+        $this->user             = model('UserModel');
         $this->cart             = cart();
         
     }
@@ -70,9 +71,9 @@ class BizController extends BaseController
             redirect()->to('');
         }
         else{
-            if (url_is(VENDOR_REST.'*')) {$biztype = VENDOR_REST; $where =['biz_type' => VENDOR_REST,'slug' => $slug];}
-            if (url_is(VENDOR_GROC.'*')) {$biztype = VENDOR_GROC; $where =['biz_type' => VENDOR_GROC,'slug' => $slug];}
-            if (url_is(VENDOR_PART.'*')) {$biztype = VENDOR_PART; $where =['biz_type' => VENDOR_PART,'slug' => $slug];}
+            if (url_is(VENDOR_REST.'*')) {$biztype = VENDOR_REST; $page_view = 'main/bizcategorymenu'; $where =['biz_type' => VENDOR_REST,'slug' => $slug];}
+            if (url_is(VENDOR_GROC.'*')) {$biztype = VENDOR_GROC; $page_view = 'main/bizcategorymenu_gp'; $where =['biz_type' => VENDOR_GROC,'slug' => $slug];}
+            if (url_is(VENDOR_PART.'*')) {$biztype = VENDOR_PART; $page_view = 'main/bizcategorymenu_gp'; $where =['biz_type' => VENDOR_PART,'slug' => $slug];}
         }
         $biz = $this->biz
                     ->where(self::filter)
@@ -88,6 +89,7 @@ class BizController extends BaseController
             }
             if($checkcart == false){
                 $this->cart->destroy(); 
+                $this->session->remove('cart_adds');
             }
                 
             $this->data = [
@@ -104,9 +106,8 @@ class BizController extends BaseController
                 'deliveryloc'   => $this->deliveryLocate->getDeliveryLocate(),
             ];
             
-            
-            //print("<pre>".print_r($this->data,true)."</pre>");die;
-            return view('main/bizcategorymenu', $this->data);
+            // print("<pre>".print_r($biz->NestedCategories(),true)."</pre>");die;
+            return view($page_view, $this->data);
         }
         else{  
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
@@ -118,7 +119,8 @@ class BizController extends BaseController
         // print("<pre>".print_r(site_url(uri_string(true)),true)."</pre>");die;
         $biz = $this->biz
                     ->where(self::filter)
-                    ->where(['biz_type' => VENDOR_REST,'slug' => $bizslug])
+                    ->where([//'biz_type' => VENDOR_REST,
+                            'slug' => $bizslug])
                     ->first();
         if($biz){
             
@@ -276,7 +278,6 @@ class BizController extends BaseController
     public function checkOut($slug)
     {
         // print("<pre>".print_r(site_url(uri_string(true)),true)."</pre>");die;
-        
         if ($slug === false) {
             redirect()->to('');
         }
@@ -303,16 +304,22 @@ class BizController extends BaseController
                         $checkcart = true;
                     }else{ $checkcart = false; break;}
                 }
-                if($checkcart == false){$this->cart->destroy(); return redirect()->back();}
+                if($checkcart == false){$this->cart->destroy(); $this->session->remove('cart_adds'); return redirect()->to($where['biz_type'].'/'.$slug);}
             }
-
-            // check if login 
+            
+            // check if login
             if(!$this->session->get('isLoggedIn')){
                 return setBackUrl(site_url(uri_string()));
             }
-            $delivery_fee = 2000;
+            $user = $this->user->where(self::filter)->where('id',$_SESSION['userId'])->first();
+            
+            $delivery_fee = $this->encrypter->decrypt(base64_decode(getDeliveryLocationTemp()['deliveryLocate']));
             $sum_total = (float)$this->cart->total();
             $grand_total = $sum_total + $delivery_fee;
+            $this->session->set('cart_adds', [
+                                'delivery_fee'=> (int)$delivery_fee,
+                                'user_address_id'=> '',
+                            ]);
 
             $this->data = [
                 'encrypter'     => $this->encrypter,
@@ -326,10 +333,11 @@ class BizController extends BaseController
                 'sum_total'     => $sum_total,
                 'grand_total'   => $grand_total,
                 'deliveryloc'   => $this->deliveryLocate->getDeliveryLocate(),
+                'user'          => $user,
             ];
                 // print("<pre>".print_r($this->data['cart'],true)."</pre>");
                 //print("<pre>".print_r(json_encode($this->data['cart']['d33443769121f404c7c87015223dac57']['addups'],JSON_PRETTY_PRINT),true)."</pre>");die;
-                //print("<pre>".print_r($this->data['cart'],true)."</pre>");die;
+                
                 return view('main/checkout', $this->data);
         }
         else{ throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();}
@@ -340,11 +348,27 @@ class BizController extends BaseController
         if($this->request->getVar('deliveryId')){$id = $this->request->getVar('deliveryId');}
         setDeliveryLocationTemp($id);
         $data = [
-            'deliveryLocateId'    => $id,
-            'deliveryLocateState' => getDeliveryLocationTemp()['deliveryLocateState'],
+            'deliveryLocateId'    => getDeliveryLocationTemp()['deliveryLocateId'],
+            'deliveryLocate'      => getDeliveryLocationTemp()['deliveryLocate'],
             'deliveryLocateCity'  => getDeliveryLocationTemp()['deliveryLocateCity'],
+            'deliveryLocateState' => getDeliveryLocationTemp()['deliveryLocateState'],
 
         ];
+        return $this->respond($data);
+    }
+
+    public function deliveryAddress_()
+    {
+        $address_id = $this->request->getVar('userAddressId');
+        $delivery_id =  $this->encrypter->decrypt(base64_decode($this->request->getVar('deliveryId')));
+        $data= $this->deliveryLocate->where(self::filter)->where('id', $delivery_id)->first();
+
+        if($this->session->has('cart_adds')){
+            $this->session->set('cart_adds', [
+                'delivery_fee'=> (int)$data['fee'],
+                'user_address_id'=> $address_id,
+            ]);
+        }
         return $this->respond($data);
     }
 
@@ -353,9 +377,10 @@ class BizController extends BaseController
         if(getDeliveryLocationTemp())
         {
             $data = [
-                'deliveryLocateId'    => $this->encrypter->decrypt(getDeliveryLocationTemp()['deliveryLocateId']),
-                'deliveryLocateState' => getDeliveryLocationTemp()['deliveryLocateState'],
+                'deliveryLocate'      => $this->encrypter->decrypt(base64_decode(getDeliveryLocationTemp()['deliveryLocate'])),
+                'deliveryLocateId'    => $this->encrypter->decrypt(base64_decode(getDeliveryLocationTemp()['deliveryLocateId'])),
                 'deliveryLocateCity'  => getDeliveryLocationTemp()['deliveryLocateCity'],
+                'deliveryLocateState' => getDeliveryLocationTemp()['deliveryLocateState'],
 
             ];
             return $this->respond($data);

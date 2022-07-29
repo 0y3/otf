@@ -3,9 +3,12 @@
 namespace App\Controllers\Web\Superadmin;
 
 use App\Controllers\BaseController;
+use CodeIgniter\API\ResponseTrait;
 
 class DashboardController extends BaseController
 {
+    use ResponseTrait;
+
     function __construct()
     {
         $this->request          = service('request');

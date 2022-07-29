@@ -14,7 +14,7 @@ class DeliveryLocationsModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = ['fee','city_id','state_id','status'];
+    protected $allowedFields    = ['fee','city_id','state_id','status','isdeleted'];
 
     // Dates
     protected $useTimestamps = true;

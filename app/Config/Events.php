@@ -47,4 +47,9 @@ Events::on('pre_system', static function () {
         Events::on('DBQuery', 'CodeIgniter\Debug\Toolbar\Collectors\Database::collect');
         Services::toolbar()->respond();
     }
+
+    // Events::on('DBQuery',static function (\CodeIgniter\Database\Query $query) { 
+    //     log_message('alert', (string) $query); 
+    //     }
+    // ); 
 });

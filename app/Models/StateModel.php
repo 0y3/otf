@@ -14,7 +14,7 @@ class StateModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['state_name'];
+    protected $allowedFields    = ['state_name','code'];
 
     // Dates
     protected $useTimestamps = false;

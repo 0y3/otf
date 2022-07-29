@@ -16,6 +16,8 @@
       <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#ae0bce">
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#ffffff">
+      
+      <?= $this->renderSection("styles"); ?>
       <!-- Bootstrap core CSS-->
       <link href="/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
       <!-- Font Awesome-->
@@ -24,15 +26,25 @@
       <link href="/vendor/icofont/icofont.min.css" rel="stylesheet">
       <!-- Select2 CSS-->
       <link href="/vendor/select2/css/css/select2.min.css" rel="stylesheet">
+      
       <!-- Custom styles for this template-->
       <link href="/css/style.css" rel="stylesheet">
       <!-- Owl Carousel -->
       <link rel="stylesheet" href="/vendor/owl-carousel/owl.carousel.css">
       <link rel="stylesheet" href="/vendor/owl-carousel/owl.theme.css">
+
       <script>var base_url = '<?=base_url()?>';</script>
       <script>var current_url = '<?=current_url()?>';</script>
       <script>var previous_url = '<?=previous_url()?>';</script>
       <script>var main_url = '<?=site_url(uri_string())?>';</script>
+      <style>
+         .img-fluid-img {
+            max-width: 100%;
+            width: 350px;
+            height: 120px;
+
+         }
+      </style>
    </head>
    <body>
        <!-- Header with logos -->
@@ -65,5 +77,8 @@
       <script src="/vendor/lodash/lodash.js"></script>
       <!-- Custom scripts for all pages-->
       <script src="/js/custom.js"></script>
+      
+
+      <?= $this->renderSection("scripts"); ?>
    </body>
 </html>

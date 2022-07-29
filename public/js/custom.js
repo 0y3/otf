@@ -54,6 +54,41 @@ Version: 1.0
         }
     })
 
+    $('input[type=radio][name=address_id]').change(function() {
+        if ($(this).is(':checked')) {
+
+            axios.post(base_url + '/deliveryaddress', {
+                    userAddressId: $(this).val(),
+                    deliveryId: $(this).data("deliverylocations"),
+                })
+                .then(function(response) {
+                    $('.delivery-fee').attr('data-deliverylocationfee', response.data.fee);
+                    $('.delivery-fee').html(`₦${ parseFloat(response.data.fee).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}`);
+
+                    let sum_total = parseFloat(response.data.fee) + parseFloat($('.subtotal').attr('data-subtotal'));
+                    $('.grand-total').text('₦' + parseFloat(sum_total).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'));
+                })
+                .catch(function(error) {
+                    console.log(error);
+                })
+        }
+    });
+    // Add to NEW Address Button
+    // $(document).on('click', '#user_address_submit', function(e) {
+    $('#addAddress').submit(function(e) {
+        // Prevent default button action
+        e.preventDefault();
+        var formData = new FormData($(this)[0]);
+        axios.post(base_url + '/user/add/address', formData)
+            .then(function(response) {
+                // console.log(response.data.cart);
+                location.reload(true);
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+    });
+
     // ===========My Account Tabs============
     /*
     $(window).on('hashchange', function() {
@@ -354,6 +389,7 @@ $('#addupMenuModal').on('show.bs.modal', function(event) {
 //click dec in addup menu list
 // $('.dec').click((e) => {
 $(document).on('click', '.dec', function(e) {
+    let getnewmenuprice = 0;
     let inputmin = $('.count-number').find('#menuQTY_' + menu_var['menu_id']); // find the Quantity div
     var getoldinputmin = inputmin.val();
 
@@ -371,6 +407,8 @@ $(document).on('click', '.dec', function(e) {
         menu_var['menu_qty'] = getoldinputmin;
         menu_var['menu_subtotal'] = getnewmenuprice;
         //console.log(menu_var['menu_qty'] + '=' + menu_var['menu_price'] + '==' + getnewmenuprice);
+    } else {
+        getnewmenuprice = menu_var['menu_price'];
     }
     inputmin.val(getoldinputmin);
     subtotaldiv.find('.subtotalmenuprice').text(getnewmenuprice.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'));
@@ -522,7 +560,11 @@ function checkoutView(response) {
     }
     $('#order-count').text(parseInt(x) + ' Quantity');
     $('#checkout').html(html);
+    $('.subtotal').attr('data-subtotal', sum_);
     $('.subtotal').text('₦' + parseFloat(sum_).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'));
+
+    let sum_total = sum_ + parseFloat($('.delivery-fee').attr('data-deliverylocationfee'));
+    $('.grand-total').text('₦' + parseFloat(sum_total).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'));
 
 }
 //axios('/api/biz');

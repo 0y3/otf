@@ -74,9 +74,12 @@ $routes->setAutoRoute(true);
     $routes->get("authentication/resetpasswordemail/(:segment)/(:segment)", "AuthenticationController::resetPasswordConfirmUser/$1/$2");
     $routes->post("signup", "AuthenticationController::signup_");
     $routes->post("login", "AuthenticationController::login_");
+    $routes->post("deliveryaddress", 'BizController::deliveryAddress_');
     $routes->post("deliverylocation", 'BizController::deliveryLocation_');
     $routes->get("deliverylocation", 'BizController::getDeliveryLocation');
 
+    
+    $routes->get("emailtest", "AuthenticationController::emailTest");
 
     // get all vendor
     $routes->get(VENDOR_REST, 'BizController::index/'.VENDOR_REST);
@@ -113,15 +116,24 @@ $routes->setAutoRoute(true);
     $routes->get('order', 'UsersController::order');
     $routes->get('order/(:segment)', 'UsersController::orderDetails/$1');
 
-  });
+    $routes->get('verifypayment', 'UsersController::verifyPayment');
+    $routes->post('makepayment', 'UsersController::makePayment', ['as' => 'user_payment']);
+    
+    $routes->post('add/address', 'UsersController::address_');
 
+  });
 
   $routes->group('otfadmin', ['namespace' => 'App\Controllers\Web\Superadmin'], function ($routes) {
     
+    $routes->get("", "AuthenticationController::login");
     $routes->get("login", "AuthenticationController::login");
-    $routes->post("login", "AuthenticationController::_login");
+    $routes->post("login", "AuthenticationController::login_");
     $routes->get("logout", "AuthenticationController::logout");
 
+  });
+
+  $routes->group('otfadmin', ['namespace' => 'App\Controllers\Web\Superadmin','filter' => 'authAdminGuard'], function ($routes) {
+    
     $routes->get('dashboard', 'DashboardController::index');
 
     // view All Vendor
@@ -136,8 +148,28 @@ $routes->setAutoRoute(true);
 
     
 
-    $routes->get('vendor/(:segment)/menus', 'BizController::menus/$1', ['as' => 'vendor_menus']);
-    $routes->get('vendor/(:segment)/menus/(:segment)', 'BizController::menus/$1/$2', ['as' => 'vendor_menus_details']);
+    $routes->get('vendor/(:segment)/menus', 'MenuController::index/$1', ['as' => 'menus']);
+    $routes->get('vendor/(:segment)/menus/(:segment)', 'MenuController::details/$1/$2', ['as' => 'menu_details']);
+    $routes->get('vendor/(:segment)/add-menu', 'MenuController::add/$1', ['as' => 'menu_add']);
+    $routes->get('vendor/(:segment)/edit-menu/(:segment)', 'MenuController::edit/$1/$2', ['as' => 'menu_edit']);
+
+    $routes->get('menu/(:segment)/checkmenuname', 'MenuController::checkMenuName/$1');
+
+    $routes->post('add/menu/(:segment)', 'MenuController::add_/$1', ['as' => 'menu_new']);
+    $routes->put('edit/menu/(:segment)', 'MenuController::edit_/$1', ['as' => 'menu_update']);
+
+
+    $routes->get('vendor/(:segment)/menu-categories', 'MenuController::menuCategory/$1', ['as' => 'menucategory']);
+    $routes->get('vendor/(:segment)/add-menu-category', 'MenuController::menuCategoryAdd/$1', ['as' => 'menucategory_add']);
+    $routes->get('vendor/(:segment)/edit-menu-category/(:segment)', 'MenuController::menuCategoryEdit/$1/$2', ['as' => 'menucategory_edit']);
+
+    $routes->get('menu/checkmenuctgyname', 'MenuController::checkMenuCategoryName');
+
+    $routes->post('add/menu-category/(:segment)', 'MenuController::menuCategoryAdd_/$1', ['as' => 'menucategory_new']);
+    $routes->post('add/menu-category-child/(:segment)/(:segment)', 'MenuController::menuCategoryAdd_/$1/$2');
+    $routes->post('edit/menu-category/(:segment)', 'MenuController::menuCategoryEdit_/$1', ['as' => 'menucategory_update']);
+    $routes->delete('delete/menu-category/(:segment)', 'MenuController::menuCategoryDelete/$1', ['as' => 'menucategory_delete']);
+
 
     // Generate the relative URL to link to user ID 15, gallery 12
     // Generates: /vendor/the_place/menus/jollof_rice
@@ -147,7 +179,9 @@ $routes->setAutoRoute(true);
     $routes->get('customer', 'CustomersController::index');
     $routes->get('customer/(:segment)', 'CustomersController::overview/$1', ['as' => 'customer']);
 
-  
+    $routes->post('add/address/(:segment)', 'CustomersController::address_/$1');
+    $routes->post('edit/address/(:segment)', 'CustomersController::addressEdit/$1', ['as' => 'address_edit']);
+    $routes->delete('delete/address/(:segment)', 'CustomersController::addressDelete/$1', ['as' => 'address_delete']);
 
 
 

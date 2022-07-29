@@ -111,6 +111,9 @@
       <script src="/vendor/axios/axios.min.js"></script>
       <!-- lodash -->
       <script src="/vendor/lodash/lodash.js"></script>
+	  
+	  <!-- Encrypt and Decrypt -->
+	  <script src="<?=base_url('vendor/crypto/crypto-js.min.js')?>"></script>
       
 		<!--begin::Page Custom Javascript(used by this page)-->
 		<script src="/admin/js/widgets.bundle.js"></script>

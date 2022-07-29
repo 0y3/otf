@@ -3,9 +3,12 @@
 namespace App\Controllers\Web\Superadmin;
 
 use App\Controllers\BaseController;
+use CodeIgniter\API\ResponseTrait;
 
 class CustomersController extends BaseController
 {
+    use ResponseTrait;
+    
     const filter = [
         'isdeleted'     =>0
     ];
@@ -22,16 +25,14 @@ class CustomersController extends BaseController
         $this->orderDetails     = model('OrderDetailModel');
         $this->stateModel       = model('StateModel');
         $this->cityModel        = model('StateCityModel');
+        $this->userAddress      = model('UserAddressModel');
+        $this->deliveryLocate   = model('DeliveryLocationsModel');
         
     }
 
     public function index()
     {
-        $users = $this->user
-                ->select('users.*,count(orders.id) as user_orders',)
-                ->join('orders', 'users.id = orders.user_id', 'left')
-                ->where(['users.isdeleted' => 0 ,'orders.status' => 1 ,'orders.isdeleted' => 0])
-                ->orderBy('users.created_at','DESC')->findAll();
+        $users = $this->user->UserAndOrder_();
 
         $breadcrumb =   ' <li class="breadcrumb-item"><span class="bullet bg-gray-200 w-5px h-2px"></span></li>
                                 <li class="breadcrumb-item text-dark">Customers</li>';
@@ -67,7 +68,8 @@ class CustomersController extends BaseController
                 'parentMenu'    => "customers",
                 'currentMenu'   => 'overview',
                 'breadcrumb'    => $breadcrumb,
-                'user'          => $user
+                'user'          => $user,
+                'deliveryloc'   => $this->deliveryLocate->getDeliveryLocate(),
                 // 'menuByCategory'  => $biz->NestedCategories(),
             ];
 
@@ -114,5 +116,59 @@ class CustomersController extends BaseController
             return view('user/orderdetails', $this->data);
         }
         else{return redirect()->back();}
+    }
+
+    public function address_($id=null)
+    {    
+        // print("<pre>".print_r($this->request->getPostGet(),true)."</pre>");die;
+
+        $bizloc = $this->request->getVar('delivery');
+        $deliveryloc = $this->deliveryLocate->where('id',$bizloc)->first();
+
+        $data = [
+            'user_id'   => $id,
+            'address'   => $this->request->getVar('address'),
+            'phone'     => $this->request->getVar('phone'),
+            'city_id'   => (int)$deliveryloc['city_id'],
+            'state_id'  => (int)$deliveryloc['state_id'],
+        ];
+        $data_ = $this->userAddress->insert($data);
+        
+        //  return print("<pre>".print_r($data,true)."</pre>");die;
+         return $this->respond($data_); //json
+        // Redirect to the cart page
+    }
+
+    public function addressEdit($id=null)
+    {    
+        // $postData = $this->request->getPost();
+        // $postData['address'];
+
+        // $id_ = base64_decode($this->encrypter->decrypt($id));
+        $id_ = base64_decode($id);
+        $bizloc = $this->request->getVar('delivery');
+        $deliveryloc = $this->deliveryLocate->where('id',$bizloc)->first();
+
+        $data = [
+            'address'   => $this->request->getVar('address'),
+            'phone'     => $this->request->getVar('phone'),
+            'city_id'   => (int)$deliveryloc['city_id'],
+            'state_id'  => (int)$deliveryloc['state_id'],
+        ];
+
+        $data_ = $this->userAddress->update($id_,$data);
+        
+        // print("<pre>".print_r($data,true)."</pre>");die;
+        return $this->respond($data_); //json
+        // Redirect to the cart page
+    }
+
+    public function addressDelete($id=null)
+    {    
+        $data = $this->userAddress->delete($id);
+        
+        //  return print("<pre>".print_r($data,true)."</pre>");die;
+         return $this->respond($data); //json
+        // Redirect to the cart page
     }
 }

@@ -24,7 +24,7 @@ class Cart
      *
      * @var string
      */
-    public $productIdRules = '\.a-z0-9_-';
+    public $productIdRules = '\.a-z0-9_-'; // alpha-numeric, dashes, underscores, or periods
 
     /**
      * These are the regular expression rules that we use to validate the product ID and product name
@@ -32,7 +32,9 @@ class Cart
      *
      * @var string
      */
-    public $productNameRules = '\w \-\.\:';
+    public $productNameRules = '\d\D'; // alpha-numeric, dashes, underscores, colons or periods '\w \-\.\:';
+
+    // These are the regular expression rules that we use to validate the product ID and product name
 
     /**
      * only allow safe product names

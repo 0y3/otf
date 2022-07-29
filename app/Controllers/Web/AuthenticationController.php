@@ -120,14 +120,12 @@ class AuthenticationController extends BaseController
                 
                 $encoded_email = urlencode($this->request->getVar('email',FILTER_SANITIZE_EMAIL));
 
-                $dataemail['reset_link'] = site_url() . "authentication/activationemail/".$activation_code."/".$encoded_email;
-                $dataemail["name"] = $getSurname." ".$getFirstname;
-                $dataemail["email"] = $getEmail;
-                $dataemail["message"] = "Reset Your Password";
+                $dataemail['reset_link'] = site_url("authentication/activationemail/".$activation_code."/".$encoded_email);//site_url() . "authentication/activationemail/".$activation_code."/".$encoded_email;
+                $dataemail["name"] = ucwords($getSurname)." ".ucwords($getFirstname);
+                $dataemail["emailTo"] = $getEmail;
                 
-                $sendStatus = resetPasswordEmail($dataemail);
+                $sendStatus = WelcomeEmail($dataemail);
                 if($sendStatus){
-                    $status = "send";
                     // setFlashData($status, "Activaion link sent successfully, please check mails.");
                     $this->session->setFlashdata('success', 'success');
                     $this->session->setFlashdata('message', '<h4><b>Activation link sent successfully, <small>please check mails.</small></b></h4>');
@@ -260,8 +258,8 @@ class AuthenticationController extends BaseController
     function activateConfirmUser($activation_id, $get_email)
     {
         $this->data = [
-            'title' => "OTF Vendors:- Activate Email",
-            'currentMenu'   => 'Signin',
+            'title' => "OTF Users:- Activate Email",
+            'currentMenu'   => 'login',
         ];
 
         // Get email and activation code from URL values at index 3-4
@@ -282,7 +280,8 @@ class AuthenticationController extends BaseController
                 'status'  =>  1,
                 'activation_code' => ''
             ];
-            $activate_data = $this->users->update($check_data['id'],$update_data); 
+            
+            $activate_data = $this->users->update($check_data->id,$update_data); 
 
             $this->session->setFlashdata('success', 'success');
             $this->session->setFlashdata('message', '<h4>User Activated</h4> Login in');
@@ -299,5 +298,20 @@ class AuthenticationController extends BaseController
         $log_session = ['userId', 'userSurname','userFirstname','userEmail','userPhone','isLoggedIn','isAdmin','back_url'];
         $this->session->remove($log_session);
         return redirect()->to('login');
+    }
+
+    public function emailTest()
+    {
+        $encoded_email = urlencode('trivin98@gmail.com');
+        $activation_code = randomToken(128);
+
+        $dataemail["emailTo"] = 'trivin98@gmail.com';
+        $dataemail['reset_link'] = site_url("authentication/activationemail/".$activation_code."/".$encoded_email);//site_url() . "authentication/activationemail/".$activation_code."/".$encoded_email;
+        $dataemail["name"] = 'Oye Trovolink';
+        
+        $sentdata = WelcomeEmail($dataemail);
+
+        // $sentdata = TestingEmail($dataemail);
+        return $sentdata;
     }
 }

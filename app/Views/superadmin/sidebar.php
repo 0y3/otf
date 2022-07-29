@@ -325,14 +325,14 @@
                   <span class="menu-arrow"></span>
                </span>
                <div class="menu-sub menu-sub-accordion">
-                  <div class="menu-item">
+                  <!-- <div class="menu-item">
                      <a class="menu-link <?=($currentMenu == 'vendoradd') ? 'active' : '' ?>" href="<?= site_url('otfadmin/add/vendor')?>">
                         <span class="menu-bullet">
                            <span class="bullet bullet-dot"></span>
                         </span>
                         <span class="menu-title">Add Vendor</span>
                      </a>
-                  </div>
+                  </div> -->
                   <div class="menu-item">
                      <a class="menu-link <?=($currentMenu == 'vendor') ? 'active' : '' ?>" href="<?= site_url('otfadmin/vendor')?>">
                         <span class="menu-bullet">

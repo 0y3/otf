@@ -3,7 +3,7 @@
 
 <?= $this->section('content') ?>
 <!--begin::Container-->
-    <div class="container-xxl"> 
+<div class="container-xxl"> 
     <!--begin::Navbar-->
     <?= $this->include('superadmin/vendors_details_menu') ?>
     <!--end::Navbar-->

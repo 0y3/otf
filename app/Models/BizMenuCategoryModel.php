@@ -33,7 +33,7 @@ class BizMenuCategoryModel extends Model
     protected $allowCallbacks = true;
     protected $beforeInsert   = ['generateSlug'];
     protected $afterInsert    = [];
-    protected $beforeUpdate   = [];
+    protected $beforeUpdate   = ['updateSlug'];
     protected $afterUpdate    = [];
     protected $beforeFind     = [];
     protected $afterFind      = [];
@@ -48,20 +48,44 @@ class BizMenuCategoryModel extends Model
 
     protected function generateSlug(array $data)
 	{
-		$slug = url_title($data['data']['name'], '-', true);
-		$name = trim($data['data']['name']);
-
-		$data = $this->where('slug', $slug)->orderBy('id', 'DESC')->first();
-		if ($data) {
-			$slugs = explode('-', $data->slug);
+        // print("<pre>".print_r($data,true)."</pre>");die;
+		$slug = url_title($data['data']['name'], '_', true);
+        
+		$getcheck = $this->where('slug', $slug)->first();
+		if ($getcheck) {
+			$slugs = explode('_', $getcheck['slug']);
 			$slugNumber = !(empty($slugs[1])) ? ((int)$slugs[1] + 1) : 1;
-			$slug = $slug. '-' .$slugNumber;
+			$slug = $slug. '_' .$slugNumber;
 		}
 
 		$data['data']['slug'] = $slug;
-
 		return $data;
 	}
+
+    protected function updateSlug(array $data)
+	{
+        // print("<pre>".print_r($data['id'][0],true)."</pre>");die;
+        $id = $data['id'][0];
+        if(isset($data['data']['name'])){
+
+           
+            $name = $data['data']['name'];
+            $slug = url_title($name, '_', true);
+
+            $getcheck = $this->where(['slug' => $slug, 'id !=' => $id])->first();
+            if ($getcheck) { // if slug exist
+                $slugs = explode('_', $getcheck['slug']);
+                $slugNumber = !(empty($slugs[1])) ? ((int)$slugs[1] + 1) : 1;
+                $slug = $slug. '_' .$slugNumber;
+                
+            }
+
+            $data['data']['slug'] = $slug;
+           
+        }
+        return $data;
+    }
+
     public function getParentOptions($exceptCategoryId = null)
 	{
 		$categories = [];

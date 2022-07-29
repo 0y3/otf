@@ -12,9 +12,9 @@ class UserAddressModel extends Model
     protected $useAutoIncrement = true;
     protected $insertID         = 0;
     protected $returnType       = 'array';
-    protected $useSoftDeletes   = false;
+    protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = ['user_id','address','city_id','state_id','status'];
+    protected $allowedFields    = ['user_id','address','phone','city_id','state_id','status','isdeleted'];
 
     // Dates
     protected $useTimestamps = true;

@@ -7,7 +7,7 @@
             <?= $this->include('user/sidebar') ?>
             <div class="col-md-9">
                 <div class="shadow-sm bg-white p-4 h-10000">
-                    <h4 class="font-weight-bold mt-0 mb-4">Past Orders</h4>
+                    <h4 class="font-weight-bold mt-0 mb-4">Past Orders</h4><?= $this->include('errors/html/alerts') ?>
                     <?php foreach ($order as $orders) :?>
                     <div class="bg-white card mb-4 order-list shadow-sm">
                         <div class="gold-members p-4">

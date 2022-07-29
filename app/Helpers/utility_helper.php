@@ -51,7 +51,7 @@ if(!function_exists('getBrowserAgent'))
         $currentAgent = '';
 
         if ($agent->isBrowser()) {
-            $currentAgent = $agent->getBrowser() . ' ' . $agent->getVersion();
+            $currentAgent = $agent->getPlatform() .' '.$agent->getBrowser() . '/' . $agent->getVersion();
         } elseif ($agent->isRobot()) {
             $currentAgent = $agent->getRobot();
         } elseif ($agent->isMobile()) {
@@ -70,17 +70,16 @@ if(!function_exists('setProtocol'))
     {
         $email = Services::email();
         
-        //$config['protocol'] = 'mail'; //FIXED
         $config['protocol'] = PROTOCOL;
         $config['mailpath'] = MAIL_PATH;
-        $config['smtp_host'] = SMTP_HOST;
-        $config['smtp_port'] = SMTP_PORT;
-        $config['smtp_user'] = SMTP_USER;
-        $config['smtp_pass'] = SMTP_PASS;
-        $config['smtp_crypto'] = 'ssl'; //FIXED
-        $config['charset'] = "utf-8";
-        $config['mailtype'] = "html";
+        $config['SMTPHost'] = SMTP_HOST;
+        $config['SMTPUser'] = SMTP_USER;
+        $config['SMTPPass'] = SMTP_PASS;
+        $config['SMTPPort'] = SMTP_PORT;
+        $config['mailType'] = "html";
+        $config['wordWrap'] = TRUE;
         $config['newline'] = "\r\n";
+        $config['SMTPCrypto'] = 'ssl'; //FIXED
         
         $email->initialize($config);
         
@@ -95,13 +94,47 @@ if(!function_exists('emailConfig'))
         $email = Services::email();
 
         $config['protocol'] = PROTOCOL;
-        $config['smtp_host'] = SMTP_HOST;
-        $config['smtp_port'] = SMTP_PORT;
         $config['mailpath'] = MAIL_PATH;
-        $config['charset'] = 'UTF-8';
-        $config['mailtype'] = "html";
+        $config['SMTPHost'] = SMTP_HOST;
+        $config['SMTPUser'] = SMTP_USER;
+        $config['SMTPPass'] = SMTP_PASS;
+        $config['SMTPPort'] = SMTP_PORT;
+        $config['mailType'] = "html";
         $config['newline'] = "\r\n";
-        $config['wordwrap'] = TRUE;
+        $config['wordWrap'] = TRUE;
+
+        $email->initialize($config);
+        return $email;
+    }
+}
+
+if(!function_exists('TestingEmail'))
+{
+    function TestingEmail($detail)
+    {
+        if(!empty($detail))
+        {
+            $data["data"] = $detail;
+            //pre($detail);die;
+            $email = Services::email();
+            $email = setProtocol();        
+            
+            //$CI->email->from($detail["email"], $detail['name']);
+            $email->setFrom(EMAIL_FROM, FROM_NAME);
+            $email->setSubject('Testing Email Server | OTF Online');
+            $email->setMessage($detail["message"]);
+            $email->setTo($detail["emailTo"]);
+            // $email->setCC(EMAIL_CC);//CC
+            $email->setBCC(EMAIL_BCC);// and BCC
+            if($detail["filename"]){$email->attach($detail["filename"]);}
+            $email->send();
+            $status = $email->printDebugger(['headers']);
+            return $status;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
 
@@ -119,9 +152,11 @@ if(!function_exists('WelcomeEmail'))
             //$CI->email->from($detail["email"], $detail['name']);
             $email->setFrom(EMAIL_FROM, FROM_NAME);
             $email->setSubject('Thank you for registering with OTF');
-            $email->setMessage(view('email/welcomeEmail', $data, ['saveData' => true]));
+            $email->setMessage(view('email/welcomeemail', $data, ['saveData' => true]));
             $email->setTo($detail["emailTo"]);
-            $status = $email->send();
+            $email->send();
+            
+            $status = $email->printDebugger(['headers']);
             
             return $status;
         }
@@ -189,7 +224,7 @@ if(!function_exists('contactusEmail'))
             $email->setSubject('ContactUs:- '.$detail['subject']);
             $email->setMessage(view('email/contactEmail', $data, ['saveData' => TRUE]));
             $email->setTo($detail["emailTo"]);
-            $email->setBCC(EMAIL_BCC_C);
+            $email->setBCC(EMAIL_BCC);
             $status = $email->send();
             
             return $status;
@@ -279,7 +314,8 @@ if(!function_exists('setDeliveryLocationTemp'))
         if($data)
         {
             $locationArray = [
-                    'deliveryLocateId'      => service('encrypter')->encrypt($id),
+                    'deliveryLocate'        => base64_encode(service('encrypter')->encrypt($data['fee'])),
+                    'deliveryLocateId'      => base64_encode(service('encrypter')->encrypt($id)),
                     'deliveryLocateState'   => $data['state_name'],
                     'deliveryLocateCity'    => $data['city_name']
             ];
@@ -376,3 +412,89 @@ if (! function_exists('mk_dir_vendor'))
         else{return false;}
     }
 }
+
+if (! function_exists('uniqueRef'))
+{
+    function uniqueRef( $length = 15, $capsMix = 5 )
+    {
+        // uniqid gives 15 chars, but you could adjust it to your needs.
+        if ( function_exists( "random_bytes" ) ) {
+            $bytes = random_bytes( ceil( $length / 2 ) );
+        } elseif ( function_exists( "openssl_random_pseudo_bytes" ) ) {
+            $bytes = openssl_random_pseudo_bytes( ceil( $length / 2 ) );
+        } else {
+            throw new \Exception( "No cryptographically secure random function available" );
+        }
+
+        if ( $capsMix > 10 ) {
+            throw new \Exception( 'capsMix can not be greater than 10' );
+        }
+        $caps = substr( str_shuffle( 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' ), 1, $capsMix );
+
+        return str_shuffle( substr( bin2hex( $bytes ), 0, $length ) . $caps );
+    }
+}
+if (! function_exists('asteriskMiddle'))
+{
+    function asteriskMiddle($data){
+        // $data = substr_replace($data, str_repeat("*", strlen($data)-2), 1,strlen($data)-2);
+        $data = substr_replace($data, str_repeat("*", strlen($data)-4), 4,-3);
+        return $data;
+    }
+}
+if (! function_exists('callAPI'))
+{
+    function callAPI($data=null, $url=null, $method =null, $headers = false){
+        $method = $method ?: 'POST';
+        $apiurl ="https://api.flutterwave.com/v3/";
+		$curl = curl_init();
+		switch ($url){
+		   case "payments":
+            curl_setopt($curl, CURLOPT_URL, $apiurl.$url);   
+			  break;
+		}
+        switch ($method){
+            case "POST":
+               curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+               if ($data)
+                  curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
+               break;
+            case "PUT":
+               curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
+               if ($data)
+                  curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));			 					
+               break;
+            case "GET":
+                curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "GET");
+                curl_setopt($curl, CURLOPT_URL, $apiurl.$url);			 					
+                break;
+         }
+		// OPTIONS:
+		if(!$headers){
+			curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+			   'Authorization: Bearer '.getenv('FLW_TEST_SECRET_KEY'),
+			   'Content-Type: application/json',
+               'User-Agent:'.getBrowserAgent(),
+			));
+		}else{
+			curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+                'Authorization: Bearer '.getenv('FLW_TEST_SECRET_KEY'),
+			    'Content-Type: application/json',
+			    $headers
+			));
+		}
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+        curl_setopt($curl, CURLOPT_ENCODING,"");
+        curl_setopt($curl, CURLOPT_MAXREDIRS, 10);
+        curl_setopt($curl, CURLOPT_TIMEOUT, 10000); // 10 sec.
+        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
+		// EXECUTE:
+		$result = curl_exec($curl);
+		if(!$result){die(curl_error($curl));}
+		curl_close($curl);
+		return json_decode($result);
+    }
+}
+

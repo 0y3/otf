@@ -386,7 +386,7 @@ var KTDatatables = function() {
                 },
             ]
         });
-        
+
         dt.on('order.dt search.dt', function() {
             let i = 1;
 

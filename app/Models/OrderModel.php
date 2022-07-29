@@ -16,7 +16,8 @@ class OrderModel extends Model
     protected $protectFields    = true;
     protected $allowedFields    = [
                                     'user_id',
-                                    'reference',
+                                    'pi_id','pi_reference','pi_paid_at','pi_channel',
+                                    'pi_last4','pi_card_type','pi_authorization_code',
                                     'biz_id',
                                     'user_address_id',
                                     'couponcode',

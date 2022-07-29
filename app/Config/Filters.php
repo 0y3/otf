@@ -24,6 +24,7 @@ class Filters extends BaseConfig
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
 		'authGuard'     => \App\Filters\AuthGuardFilter::class,
+		'authAdminGuard'     => \App\Filters\AuthAdminGuardFilter::class,
         'authTokenFilter' => \App\Filters\AuthTokenFilter::class,
     ];
 
@@ -38,6 +39,7 @@ class Filters extends BaseConfig
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
+            // 'authAdminGuard' => ['except' => ['otfadmin/', 'otfadmin/login', 'otfadmin/logout']],
         ],
         'after' => [
             'toolbar',

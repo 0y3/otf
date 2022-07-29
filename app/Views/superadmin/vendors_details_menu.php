@@ -89,12 +89,15 @@
                             <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3" data-kt-menu="true">
                                 <!--begin::Heading-->
                                 <div class="menu-item px-3">
-                                    <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Payments</div>
+                                    <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Add's</div>
                                 </div>
                                 <!--end::Heading-->
                                 <!--begin::Menu item-->
                                 <div class="menu-item px-3">
-                                    <a href="#" class="menu-link px-3">Create Invoice</a>
+                                    <a href="<?= route_to('menu_add',$biz->slug)?>" class="menu-link px-3">Create Menu</a>
+                                </div>
+                                <div class="menu-item px-3">
+                                    <a href="<?= route_to('menucategory', $biz->slug) ?>" class="menu-link px-3">Create Menu Category</a>
                                 </div>
                                 <!--end::Menu item-->
                             </div>
@@ -193,7 +196,12 @@
             <!--end::Nav item-->
             <!--begin::Nav item-->
             <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 <?=($currentMenu == 'menus') ? 'active' : '' ?>" href="<?= route_to('vendor_menus', $biz->slug) ?>">Menus</a>
+                <a class="nav-link text-active-primary ms-0 me-10 py-5 <?=($currentMenu == 'categories') ? 'active' : '' ?>" href="<?= route_to('menucategory', $biz->slug) ?>">Menu Category</a>
+            </li>
+            <!--end::Nav item-->
+            <!--begin::Nav item-->
+            <li class="nav-item mt-2">
+                <a class="nav-link text-active-primary ms-0 me-10 py-5 <?=($currentMenu == 'menus') ? 'active' : '' ?>" href="<?= route_to('menus', $biz->slug) ?>">Menus</a>
             </li>
             <!--end::Nav item-->
             <!--begin::Nav item-->

@@ -16,7 +16,7 @@ class UsersMigration extends Migration
             'email'                 => ['type' => 'varchar', 'constraint' => 255],
             'phone'                 => ['type' => 'varchar', 'constraint' => 255],
             'password'              => ['type' => 'varchar', 'constraint' => 255],
-            'activation_code'       => ['type' => 'varchar', 'constraint' => 255],
+            'activation_code'       => ['type' => 'varchar', 'constraint' => 255, 'null' => true],
             'status'                => ['type' => 'tinyint', 'constraint' => 1, 'null' => 0, 'default' => 0],
             'created_at datetime default current_timestamp',
 			'updated_at datetime default current_timestamp on update current_timestamp',

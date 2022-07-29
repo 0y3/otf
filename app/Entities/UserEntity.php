@@ -29,10 +29,11 @@ class UserEntity extends Entity
     public function getAddress()
     {
         $data_ = $this->userAddress
-                    ->select('user_address.*, state_cities.city_name, states.state_name, states.code as state_code')
+                    ->select('user_address.*, state_cities.city_name, states.state_name, states.code as state_code, delivery_locations.id as delivery_locations_id')
                     ->join('state_cities', 'user_address.city_id = state_cities.id', 'left')
                     ->join('states', 'user_address.state_id = states.id', 'left')
-                    ->where('user_address.id', $this->id)
+                    ->join('delivery_locations', 'user_address.city_id = delivery_locations.city_id', 'left')
+                    ->where('user_address.user_id', $this->id)
                     ->findAll();
 
         return $data_;

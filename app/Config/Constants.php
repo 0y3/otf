@@ -97,19 +97,14 @@ define('BG_NAME',            ["info","danger","warning","success","secondary","p
 
 /************************** EMAIL CONSTANTS *****************************/
 
-define('EMAIL_FROM',                            'noreply@vdoc.com.ng');		// e.g. email@example.com
-define('EMAIL_BCC_C',                           'trivin98@gmail.com, info@afritech.com.ng,info@vdoc.com.ng,e.gabriel@afritech.com.ng,
-												j.blessing@afritech.com.ng,a.kolawole@afritech.com.ng,m.fatima@afritech.com.ng
-												sa.mohammed@afritech.com.ng,o.john@afritech.com.ng,o.priscilla@afritech.com.ng
-												l.bintu@afritech.com.ng,ministergabi@gmail.com');		// e.g. email@example.com
-define('EMAIL_BCC',                           	'info@afritech.com.ng, info@vdoc.com.ng, m.fatima@afritech.com.ng, o.john@afritech.com.ng,
-												o.priscilla@afritech.com.ng');	
-define('FROM_NAME',                             'Vdoc Vehicle Services Admin System');	// Your system name
-define('EMAIL_PASS',                            'Your email password');	// Your email password
-define('PROTOCOL',                             	'sendmail');				// mail, sendmail, smtp
-define('SMTP_HOST',                             'vdoc.com.ng');		// your smtp host e.g. smtp.gmail.com
-define('SMTP_PORT',                             '25');					// your smtp port e.g. 25, 587
-define('SMTP_USER',                             '_mainaccount@vdoc.com.ng');		// your smtp user
-define('SMTP_PASS',                             'NewP@$$w0rd');//'Afritechnew1$$@1');	// your smtp password
+define('EMAIL_FROM',                            'info@otfonline.com.ng');		// e.g. email@example.com
+define('EMAIL_BCC',                           	'trovolink@gmail.com');		// e.g. email@example.com
+define('EMAIL_CC',                           	'admin@otfonline.com.ng, info@otfonline.com.ng');	
+define('FROM_NAME',                             'Otf Online ');	// Your system name
+define('PROTOCOL',                             	'smtp');				// mail, sendmail, smtp
+define('SMTP_HOST',                             'smtp.titan.email');//'smtp.hostinger.com');		// your smtp host e.g. smtp.gmail.com
+define('SMTP_PORT',                             '465');					// your smtp port e.g. 465, 587
+define('SMTP_USER',                             'info@otfonline.com.ng');		// your smtp user
+define('SMTP_PASS',                             '0Tf0nlin3');	// your smtp password
 define('MAIL_PATH',                             '/usr/sbin/sendmail');
 

@@ -3,7 +3,7 @@
 
 <?= $this->section('content') ?>
 <!--begin::Container-->
-    <div class="container-xxl"> 
+<div class="container-xxl"> 
     <!--begin::Navbar-->
     <?= $this->include('superadmin/vendors_details_menu') ?>
     <!--end::Navbar-->
@@ -15,6 +15,13 @@
             <div class="card-title">
                 <h3 class="card-label">Vendors Menus
                 <!-- <span class="d-block text-muted pt-2 font-size-sm">Vendor management made easy</span></h3> -->
+            </div>
+            <div class="card-toolbar">
+                <!--begin::Button-->
+                <div class="m-2">
+                    <a href="<?= route_to('menu_add',$biz->slug)?>" class="btn btn-primary font-weight-bolder" ">Add Menu</a>
+                </div>
+                <!--end::Button-->
             </div>
         </div>
         <!--end::Header-->

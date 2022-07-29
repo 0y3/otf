@@ -14,7 +14,7 @@ class BizMenuAddupModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = ['biz_id','biz_menu_addup_category_id','name','image','price','sort','status','isdeleted'];
+    protected $allowedFields    = ['biz_id','biz_menu_id','biz_menu_addup_category_id','name','image','price','sort','status','isdeleted'];
 
     // Dates
     protected $useTimestamps = true;

@@ -1,0 +1,97 @@
+CRITICAL - 2022-07-02 13:57:16 --> Undefined property: App\Controllers\Web\Superadmin\AuthenticationController::$validation
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\Superadmin\AuthenticationController.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 45)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\Superadmin\AuthenticationController->login_()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Superadmin\AuthenticationController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-02 13:58:20 --> Undefined property: App\Controllers\Web\Superadmin\AuthenticationController::$users
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\Superadmin\AuthenticationController.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 78)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\Superadmin\AuthenticationController->login_()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Superadmin\AuthenticationController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-02 14:45:26 --> Undefined variable $previous_url
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\Superadmin\AuthenticationController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 30)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\Superadmin\AuthenticationController->login()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Superadmin\AuthenticationController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-02 14:45:37 --> Undefined variable $previous_url
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\Superadmin\AuthenticationController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 30)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\Superadmin\AuthenticationController->login()
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Superadmin\AuthenticationController))
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-02 15:01:37 --> Unclosed '[' on line 126 does not match ')'
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(374): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-07-02 15:02:11 --> Undefined property: App\Filters\AuthTokenFilter::$response
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(327): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 327)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(99): App\Filters\AuthTokenFilter->format(Array)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(136): App\Filters\AuthTokenFilter->respond(Array, 401, '')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\API\ResponseTrait.php(199): App\Filters\AuthTokenFilter->fail(Array, 401, NULL, '')
+#4 C:\xampp\htdocs\otfonline\backend\ci4\app\Filters\AuthTokenFilter.php(48): App\Filters\AuthTokenFilter->failUnauthorized('Invalid Auth to...')
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Filters\Filters.php(173): App\Filters\AuthTokenFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(399): CodeIgniter\Filters\Filters->run('otfadmin/dashbo...', 'before')
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-02 15:10:42 --> Cannot use [] for reading
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Filters\Filters.php(173): App\Filters\AuthAdminGuardFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(399): CodeIgniter\Filters\Filters->run('otfadmin/dashbo...', 'before')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-07-02 15:10:52 --> Undefined variable $_session
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Filters\AuthAdminGuardFilter.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Filters\Filters.php(173): App\Filters\AuthAdminGuardFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(399): CodeIgniter\Filters\Filters->run('otfadmin/dashbo...', 'before')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-02 15:13:21 --> Undefined variable $_SESSION
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Filters\AuthAdminGuardFilter.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Filters\Filters.php(173): App\Filters\AuthAdminGuardFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(399): CodeIgniter\Filters\Filters->run('otfadmin/dashbo...', 'before')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-02 15:13:34 --> Undefined variable $_SESSION
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Filters\AuthAdminGuardFilter.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Filters\Filters.php(173): App\Filters\AuthAdminGuardFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(399): CodeIgniter\Filters\Filters->run('otfadmin/dashbo...', 'before')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-02 15:13:47 --> Undefined variable $_SESSION
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Filters\AuthAdminGuardFilter.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Filters\Filters.php(173): App\Filters\AuthAdminGuardFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(399): CodeIgniter\Filters\Filters->run('otfadmin/dashbo...', 'before')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-02 15:15:45 --> Undefined variable $_SESSION
+#0 C:\xampp\htdocs\otfonline\backend\ci4\app\Filters\AuthAdminGuardFilter.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28)
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Filters\Filters.php(173): App\Filters\AuthAdminGuardFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), NULL)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(399): CodeIgniter\Filters\Filters->run('otfadmin/dashbo...', 'before')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

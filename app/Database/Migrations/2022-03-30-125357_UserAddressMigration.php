@@ -12,6 +12,7 @@ class UserAddressMigration extends Migration
             'id'                    => ['type' => 'int', 'auto_increment' => true],
             'user_id'               => ['type' => 'int', 'constraint' => 11],
             'address'               => ['type' => 'varchar', 'constraint' => 255],
+            'phone'                 => ['type' => 'varchar', 'constraint' => 255, 'null' => 1],
             'city_id'               => ['type' => 'int', 'constraint' => 11],
             'state_id'              => ['type' => 'int', 'constraint' => 11],
             'status'                => ['type' => 'tinyint', 'constraint' => 1, 'null' => 0, 'default' => 1],

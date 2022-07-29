@@ -1,4 +1,3 @@
-
 "use strict";
 // Class definition
 var KTDatatables = function() {
@@ -11,7 +10,7 @@ var KTDatatables = function() {
         dt = $(table).DataTable({
             data: data,
             responsive: true,
-            stateSave: true,
+            // stateSave: true,
             pageLength: 20,
             lengthMenu: [
                 [20, 50, 100, 200, 500, -1],
@@ -22,7 +21,7 @@ var KTDatatables = function() {
             // scrollCollapse: true,
             // scroller:       true
             order: [
-                [4, 'desc']
+                [4, 'asc']
             ],
             columns: [
                 { data: 'id' },
@@ -44,7 +43,7 @@ var KTDatatables = function() {
                 { data: 'email' },
                 { data: 'phone' },
                 { data: 'created_at' },
-                { data: 'user_orders' },
+                { data: 'ordercount' },
                 { data: null }
             ],
             columnDefs: [{
@@ -70,7 +69,7 @@ var KTDatatables = function() {
                 {
                     targets: 4,
                     render: function(data, type, row) {
-                        return `<span class="badge badge-light fw-bolder" > ${moment(data.date).format("Do MMM, YYYY")} </span>`;
+                        return `<span class="badge badge-light fw-bolder" > ${moment(data).format("Do MMM, YYYY")} </span>`;
                     }
                 },
                 {
@@ -171,7 +170,7 @@ var PaymentDatatables = function() {
             columns: [
                 { data: null },
                 { data: 'pi_id' },
-                { 
+                {
                     data: 'biz_name',
                     render: function(data, type, row) {
                         return `<a href="${base_url+'/'+row['biz_type']+'/'+row['biz_slug']}" target="_blank"  class="text-gray-800 text-hover-primary d-block mb-1 fs-6 ">${data}</a>`;
@@ -181,11 +180,11 @@ var PaymentDatatables = function() {
                     data: 'order_status',
                     render: function(data, type, row) {
                         let status = 'danger';
-                        if (row['order_status'] == 'Canceled') {status = 'danger';}
-                        if (row['order_status'] == 'Pending') {status = 'warning';}
-                        if (row['order_status'] == 'Processing') {status = 'info';}
-                        if (row['order_status'] == 'Dispatched') {status = 'primary';}
-                        if (row['order_status'] == 'Delivered') {status = 'success';}
+                        if (row['order_status'] == 'Canceled') { status = 'danger'; }
+                        if (row['order_status'] == 'Pending') { status = 'warning'; }
+                        if (row['order_status'] == 'Processing') { status = 'info'; }
+                        if (row['order_status'] == 'Dispatched') { status = 'primary'; }
+                        if (row['order_status'] == 'Delivered') { status = 'success'; }
                         return `<span class="badge badge-light-${status} fs-7">${data}</span>`;
                     }
                 },
@@ -198,7 +197,7 @@ var PaymentDatatables = function() {
                     data: null,
                     orderable: false,
                     searchable: false,
-                    render: function(data, type, row){
+                    render: function(data, type, row) {
                         return `
                                 <button type="button" class="btn btn-sm btn-icon btn-light btn-active-light-primary toggle h-25px w-25px position-relative submenubutton" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-dark" data-bs-placement="bottom" title="Order Details">
                                     <!--begin::Svg Icon | path: icons/duotune/arrows/arr087.svg-->
@@ -223,7 +222,7 @@ var PaymentDatatables = function() {
                     targets: 4,
                     render: function(data, type, row) {
                         let status = 'text-danger';
-                        if(row['status'] == 1){ status = 'text-success';}
+                        if (row['status'] == 1) { status = 'text-success'; }
                         return `<span class="${status}">₦${parseFloat(data).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</span>`;
                     }
                 },
@@ -261,30 +260,29 @@ var PaymentDatatables = function() {
 
         var subtableMenu = (e) => {
             // `e` is the original data object for the row
-            let value = '<div class="col-md-80">'+
-                        '<table class="table table-bordered">';
-                    
+            let value = '<div class="col-md-80">' +
+                '<table class="table table-bordered">';
+
             _.forEach(e.order_details, function(data) {
                 let status = 'danger';
-                if (data.order_status == 'Canceled') {status = 'danger';}
-                if (data.order_status == 'Pending') {status = 'warning';}
-                if (data.order_status == 'Processing') {status = 'info';}
-                if (data.order_status == 'Dispatched') {status = 'primary';}
-                if (data.order_status == 'Delivered') {status = 'success';}
+                if (data.order_status == 'Canceled') { status = 'danger'; }
+                if (data.order_status == 'Pending') { status = 'warning'; }
+                if (data.order_status == 'Processing') { status = 'info'; }
+                if (data.order_status == 'Dispatched') { status = 'primary'; }
+                if (data.order_status == 'Delivered') { status = 'success'; }
                 var price = ((data.grant_total == '')) ? 0 : parseFloat(data.grant_total).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 
                 let addup = '';
                 _.forEach(JSON.parse(data.addup_menu), function(data1) {
-                    if(data1.price){
-                    addup += _.upperFirst(data1.name)+': <small class="text-dark fw-bolder fs-7">₦'+ parseFloat(data1.price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')+'</small>, ';
-                    }
-                    else{
-                    addup +=_.upperFirst(data1.cate_name)+': <small class="text-dark fw-bolder fs-7">'+data1.name+'</small>, ';
+                    if (data1.price) {
+                        addup += _.upperFirst(data1.name) + ': <small class="text-dark fw-bolder fs-7">₦' + parseFloat(data1.price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + '</small>, ';
+                    } else {
+                        addup += _.upperFirst(data1.cate_name) + ': <small class="text-dark fw-bolder fs-7">' + data1.name + '</small>, ';
                     }
                 });
-                
 
-                value +=  `
+
+                value += `
                     <tr>
                         <td colspan="3">
                             <div class="text-gray-800 fs-7 w-150px">Order No.</div>
@@ -320,11 +318,10 @@ var PaymentDatatables = function() {
         };
 
         // Add event listener for opening and closing details
-        $('#customers_payment tbody').on('click', '.submenubutton', function () {
+        $('#customers_payment tbody').on('click', '.submenubutton', function() {
             var tr = $(this).closest('tr');
             var row = dt.row(tr);
-            console.log(row.data());
-     
+
             if (row.child.isShown()) {
                 // This row is already open - close it
                 row.child.hide();
@@ -332,7 +329,7 @@ var PaymentDatatables = function() {
                 //tr.removeClass('isOpen');
             } else {
                 // Open this row
-                row.child( subtableMenu(row.data()) ).show();
+                row.child(subtableMenu(row.data())).show();
                 $(this).addClass('active');
                 //tr.addClass('isOpen');
             }
@@ -349,10 +346,456 @@ var PaymentDatatables = function() {
 }();
 
 
+// Class definition for Add Adress 
+var ModalAddAddress = function() {
+    var element;
+    var submitButton;
+    var cancelButton;
+    var closeButton;
+    var form;
+    var modal;
+    var validator;
+
+
+    var form_edit;
+    var modal_edit;
+    var element_edit;
+    var submitButton_edit;
+    var cancelButton_edit;
+    var closeButton_edit;
+
+    // Init form inputs
+    var initForm = function(e) {
+
+        // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
+        validator = FormValidation.formValidation(
+            form, {
+                fields: {
+                    'address': {
+                        validators: {
+                            notEmpty: {
+                                message: 'Address is required'
+                            },
+                        }
+                    },
+                    'delivery': {
+                        validators: {
+                            notEmpty: {
+                                message: 'City/State is required'
+                            }
+                        }
+                    },
+                },
+                plugins: {
+                    trigger: new FormValidation.plugins.Trigger(),
+                    bootstrap: new FormValidation.plugins.Bootstrap5({
+                        rowSelector: '.fv-row'
+                    })
+                }
+            }
+        );
+
+
+        // Action buttons
+        submitButton.addEventListener('click', function(e) {
+            // Prevent default button action
+            e.preventDefault();
+
+            validator.validate().then(function(status) {
+                if (status == 'Valid') {
+
+                    // Show loading indication
+                    submitButton.setAttribute('data-kt-indicator', 'on');
+
+                    var formData = new FormData(form);
+                    // input, select, textarea or :input
+                    // $("#modal_addres_form :input").each(function(key, e) {
+                    //     formData.append($(this).attr("name"), $(this).val());
+                    // });
+
+                    axios.post(form.action, formData)
+                        .then(function(response) {
+
+                            //console.log(response.data);
+                            // Simulate form submission
+                            setTimeout(function() {
+                                // Simulate form submission
+                                submitButton.removeAttribute('data-kt-indicator');
+
+                                // Show popup confirmation 
+                                Swal.fire({
+                                    text: "Form has been successfully submitted!",
+                                    icon: "success",
+                                    buttonsStyling: false,
+                                    confirmButtonText: "Ok, got it!",
+                                    customClass: {
+                                        confirmButton: "btn btn-primary"
+                                    }
+                                }).then(function(result) {
+                                    if (result.isConfirmed) {
+                                        modal.hide();
+                                    }
+                                });
+                                location.reload(true);
+                            }, 2000);
+
+                        })
+                        .catch(function(error) {
+                            console.log(error);
+                            Swal.fire({
+                                text: "Sorry, looks like there are some errors detected, please try again.",
+                                icon: "error",
+                                buttonsStyling: false,
+                                confirmButtonText: "Ok, got it!",
+                                customClass: {
+                                    confirmButton: "btn btn-primary"
+                                }
+                            });
+                        });
+
+
+                } else {
+                    // Show error popup. For more info check the plugin's official documentation: https://sweetalert2.github.io/
+                    Swal.fire({
+                        text: "Sorry, looks like there are some errors detected, please try again.",
+                        icon: "error",
+                        buttonsStyling: false,
+                        confirmButtonText: "Ok, got it!",
+                        customClass: {
+                            confirmButton: "btn btn-primary"
+                        }
+                    });
+                }
+            });
+        });
+
+        cancelButton.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            Swal.fire({
+                text: "Are you sure you would like to cancel?",
+                icon: "warning",
+                showCancelButton: true,
+                buttonsStyling: false,
+                confirmButtonText: "Yes, cancel it!",
+                cancelButtonText: "No, return",
+                customClass: {
+                    confirmButton: "btn btn-primary",
+                    cancelButton: "btn btn-active-light"
+                }
+            }).then(function(result) {
+                if (result.value) {
+                    form.reset(); // Reset form 
+                    modal.hide(); // Hide modal             
+                } else if (result.dismiss === 'cancel') {
+                    Swal.fire({
+                        text: "Your form has not been cancelled!.",
+                        icon: "error",
+                        buttonsStyling: false,
+                        confirmButtonText: "Ok, got it!",
+                        customClass: {
+                            confirmButton: "btn btn-primary",
+                        }
+                    });
+                }
+            });
+        });
+
+        closeButton.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            Swal.fire({
+                text: "Are you sure you would like to cancel?",
+                icon: "warning",
+                showCancelButton: true,
+                buttonsStyling: false,
+                confirmButtonText: "Yes, cancel it!",
+                cancelButtonText: "No, return",
+                customClass: {
+                    confirmButton: "btn btn-primary",
+                    cancelButton: "btn btn-active-light"
+                }
+            }).then(function(result) {
+                if (result.value) {
+                    form.reset(); // Reset form 
+                    modal.hide(); // Hide modal             
+                } else if (result.dismiss === 'cancel') {
+                    Swal.fire({
+                        text: "Your form has not been cancelled!.",
+                        icon: "error",
+                        buttonsStyling: false,
+                        confirmButtonText: "Ok, got it!",
+                        customClass: {
+                            confirmButton: "btn btn-primary",
+                        }
+                    });
+                }
+            });
+        });
+    }
+
+    $('.deleteAddress').on('click', function(e) {
+        e.preventDefault();
+        var id = $(this).data('innit');
+        Swal.fire({
+            text: "Are you sure you want to delete this Address?",
+            icon: "warning",
+            showCancelButton: true,
+            buttonsStyling: false,
+            confirmButtonText: "Yes, Delete it!",
+            cancelButtonText: "No, return",
+            customClass: {
+                confirmButton: "btn btn-danger",
+                cancelButton: "btn btn-active-light"
+            }
+        }).then(function(result) {
+            console.log(result);
+            if (result.dismiss === 'cancel') {} else if (result.value) {
+
+                axios.delete(base_url + '/otfadmin/delete/address/' + id)
+                    .then(function(response) {
+                        $("#address" + id).remove();
+                        Swal.fire({
+                            text: "Address has not been Deleted!.",
+                            icon: "success",
+                            buttonsStyling: false,
+                            confirmButtonText: "Ok, got it!",
+                            customClass: {
+                                confirmButton: "btn btn-primary",
+                            }
+                        });
+                    })
+                    .catch(function(error) {
+                        console.log(error);
+                        Swal.fire({
+                            text: "Sorry, looks like there are some errors detected, please try again.",
+                            icon: "error",
+                            buttonsStyling: false,
+                            confirmButtonText: "Ok, got it!",
+                            customClass: {
+                                confirmButton: "btn btn-primary"
+                            }
+                        });
+                    });
+            }
+        });
+    });
+
+    let edit_id;
+    $('.editAddress').on('click', function(e) {
+        e.preventDefault();
+        edit_id = $(this).data('innit');
+        const address = $(this).data('address');
+        const phone = $(this).data('phone');
+        const delivery = $(this).data('delivery');
+        // Set data to Form Edit
+        $('.product_id').val(edit_id);
+        $('.inputaddress').val(address);
+        $('.inputphone').val(phone);
+        $('.delivery').val(delivery).trigger('change');
+        console.log(id);
+    });
+    var editForm = function(e) {
+
+        // Init form validation rules. For more info check the FormValidation plugin's official documentation:https://formvalidation.io/
+        validator = FormValidation.formValidation(
+            form_edit, {
+                fields: {
+                    'address': {
+                        validators: {
+                            notEmpty: {
+                                message: 'Address is required'
+                            },
+                        }
+                    },
+                    'delivery': {
+                        validators: {
+                            notEmpty: {
+                                message: 'City/State is required'
+                            }
+                        }
+                    },
+                },
+                plugins: {
+                    trigger: new FormValidation.plugins.Trigger(),
+                    bootstrap: new FormValidation.plugins.Bootstrap5({
+                        rowSelector: '.fv-row'
+                    })
+                }
+            }
+        );
+
+
+        // Action buttons
+        submitButton_edit.addEventListener('click', function(e) {
+            // Prevent default button action
+            e.preventDefault();
+
+            validator.validate().then(function(status) {
+                if (status == 'Valid') {
+
+                    // Show loading indication
+                    submitButton_edit.setAttribute('data-kt-indicator', 'on');
+
+                    var formData = new FormData(form_edit);
+                    // input, select, textarea or :input
+                    // $("#modal_addres_form :input").each(function(key, e) {
+                    //     formData.append($(this).attr("name"), $(this).val());
+                    // });
+
+                    axios.post(form_edit.action + '/' + edit_id, formData)
+                        .then(function(response) {
+
+                            //console.log(response.data);
+                            // Simulate form submission
+                            setTimeout(function() {
+                                // Simulate form submission
+                                submitButton_edit.removeAttribute('data-kt-indicator');
+
+                                // Show popup confirmation 
+                                Swal.fire({
+                                    text: "Form has been successfully submitted!",
+                                    icon: "success",
+                                    buttonsStyling: false,
+                                    confirmButtonText: "Ok, got it!",
+                                    customClass: {
+                                        confirmButton: "btn btn-primary"
+                                    }
+                                }).then(function(result) {
+                                    if (result.isConfirmed) {
+                                        modal_edit.hide();
+                                    }
+                                });
+                                location.reload(true);
+                            }, 2000);
+
+                        })
+                        .catch(function(error) {
+                            console.log(error);
+                            Swal.fire({
+                                text: "Sorry, looks like there are some errors detected, please try again.",
+                                icon: "error",
+                                buttonsStyling: false,
+                                confirmButtonText: "Ok, got it!",
+                                customClass: {
+                                    confirmButton: "btn btn-primary"
+                                }
+                            });
+                        });
+
+
+                } else {
+                    // Show error popup. For more info check the plugin's official documentation: https://sweetalert2.github.io/
+                    Swal.fire({
+                        text: "Sorry, looks like there are some errors detected, please try again.",
+                        icon: "error",
+                        buttonsStyling: false,
+                        confirmButtonText: "Ok, got it!",
+                        customClass: {
+                            confirmButton: "btn btn-primary"
+                        }
+                    });
+                }
+            });
+        });
+
+        cancelButton_edit.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            Swal.fire({
+                text: "Are you sure you would like to cancel?",
+                icon: "warning",
+                showCancelButton: true,
+                buttonsStyling: false,
+                confirmButtonText: "Yes, cancel it!",
+                cancelButtonText: "No, return",
+                customClass: {
+                    confirmButton: "btn btn-primary",
+                    cancelButton: "btn btn-active-light"
+                }
+            }).then(function(result) {
+                if (result.value) {
+                    form_edit.reset(); // Reset form 
+                    modal_edit.hide(); // Hide modal             
+                } else if (result.dismiss === 'cancel') {
+                    Swal.fire({
+                        text: "Your form has not been cancelled!.",
+                        icon: "error",
+                        buttonsStyling: false,
+                        confirmButtonText: "Ok, got it!",
+                        customClass: {
+                            confirmButton: "btn btn-primary",
+                        }
+                    });
+                }
+            });
+        });
+
+        closeButton_edit.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            Swal.fire({
+                text: "Are you sure you would like to cancel?",
+                icon: "warning",
+                showCancelButton: true,
+                buttonsStyling: false,
+                confirmButtonText: "Yes, cancel it!",
+                cancelButtonText: "No, return",
+                customClass: {
+                    confirmButton: "btn btn-primary",
+                    cancelButton: "btn btn-active-light"
+                }
+            }).then(function(result) {
+                if (result.value) {
+                    form_edit.reset(); // Reset form 
+                    modal_edit.hide(); // Hide modal             
+                } else if (result.dismiss === 'cancel') {
+                    Swal.fire({
+                        text: "Your form has not been cancelled!.",
+                        icon: "error",
+                        buttonsStyling: false,
+                        confirmButtonText: "Ok, got it!",
+                        customClass: {
+                            confirmButton: "btn btn-primary",
+                        }
+                    });
+                }
+            });
+        });
+    }
+
+    return {
+        // Public functions
+        init: function() {
+            // Elements
+            element = document.querySelector('#modal_address');
+            modal = new bootstrap.Modal(element);
+
+            form = element.querySelector('#modal_address_form');
+            submitButton = form.querySelector('#modal_address_submit');
+            cancelButton = form.querySelector('#modal_address_cancel');
+            closeButton = element.querySelector('#modal_address_close');
+
+            initForm();
+
+
+            element_edit = document.querySelector('#modal_edit_address');
+            modal_edit = new bootstrap.Modal(element_edit);
+
+            form_edit = element_edit.querySelector('#modal_address_form');
+            submitButton_edit = form_edit.querySelector('#modal_address_submit');
+            cancelButton_edit = form_edit.querySelector('#modal_address_cancel');
+            closeButton_edit = element_edit.querySelector('#modal_address_close');
+            editForm();
+        }
+    };
+}();
+
 
 // On document ready
 // KTUtil.onDOMContentLoaded(function () {
 jQuery(document).ready(function() {
     KTDatatables.init();
     PaymentDatatables.init();
+    ModalAddAddress.init();
 });

@@ -1,0 +1,10 @@
+CRITICAL - 2022-07-13 01:08:32 --> Invalid file: email/wellcomeemail.php
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('email/wellcomee...')
+#1 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('email/wellcomee...', Array, true)
+#2 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\Home.php(37): view('email/wellcomee...', Array)
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\Home->index()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+#5 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}

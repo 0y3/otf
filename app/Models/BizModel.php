@@ -108,7 +108,7 @@ class BizModel extends Model
         }
         return $data;
         //log_message("info", "Running method before update ". json_encode($data));
-        log_message('info','Running Biz method before update'. json_encode($id));
+        log_message('info','Running Biz method before update:- '. json_encode($id));
 
         
         /*

@@ -43,7 +43,7 @@
                                     <!-- <div class="favourite-heart text-danger position-absolute"><a href="detail.html"><i class="icofont-heart"></i></a></div> -->
                                     <!-- <div class="member-plan position-absolute"><span class="badge badge-dark">Promoted</span></div> -->
                                     <a href="<?= site_url($bizs->biz_type.'/'.$bizs->slug) ?>">
-                                        <img src="<?= site_url('img/vendor/'.$bizs->id.'/logo/'.$bizs->image)?>" class="img-fluid item-img">
+                                        <img data-src="<?= site_url('img/vendor/'.$bizs->id.'/logo/'.$bizs->image)?>" class="img-fluid img-fluid-img lazyload">
                                     </a>
                                 </div>
                                 <div class="p-3 position-relative">
@@ -104,3 +104,10 @@
 <!-- /location modal -->
 
 <?= $this->endsection() ?>
+
+<?=$this->section("scripts")?>
+    <script src="/js/lazyload.js"></script>
+    <script>
+        $("img").lazyload();
+    </script>
+<?=$this->endSection()?>

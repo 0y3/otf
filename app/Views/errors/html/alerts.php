@@ -1,6 +1,6 @@
 <style type="text/css">
 	.alert{
-		margin-top: 50px;
+		margin-top: 5px;
 	}
 </style>
         <?php if(session()->getFlashdata('error')){ ?>
