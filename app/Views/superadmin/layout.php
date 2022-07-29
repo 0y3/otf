@@ -19,23 +19,23 @@
       <title><?= $title ? esc($title) : "OTF | Food Delivery" ?></title>
 
       <!-- Favicon Icon -->
-      <!-- <link rel="icon" type="image/png" href="/favicon/favicon.ico"> -->
-      <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-      <link rel="manifest" href="/favicon/site.webmanifest">
-      <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#ae0bce">
+      <link rel="icon" type="image/png" href="<?=base_url('')?>/favicon/favicon.ico">
+      <link rel="apple-touch-icon" sizes="180x180" href="<?=base_url('')?>/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="<?=base_url('')?>/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="<?=base_url('')?>/favicon/favicon-16x16.png">
+      <link rel="manifest" href="<?=base_url('')?>/favicon/site.webmanifest">
+      <link rel="mask-icon" href="<?=base_url('')?>/favicon/safari-pinned-tab.svg" color="#ae0bce">
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#ffffff">
       <!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
 		<!--begin::Page Vendor Stylesheets(used by this page)-->
-		<link href="/admin/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="<?=base_url('')?>/admin/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Page Vendor Stylesheets-->
 		<!--begin::Global Stylesheets Bundle(used by all pages)-->
-		<link href="/admin/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="/admin/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="<?=base_url('')?>/admin/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="<?=base_url('')?>/admin/css/style.bundle.css" rel="stylesheet" type="text/css" />
       <?= $this->renderSection("styles"); ?>
       
       <script>var base_url = '<?=base_url()?>';</script>
@@ -92,34 +92,34 @@
 
       <!--begin::Javascript-->
 		<!--begin::Global Javascript Bundle(used by all pages)-->
-		<script src="/admin/plugins/global/plugins.bundle.js"></script>
-		<script src="/admin/js/scripts.bundle.js"></script>
+		<script src="<?=base_url('')?>/admin/plugins/global/plugins.bundle.js"></script>
+		<script src="<?=base_url('')?>/admin/js/scripts.bundle.js"></script>
 		<!--end::Global Javascript Bundle-->
 		<!--begin::Page Vendors Javascript(used by this page)-->
-		<script src="/admin/plugins/custom/fslightbox/fslightbox.bundle.js"></script>
-		<script src="/admin/plugins/custom/typedjs/typedjs.bundle.js"></script>
+		<script src="<?=base_url('')?>/admin/plugins/custom/fslightbox/fslightbox.bundle.js"></script>
+		<script src="<?=base_url('')?>/admin/plugins/custom/typedjs/typedjs.bundle.js"></script>
 		<!-- <script src="../../../../cdn.amcharts.com/lib/5/index.js"></script>
 		<script src="../../../../cdn.amcharts.com/lib/5/xy.js"></script>
 		<script src="../../../../cdn.amcharts.com/lib/5/percent.js"></script>
 		<script src="../../../../cdn.amcharts.com/lib/5/radar.js"></script>
 		<script src="../../../../cdn.amcharts.com/lib/5/themes/Animated.js"></script> -->
-		<script src="/admin/plugins/custom/datatables/datatables.bundle.js"></script>
+		<script src="<?=base_url('')?>/admin/plugins/custom/datatables/datatables.bundle.js"></script>
 		<!--end::Page Vendors Javascript-->
 
       
       <!-- axios -->
-      <script src="/vendor/axios/axios.min.js"></script>
+      <script src="<?=base_url('')?>/vendor/axios/axios.min.js"></script>
       <!-- lodash -->
-      <script src="/vendor/lodash/lodash.js"></script>
+      <script src="<?=base_url('')?>/vendor/lodash/lodash.js"></script>
 	  
 	  <!-- Encrypt and Decrypt -->
 	  <script src="<?=base_url('vendor/crypto/crypto-js.min.js')?>"></script>
       
 		<!--begin::Page Custom Javascript(used by this page)-->
-		<script src="/admin/js/widgets.bundle.js"></script>
-		<script src="/admin/js/custom/widgets.js"></script>
-		<script src="/admin/js/custom/apps/chat/chat.js"></script>
-		<script src="/admin/js/custom/intro.js"></script>
+		<script src="<?=base_url('')?>/admin/js/widgets.bundle.js"></script>
+		<script src="<?=base_url('')?>/admin/js/custom/widgets.js"></script>
+		<script src="<?=base_url('')?>/admin/js/custom/apps/chat/chat.js"></script>
+		<script src="<?=base_url('')?>/admin/js/custom/intro.js"></script>
 		<!--end::Page Custom Javascript-->
       <!-- <script src="/admin/js/custom/datatable/vendor.js"></script> -->
 		<!--end::Javascript-->

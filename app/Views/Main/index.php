@@ -37,11 +37,11 @@
                            <div class="col-lg-10 col-md-10 col-sm-12 form-group">
                               <div class="location-dropdown">
                                  <i class="icofont-location-arrow"></i>
-                                 <select class="custom-select form-control-lg locationselection select2" data-placeholder="Select your delivery location" name="delivery" value ="<?= !empty(getDeliveryLocationTemp()) ? $encrypter->decrypt(getDeliveryLocationTemp()['deliveryLocateId']) : '' ?>" required>
+                                 <select class="custom-select form-control-lg locationselection select2" data-placeholder="Select your delivery location" name="delivery" value ="<?= !empty(getDeliveryLocationTemp()) ? $encrypter->decrypt(base64_decode(getDeliveryLocationTemp()['deliveryLocateId'])) : '' ?>" required>
                                     <option value=""> Select your delivery location </option>
                                  <?php foreach ($deliveryloc as $data) :?>
                                  <?php if(getDeliveryLocationTemp()): ?>
-                                    <option value="<?=$data['id']?>" <?= ($data['id'] == $encrypter->decrypt(getDeliveryLocationTemp()['deliveryLocateId'])) ? 'selected' : '' ?> > <?= ucwords($data['city_name']) ?> <small>(<?= ucwords($data['state_name']) ?>)</small> </option>
+                                    <option value="<?=$data['id']?>" <?= ($data['id'] == $encrypter->decrypt(base64_decode(getDeliveryLocationTemp()['deliveryLocateId']))) ? 'selected' : '' ?> > <?= ucwords($data['city_name']) ?> <small>(<?= ucwords($data['state_name']) ?>)</small> </option>
                                  <?php else: ?>
                                  <option value="<?=$data['id']?>"> <?= ucwords($data['city_name']) ?> <small>(<?= ucwords($data['state_name']) ?>)</small> </option>
                                  <?php endif; ?>

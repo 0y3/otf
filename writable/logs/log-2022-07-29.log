@@ -104,3 +104,16 @@ CRITICAL - 2022-07-29 03:08:09 --> Attempt to read property "fee" on array
 #4 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+CRITICAL - 2022-07-29 14:23:53 --> Decrypting: authentication failed.
+#0 C:\xampp\htdocs\otfonline\backend\ci4\system\Encryption\Handlers\OpenSSLHandler.php(98): CodeIgniter\Encryption\Exceptions\EncryptionException::forAuthenticationFailed()
+#1 C:\xampp\htdocs\otfonline\backend\ci4\app\Views\main\index.php(40): CodeIgniter\Encryption\Handlers\OpenSSLHandler->decrypt('pY1Oj/thF+41rA+...')
+#2 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\otfonline\backend\ci4\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\otfonline\backend\ci4\system\Common.php(1089): CodeIgniter\View\View->render('main/index', Array, true)
+#5 C:\xampp\htdocs\otfonline\backend\ci4\app\Controllers\Web\Home.php(37): view('main/index', Array)
+#6 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(838): App\Controllers\Web\Home->index()
+#7 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(425): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Web\Home))
+#8 C:\xampp\htdocs\otfonline\backend\ci4\system\CodeIgniter.php(332): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\otfonline\backend\ci4\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\otfonline\backend\ci4\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
