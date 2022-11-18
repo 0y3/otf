@@ -281,7 +281,8 @@ var KTDatatables = function() {
         dt = $(table).DataTable({
             data: data,
             responsive: true,
-            stateSave: true,
+            // stateSave: true,
+            // fixedHeader: true,
             pageLength: 20,
             lengthMenu: [
                 [20, 50, 100, 200, 500, -1],
@@ -361,7 +362,8 @@ var KTDatatables = function() {
                                     <!--end::Svg Icon-->
                                 </span>
                             </a>
-                            <a href="#" class="btn btn-icon btn-flex btn-active-light-primary btn-sm w-30px h-30px me-1">
+                            <a href="#" class="btn btn-icon btn-flex btn-active-light-primary btn-sm w-30px h-30px me-1 editvendor" data-bs-toggle="modal"
+                            data-bs-target="#modal_edit_vendor" data-name="${row['name']}" data-slug="${row['slug']}" data-description="${row['description']}" data-logo="${row['logo']}" data-phone="${row['phone']}" data-email="${row['email']}" data-address="${row['address']}" data-status="${row['status']}"> 
                                 <span class="svg-icon svg-icon-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="currentColor"></path>
@@ -403,15 +405,106 @@ var KTDatatables = function() {
         });
     }
 
+
+    var handleFilterDatatable = () => {
+        // Select filter options
+        filterPayment = document.querySelectorAll('[name="biz_status_filter"], [name="biz_type_filter"]');
+        const filterButton = document.querySelector('[data-kt-vendor-table-filter="filter"]');
+        // Filter Datatable
+        $('[name="biz_status_filter"]').on('change', function(e) {
+            if ($(this).val() === 'all') {
+                dt.column(2).search('').draw();
+            } else {
+                dt.column(2).search($(this).val().toLowerCase()).draw();
+            }
+        });
+
+        // Filter datatable on submit
+        filterButton.addEventListener('click', function(e) {
+            // Get filter values
+            let Value = '';
+
+            // console.log(filterPayment);
+            // Get payment value
+            filterPayment.forEach(r => {
+                if (r.checked) {
+                    Value = r.value;
+                }
+
+                // Reset payment value if "All" is selected
+                if (Value === 'all') {
+                    Value = '';
+                }
+            });
+            console.log(Value);
+            // Filter datatable --- official docs reference: https://datatables.net/reference/api/search()
+            dt.search(Value).draw();
+        });
+    }
+
+    // Reset Filter
+    var handleResetForm = () => {
+        // Select reset button
+        const resetButton = document.querySelector('[data-kt-vendor-table-filter="reset"]');
+
+        // Reset datatable
+        resetButton.addEventListener('click', function() {
+            // Reset payment type
+            filterPayment[0].checked = true;
+            $('[name="biz_status_filter"]').val(null).trigger('change');
+            // Reset datatable --- official docs reference: https://datatables.net/reference/api/search()
+            dt.search('').draw();
+        });
+    }
+
+    // Hook export buttons
+    var exportButtons = () => {
+        const documentTitle = 'Vendors List';
+        var buttons = new $.fn.dataTable.Buttons(table, {
+            buttons: [{
+                    extend: 'copyHtml5',
+                    title: documentTitle
+                },
+                {
+                    extend: 'excelHtml5',
+                    title: documentTitle
+                },
+                {
+                    extend: 'csvHtml5',
+                    title: documentTitle
+                },
+                {
+                    extend: 'pdfHtml5',
+                    title: documentTitle
+                }
+            ]
+        }).container().appendTo($('#kt_ecommerce_report_customer_orders_export'));
+
+        // Hook dropdown menu click event to datatable export buttons
+        const exportButtons = document.querySelectorAll('#kt_vendor_export_menu [data-kt-vendor-export]');
+        exportButtons.forEach(exportButton => {
+            exportButton.addEventListener('click', e => {
+                e.preventDefault();
+
+                // Get clicked export value
+                const exportValue = e.target.getAttribute('data-kt-vendor-export');
+                const target = document.querySelector('.dt-buttons .buttons-' + exportValue);
+                console.log(exportValue);
+                // Trigger click event on hidden datatable export buttons
+                target.click();
+            });
+        });
+    }
+
     // Public methods
     return {
         init: function() {
             initDatatable();
             KTMenu.createInstances();
-            // exportButtons();
+            exportButtons();
             handleSearchDatatable();
-            // handleFilterDatatable();
-            // handleResetForm();
+            handleFilterDatatable();
+            handleResetForm();
         }
     }
 }();
@@ -859,6 +952,13 @@ var KTAddVendor = function() {
     };
 }();
 
+var KTEditVendor = function(){
+    // Elements
+    var form;
+    var validator;
+    var formSubmitButton;
+    let edit_id;
+}
 
 // On document ready
 // KTUtil.onDOMContentLoaded(function () {

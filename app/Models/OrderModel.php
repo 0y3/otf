@@ -81,4 +81,44 @@ class OrderModel extends Model
 		);
 		return $types;
 	}
+
+    public function orderJoins_()
+    {
+        $data_ = [];
+		$categories = $this->asArray()
+                    ->where(['status' => 1, 'isdeleted' => 0])
+                    ->orderBy('pi_paid_at DESC','id')
+                    ->findAll();
+
+        if (count($categories) > 0) {
+            foreach ($categories as $key => $category) {
+                $category['biz_details'] = $this->bizDetails_($category['biz_id']);
+                $category['user_details'] = $this->userDetails_($category['user_id']);
+                $category['order_details'] = $this->OrderDetails_($category['id']);
+                $data_[] = $category;
+            }
+        }
+
+        return $data_;
+    }
+    public function bizDetails_($id=null)
+    {
+        $data_ = (new BizModel)->where(['isdeleted' => 0,'id' => $id])->first();
+        return $data_;
+    }
+
+    public function userDetails_($id=null)
+    {
+        $data_ = (new UserModel)->where(['isdeleted' => 0,'id' => $id])->first();
+        return $data_;
+    }
+    public function orderDetails_($id=null)
+    {
+        $data_ = (new OrderDetailModel) 
+                ->where(['isdeleted' => 0,'order_id' => $id])
+                ->orderBy('id ASC')
+                ->findAll();
+
+       return $data_;
+    }
 }

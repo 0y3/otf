@@ -23,7 +23,7 @@ class OrderDetailModel extends Model
                                     'quantity',
                                     'price',
                                     'addup_menu',
-                                    'grand_total',
+                                    'grant_total',
                                     'order_status',
                                     'status',
                                     'isdeleted'

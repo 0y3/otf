@@ -15,7 +15,7 @@
          <!--begin::Symbol-->
          <div class="symbol symbol-50px">
             <!-- <img src="../assets/media/avatars/300-1.jpg" alt="" /> -->
-            <div class="symbol-label fs-2 fw-bold bg-<?=BG_NAME[array_rand(BG_NAME)]?> text-inverse-danger">M</div>
+            <div class="symbol-label fs-2 fw-bold bg-<?=BG_NAME[array_rand(BG_NAME)]?> text-inverse-danger"><?= $_SESSION['userSurname'][0].''.substr($_SESSION['userFirstname'],0,1)?></div>
          </div>
          
          <!--end::Symbol-->
@@ -26,10 +26,10 @@
                <!--begin::Info-->
                <div class="flex-grow-1 me-2">
                   <!--begin::Username-->
-                  <a href="#" class="text-white text-hover-primary fs-6 fw-bold">Paul Melone</a>
+                  <a href="#" class="text-white text-hover-primary fs-6 fw-bold"><?= $_SESSION['userSurname'] .' '. $_SESSION['userFirstname']?></a>
                   <!--end::Username-->
                   <!--begin::Description-->
-                  <span class="text-gray-600 fw-bold d-block fs-8 mb-1">Python Dev</span>
+                  <span class="text-gray-600 fw-bold d-block fs-8 mb-1"><?= $_SESSION['userSurname'] .' '. $_SESSION['userFirstname']?></span>
                   <!--end::Description-->
                   <!--begin::Label-->
                   <div class="d-flex align-items-center text-success fs-9">
@@ -204,7 +204,7 @@
                      <!--end::Menu item-->
                      <!--begin::Menu item-->
                      <div class="menu-item px-5">
-                        <a href="../authentication/flows/basic/sign-in.html" class="menu-link px-5">Sign Out</a>
+                        <a href="<?=site_url('otfadmin/logout') ?>" class="menu-link px-5">Sign Out</a>
                      </div>
                      <!--end::Menu item-->
                      <!--begin::Menu separator-->
@@ -276,27 +276,27 @@
                   <span class="menu-section text-muted text-uppercase fs-8 ls-1">Orders Menu</span>
                </div>
             </div>
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-            <a class="menu-link" href="<?= site_url('otfadmin/customer/add')?>">
-               <span class="menu-link">
-                  <span class="menu-icon">
-                     <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
-                     <span class="svg-icon svg-icon-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                           <path opacity="0.3" d="M18.041 22.041C18.5932 22.041 19.041 21.5932 19.041 21.041C19.041 20.4887 18.5932 20.041 18.041 20.041C17.4887 20.041 17.041 20.4887 17.041 21.041C17.041 21.5932 17.4887 22.041 18.041 22.041Z" fill="currentColor"></path>
-                           <path opacity="0.3" d="M6.04095 22.041C6.59324 22.041 7.04095 21.5932 7.04095 21.041C7.04095 20.4887 6.59324 20.041 6.04095 20.041C5.48867 20.041 5.04095 20.4887 5.04095 21.041C5.04095 21.5932 5.48867 22.041 6.04095 22.041Z" fill="currentColor"></path>
-                           <path opacity="0.3" d="M7.04095 16.041L19.1409 15.1409C19.7409 15.1409 20.141 14.7409 20.341 14.1409L21.7409 8.34094C21.9409 7.64094 21.4409 7.04095 20.7409 7.04095H5.44095L7.04095 16.041Z" fill="currentColor"></path>
-                           <path d="M19.041 20.041H5.04096C4.74096 20.041 4.34095 19.841 4.14095 19.541C3.94095 19.241 3.94095 18.841 4.14095 18.541L6.04096 14.841L4.14095 4.64095L2.54096 3.84096C2.04096 3.64096 1.84095 3.04097 2.14095 2.54097C2.34095 2.04097 2.94096 1.84095 3.44096 2.14095L5.44096 3.14095C5.74096 3.24095 5.94096 3.54096 5.94096 3.84096L7.94096 14.841C7.94096 15.041 7.94095 15.241 7.84095 15.441L6.54096 18.041H19.041C19.641 18.041 20.041 18.441 20.041 19.041C20.041 19.641 19.641 20.041 19.041 20.041Z" fill="currentColor"></path>
-                        </svg>
+            <div class="menu-item">
+               <a class="menu-link <?=($currentMenu == 'order') ? 'active' : '' ?>" href="<?= route_to('orders')?> ">
+                  <span class="menu-link">
+                     <span class="menu-icon">
+                        <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm007.svg-->
+                        <span class="svg-icon svg-icon-2">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path opacity="0.3" d="M18.041 22.041C18.5932 22.041 19.041 21.5932 19.041 21.041C19.041 20.4887 18.5932 20.041 18.041 20.041C17.4887 20.041 17.041 20.4887 17.041 21.041C17.041 21.5932 17.4887 22.041 18.041 22.041Z" fill="currentColor"></path>
+                              <path opacity="0.3" d="M6.04095 22.041C6.59324 22.041 7.04095 21.5932 7.04095 21.041C7.04095 20.4887 6.59324 20.041 6.04095 20.041C5.48867 20.041 5.04095 20.4887 5.04095 21.041C5.04095 21.5932 5.48867 22.041 6.04095 22.041Z" fill="currentColor"></path>
+                              <path opacity="0.3" d="M7.04095 16.041L19.1409 15.1409C19.7409 15.1409 20.141 14.7409 20.341 14.1409L21.7409 8.34094C21.9409 7.64094 21.4409 7.04095 20.7409 7.04095H5.44095L7.04095 16.041Z" fill="currentColor"></path>
+                              <path d="M19.041 20.041H5.04096C4.74096 20.041 4.34095 19.841 4.14095 19.541C3.94095 19.241 3.94095 18.841 4.14095 18.541L6.04096 14.841L4.14095 4.64095L2.54096 3.84096C2.04096 3.64096 1.84095 3.04097 2.14095 2.54097C2.34095 2.04097 2.94096 1.84095 3.44096 2.14095L5.44096 3.14095C5.74096 3.24095 5.94096 3.54096 5.94096 3.84096L7.94096 14.841C7.94096 15.041 7.94095 15.241 7.84095 15.441L6.54096 18.041H19.041C19.641 18.041 20.041 18.441 20.041 19.041C20.041 19.641 19.641 20.041 19.041 20.041Z" fill="currentColor"></path>
+                           </svg>
+                        </span>
+                        <!--end::Svg Icon-->
                      </span>
-                     <!--end::Svg Icon-->
+                     <span class="menu-title">Orders</span>
+                     <span class="menu-label">
+                        <span class="badge badge-light-danger">new</span>
+                     </span>
                   </span>
-                  <span class="menu-title">Orders</span>
-                  <span class="menu-label">
-                     <span class="badge badge-light-danger">new</span>
-                  </span>
-               </span>
-            </a>
+               </a>
             </div>
             
             
@@ -343,7 +343,7 @@
                   </div>
                </div>
             </div>
-            <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+            <div data-kt-menu-trigger="click" class="menu-item  <?=(isset($parentMenu) && $parentMenu == 'customers') ? 'here show' : '' ?> menu-accordion">
                <span class="menu-link">
                   <span class="menu-icon">
                      <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
@@ -368,7 +368,7 @@
                      </a>
                   </div> -->
                   <div class="menu-item">
-                     <a class="menu-link <?=($currentMenu == 'customer') ? 'active' : '' ?>" " href="<?= site_url('otfadmin/customer')?>">
+                     <a class="menu-link <?=($currentMenu == 'customer') ? 'active' : '' ?>" href="<?= site_url('otfadmin/customer')?>">
                         <span class="menu-bullet">
                            <span class="bullet bullet-dot"></span>
                         </span>
@@ -378,7 +378,7 @@
                </div>
             </div>
             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
-               <a class="menu-link" href="../layout-builder.html" title="" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right" data-bs-original-title="Build your layout and export HTML for server side integration">
+               <a class="menu-link" href="" title="" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right" data-bs-original-title="Build your layout and export HTML for server side integration">
                   <span class="menu-icon">
                      <!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
                      <span class="svg-icon svg-icon-2">
@@ -400,7 +400,7 @@
                </div>
             </div>
             <div class="menu-item">
-               <a class="menu-link" href="../layout-builder.html" title="" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right" data-bs-original-title="Build your layout and export HTML for server side integration">
+               <a class="menu-link" href="" title="" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right" data-bs-original-title="Build your layout and export HTML for server side integration">
                   <span class="menu-icon">
                      <!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
                      <span class="svg-icon svg-icon-2">

@@ -91,6 +91,7 @@ class AuthenticationController extends BaseController
                     ];
 
                     $this->session->set($sessionArray);
+                    $this->session->remove('isLoggedIn');
                     return (getBackUrl()) ? getBackUrl() : redirect()->to('otfadmin/dashboard');
                 }
                 else{

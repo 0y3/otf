@@ -26,6 +26,7 @@ class UsersController extends BaseController
         $this->orderDetail      = model('OrderDetailModel');
         $this->stateModel       = model('StateModel');
         $this->cityModel        = model('StateCityModel');
+        $this->userAddress      = model('UserAddressModel');
         $this->deliveryLocate   = model('DeliveryLocationsModel');
         $this->cart             = cart();
         
@@ -44,7 +45,6 @@ class UsersController extends BaseController
                       ->where(self::filter)
                       ->where('user_id',$_SESSION['userId'])
                       ->orderBy('created_at DESC','id')
-                      ->orderBy('id')
                       ->paginate(24);
 
         $this->data['order'] = $order;
@@ -90,8 +90,8 @@ class UsersController extends BaseController
         
         $data_ = $this->userAddress->insert($data);
         
-        //  return print("<pre>".print_r($data,true)."</pre>");die;
-         return $this->respond($data_); //json
+        // return print("<pre>".print_r($data_,true)."</pre>");die;
+        return $this->respond($data_); //json
         // Redirect to the cart page
     }
 
@@ -157,10 +157,22 @@ class UsersController extends BaseController
         if($_GET['status'] === 'successful')
         {
             if(empty($this->cart->contents()) ){ return redirect()->to('user/order');}
+            $GrandTotal = (float)$_SESSION['cart_adds']['delivery_fee'] + (float)$this->cart->total();
+
             $url = 'transactions/'.$this->request->getVar('transaction_id').'/verify';
             $response = callAPI('',$url,'GET');
 
-            if($response->status === 'success')
+            //check order db if it exist
+            $checkOrder = $this->order->where('pi_id', $_GET['transaction_id'])->first();
+            
+            // print("<pre>".print_r($GrandTotal,true)."</pre>");die;
+            if($checkOrder)
+            {
+                $this->session->setFlashdata('info', 'info');
+                $this->session->setFlashdata('message', 'Transaction Order Exist: '.$_GET['transaction_id']);
+                return redirect()->to('user/order');
+            }
+            if($response->status === 'success' && $response->data->amount == $GrandTotal)
             {
                 $ps_data = [
                     "user_id"       =>  $_SESSION['userId'],

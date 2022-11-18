@@ -214,6 +214,7 @@ class AuthenticationController extends BaseController
                     ];
 
                     $this->session->set($sessionArray);
+                    $this->session->remove('isLoggedInAdmin');
                     return (getBackUrl()) ? getBackUrl() : redirect()->to('user/order');
                 }
                 else{

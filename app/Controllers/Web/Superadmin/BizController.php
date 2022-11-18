@@ -73,6 +73,7 @@ class BizController extends BaseController
             'address'       => $this->request->getVar('address'),
             'city_id'       => (int)$deliveryloc['city_id'],
             'state_id'      => (int)$deliveryloc['state_id'],
+            'status'        => 1,
         ];
 
         $newBiz = $this->biz->insert($data);

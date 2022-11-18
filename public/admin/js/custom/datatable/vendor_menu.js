@@ -295,6 +295,7 @@ var KTDatatables = function() {
 
 
 // Class Add Menu
+var biz_isRest = '0';
 var KTAddMenu = function() {
     // Elements
     var form;
@@ -339,7 +340,7 @@ var KTAddMenu = function() {
                             },
                             file: {
                                 extension: 'jpeg,jpg,png',
-                                type: 'image/jpeg, image/png',
+                                type: 'image/jpeg,image/png',
                                 message: 'Thumbnail Image must be Only *.png, *.jpg and *.jpeg'
                             },
                         },
@@ -453,25 +454,52 @@ var KTAddMenu = function() {
 
     }
 
-    // Init form repeater --- more info: https://github.com/DubFriend/jquery.repeater
-    const initFormRepeater = () => {
-        $('#addup_menu_repeater').repeater({
-            initEmpty: true,
+    if (biz_isRest == "1") {
+        // Init form repeater --- more info: https://github.com/DubFriend/jquery.repeater
+        const initFormRepeater = () => {
+            $('#addup_menu_repeater').repeater({
+                initEmpty: true,
 
-            // defaultValues: {
-            //     'text-input': 'foo'
-            // },
+                // defaultValues: {
+                //     'text-input': 'foo'
+                // },
 
-            repeaters: [{
-                selector: '.addup-menu-repeater',
-                show: function() {
-                    $(this).slideDown();
-                },
+                repeaters: [{
+                    selector: '.addup-menu-repeater',
+                    show: function() {
+                        $(this).slideDown();
+                    },
+
+                    hide: function(deleteElement) {
+                        var $this = $(this);
+                        Swal.fire({
+                            text: "Are you sure you would like to delete this Add-Up Menu Row?",
+                            icon: "warning",
+                            showCancelButton: true,
+                            buttonsStyling: false,
+                            confirmButtonText: "Yes, Delete it!",
+                            cancelButtonText: "No, return",
+                            customClass: {
+                                confirmButton: "btn btn-primary",
+                                cancelButton: "btn btn-active-light"
+                            }
+                        }).then(function(result) {
+                            if (result.value) {
+                                $this.slideUp(deleteElement);
+                            }
+                        });
+                    }
+                }],
+
+                // show: function() {
+                //     $(this).slideDown();
+                // },
 
                 hide: function(deleteElement) {
+                    //$(this).slideUp(deleteElement);
                     var $this = $(this);
                     Swal.fire({
-                        text: "Are you sure you would like to delete this Add-Up Menu Row?",
+                        text: "Are you sure you would like to delete this Row?",
                         icon: "warning",
                         showCancelButton: true,
                         buttonsStyling: false,
@@ -487,33 +515,8 @@ var KTAddMenu = function() {
                         }
                     });
                 }
-            }],
-
-            // show: function() {
-            //     $(this).slideDown();
-            // },
-
-            hide: function(deleteElement) {
-                //$(this).slideUp(deleteElement);
-                var $this = $(this);
-                Swal.fire({
-                    text: "Are you sure you would like to delete this Row?",
-                    icon: "warning",
-                    showCancelButton: true,
-                    buttonsStyling: false,
-                    confirmButtonText: "Yes, Delete it!",
-                    cancelButtonText: "No, return",
-                    customClass: {
-                        confirmButton: "btn btn-primary",
-                        cancelButton: "btn btn-active-light"
-                    }
-                }).then(function(result) {
-                    if (result.value) {
-                        $this.slideUp(deleteElement);
-                    }
-                });
-            }
-        });
+            });
+        }
     }
     return {
         // Public Functions
@@ -522,13 +525,16 @@ var KTAddMenu = function() {
             formSubmitButton = document.querySelector('#menu_submit');
             KTImageInput.createInstances();
             handleMenu();
-            initFormRepeater();
+            if (biz_isRest == "1") {
+                initFormRepeater();
+            }
 
         }
     }
 }();
 
 // Menu Category List
+var biz_type ;
 var KTMenuCategoryDatatables = function() {
     // Shared variables
     var table = '#kt_cate_menu';

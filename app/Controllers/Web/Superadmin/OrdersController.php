@@ -5,7 +5,7 @@ namespace App\Controllers\Web\Superadmin;
 use App\Controllers\BaseController;
 use CodeIgniter\API\ResponseTrait;
 
-class CustomersController extends BaseController
+class OrdersController extends BaseController
 {
     use ResponseTrait;
     
@@ -32,23 +32,22 @@ class CustomersController extends BaseController
 
     public function index()
     {
-        $users = $this->user->UserAndOrder_();
+        $orders = $this->order->orderJoins_();
 
         $breadcrumb =   ' <li class="breadcrumb-item"><span class="bullet bg-gray-200 w-5px h-2px"></span></li>
-                                <li class="breadcrumb-item text-dark">Customers</li>';
+                                <li class="breadcrumb-item text-dark">Orders</li>';
 
         $this->data = [
             'encrypter'     => $this->encrypter,
-            'title'         => "OTF Superadmin:- Customers",
-            'parentMenu'    => "customers",
-            'currentMenu'   => 'customer',
+            'title'         => "OTF Superadmin:- Orders",
+            'parentMenu'    => "orders",
+            'currentMenu'   => 'order',
             'breadcrumb'    => $breadcrumb,
-            'user'         => $users,
+            'order'         => $orders,
         ];
 
-        //return view('layout', $data);
-        // print("<pre>".print_r(json_encode($users,JSON_PRETTY_PRINT),true)."</pre>");die;
-        return view('superadmin/customers', $this->data);
+        // print("<pre>".print_r(json_encode($orders,JSON_PRETTY_PRINT),true)."</pre>");die;
+        return view('superadmin/orders', $this->data);
     }
 
     public function overview($id = null)
@@ -78,6 +77,44 @@ class CustomersController extends BaseController
             return view('superadmin/customers_overview', $this->data);
         }
         else{ return redirect()->back(); }
+    }
+
+    public function order(){
+        $this->data = [
+            'title' => "OTF Vendors:- Order",
+            'currentMenu'   => 'order'
+        ];
+        $order = $this->order
+                      ->where(self::filter)
+                      ->where('user_id',$_SESSION['userId'])
+                      ->orderBy('id')
+                      ->paginate(24);
+
+        $this->data['order'] = $order;
+
+       
+        // $this->order->pager->setPath('api/bizs'); //customiz pagination url
+
+        // print("<pre>".print_r($this->data,true)."</pre>");die;
+        return view('user/orders', $this->data);
+    }
+
+    public function orderDetails($ref)
+    {
+        $this->data = [
+            'title' => "OTF Vendors:- Order",
+            'currentMenu'   => 'order'
+        ];
+        $order = $this->order
+                      ->where(self::filter)
+                      ->where(['user_id' => $_SESSION['userId'],'reference' => $ref])
+                      ->first();
+        if($order)
+        {
+            $this->data['order'] = $order;
+            return view('user/orderdetails', $this->data);
+        }
+        else{return redirect()->back();}
     }
 
     public function address_($id=null)

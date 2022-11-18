@@ -142,7 +142,8 @@ $routes->setAutoRoute(true);
 
     
     $routes->post('add/vendor', 'BizController::add');
-    $routes->put('edit/vendor/(:segment)', 'BizController::edit/$1', ['as' => 'vendor_edit']);
+    $routes->post('edit/vendor/(:segment)', 'BizController::edit/$1', ['as' => 'vendor_edit']);
+    $routes->post('editlogo/vendor/(:segment)', 'BizController::editLogo/$1', ['as' => 'vendor_editLogo']);
 
     $routes->get('checkbizname', 'AuthenticationController::checkbizname');
 
@@ -182,6 +183,10 @@ $routes->setAutoRoute(true);
     $routes->post('add/address/(:segment)', 'CustomersController::address_/$1');
     $routes->post('edit/address/(:segment)', 'CustomersController::addressEdit/$1', ['as' => 'address_edit']);
     $routes->delete('delete/address/(:segment)', 'CustomersController::addressDelete/$1', ['as' => 'address_delete']);
+
+
+    // view All Order
+    $routes->get('orders', 'OrdersController::index',['as' => 'orders']);
 
 
 

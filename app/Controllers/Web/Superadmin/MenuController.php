@@ -90,6 +90,7 @@ class MenuController extends BaseController
                                     <li class="breadcrumb-item text-muted"><a href="'.route_to('menus', $biz->slug).'" class="text-muted text-hover-primary">Menus</a></li>
                             <li class="breadcrumb-item"><span class="bullet bg-gray-200 w-5px h-2px"></span></li>
                                     <li class="breadcrumb-item text-dark">Add Menu</li>';
+                                    
 
 
             $this->data = [

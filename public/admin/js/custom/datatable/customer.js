@@ -229,7 +229,9 @@ var PaymentDatatables = function() {
                 {
                     targets: 5,
                     render: function(data, type, row) {
-                        return moment(data).format("Do MMM, YYYY");
+                        // return moment(data).format("Do MMM, YYYY LT"); 
+                        return `${moment(data).fromNow()} <br><span class="badge badge-light fw-bolder text-gray-800 fs-7" > ${moment(data).format("Do MMM, YYYY LT")} </span>`;
+                        // moment(data).format("lll");
                     }
                 },
                 {
