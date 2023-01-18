@@ -12,6 +12,16 @@
         </div>
                                 
         <?PHP } ?>
+
+        <?php if (session()->has('errors')) : ?>
+            <div class="alert alert-danger alert-rounded">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"> 
+                <span aria-hidden="true">×</span> </button>
+                <?php foreach (session('errors') as $error) : ?>
+                    <li><?= $error ?></li>
+                <?php endforeach ?>
+            </div>
+        <?php endif ?>
         
         <?php if(session()->getFlashdata('warning')){ ?>
         <div class="alert alert-warning alert-rounded"> 

@@ -36,45 +36,31 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto pl-5 pr-5">
-                                <h3 class="login-heading mb-4">New Buddy!</h3>
+                                <h3 class="login-heading mb-4">Reset Password</h3>
                                 <!-- alerts -->
                                 <?= $this->include('errors/html/alerts') ?>
                                 <!-- /alerts -->
-                                <form method="POST" action="<?= site_url('signup') ?>">
+                                <form method="POST" action="<?= site_url('newpassword') ?>">
                                     <?php //csrf_field(); 
                                     ?>
-                                    <div class="form-label-group mb-4">
-                                        <input type="text" name="surname" id="Surname" class="form-control" placeholder="Surname" required value="<?= set_value("surname")?>">
-                                        <label for="Surname">Surname</label>
-                                        <?php if(isset($validation)): ?><small class="help-block text-danger"><?=display_error($validation,'surname');?></small><?php endif ?>
-                                    </div>
-                                    <div class="form-label-group mb-4">
-                                        <input type="text" name="firstname" id="Firstname" class="form-control" placeholder="Firstname" required value="<?= set_value("firstname")?>">
-                                        <label for="Firstname">Firstname</label>
-                                        <?php if(isset($validation)): ?><small class="help-block text-danger"><?=display_error($validation,'firstname');?></small><?php endif ?>
-                                    </div>
                                     <div class="form-label-group">
-                                        <input type="email" name="email" id="Email" class="form-control" placeholder="Email address" required value="<?= set_value("email")?>">
+                                        <input type="email" id="Email" class="form-control-plaintext" placeholder="Email address" readonly disabled value="<?= $email?>">
                                         <label for="Email">Email address</label>
-                                        <?php if(isset($validation)): ?><small class="help-block text-danger"><?=display_error($validation,'email');?></small><?php endif ?>
-                                    </div>
-                                    <div class="form-label-group">
-                                        <input type="text" name="phone" id="Phone" class="form-control" placeholder="Phone Number" required value="<?= set_value("phone")?>">
-                                        <label for="Phone">Phone Number</label>
-                                        <?php if(isset($validation)): ?><small class="help-block text-danger"><?=display_error($validation,'phone');?></small><?php endif ?>
                                     </div>
                                     <div class="form-label-group">
                                         <input type="password" name="password" id="Password" class="form-control" placeholder="Password" required value="<?= set_value("password")?>">
                                         <label for="Password">Password</label>
                                         <?php if(isset($validation)): ?><small class="help-block text-danger"><?=display_error($validation,'password');?></small><?php endif ?>
                                     </div>
+                                    <input type="hidden" name="id" class="form-control" disable required value="<?= $activation_code ?>">
+                                    <input type="hidden" name="email" class="form-control" disable required value="<?= $email ?>">
                                     <div class="form-label-group">
                                         <input type="password" name="passconf" id="ConfirmPassword" class="form-control" placeholder="Password" required value="<?= set_value("passconf")?>">
                                         <label for="ConfirmPassword">Confirm Password</label>
                                         <?php if(isset($validation)): ?><small class="help-block text-danger"><?=display_error($validation,'passconf');?></small><?php endif ?>
                                     </div>
-                                    <button type="submit" value="Submit" class="btn btn-lg btn-outline-primary btn-block btn-login text-uppercase font-weight-bold mb-2">Sign Up</button>
-                                    <div class="text-center pt-3"> Already have an Account? <a class="font-weight-bold" href="<?= site_url('login') ?>">Sign In</a></div>
+                                    <button type="submit" value="Submit" class="btn btn-lg btn-outline-primary btn-block btn-login text-uppercase font-weight-bold mb-2">Reset Password</button>
+                                    <!-- <div class="text-center pt-3"> Already have an Account? <a class="font-weight-bold" href="<?= site_url('login') ?>">Sign In</a></div> -->
                                 </form>
                             </div>
                         </div>

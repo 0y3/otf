@@ -8,6 +8,8 @@ use CodeIgniter\API\ResponseTrait;
 class AuthenticationController extends BaseController
 {
     use ResponseTrait;
+
+    private $validation, $session, $encrypter, $users, $stateModel, $cityModel, $deliveryLocate,$data;
     function __construct()
     {
         //$this->session = service('session'); // or \Config\Services::session();
@@ -17,6 +19,7 @@ class AuthenticationController extends BaseController
         $this->users        = model('UserModel');
         $this->stateModel   = model('StateModel');
         $this->cityModel    = model('StateCityModel');
+        $this->deliveryLocate   = model('DeliveryLocationsModel');
     }
     public function signup()
     {
@@ -25,7 +28,8 @@ class AuthenticationController extends BaseController
         }
         $this->data = [
             'title' => "OTF Vendors:- Signup",
-            'currentMenu'   => 'login'
+            'currentMenu'   => 'login',
+            'deliveryloc'   => $this->deliveryLocate->getDeliveryLocate(),
         ];
 
         //return view('layout', $data);
@@ -157,7 +161,8 @@ class AuthenticationController extends BaseController
         }
         $this->data = [
             'title' => "OTF Vendors:- login",
-            'currentMenu'   => 'login'
+            'currentMenu'   => 'login',
+            'deliveryloc'   => $this->deliveryLocate->getDeliveryLocate(),
         ];
 
         //return view('layout', $data);
@@ -201,26 +206,30 @@ class AuthenticationController extends BaseController
             
             $user = $this->users->asArray()->where('email', $email)->first();
             if($user){
-                $pwd_verify = verifyHashedPassword($password, $user['password']);
-                if($pwd_verify){
-                    $sessionArray = [
-                            'userId'        => $user['id'],
-                            'userSurname'   => $user['surname'],
-                            'userFirstname' => $user['firstname'],
-                            'userEmail'     => $user['email'],
-                            'userPhone'     => $user['phone'],
-                            'isLoggedIn'    => TRUE,
-                            'isAdmin'       => FALSE
-                    ];
-
-                    $this->session->set($sessionArray);
-                    $this->session->remove('isLoggedInAdmin');
-                    return (getBackUrl()) ? getBackUrl() : redirect()->to('user/order');
-                }
-                else{
+                if ($user['status'] == 0) {
                     $this->session->setFlashdata('error', 'error');
-                    $this->session->setFlashdata('message', 'Password is incorrect. ');
-                }
+                    $this->session->setFlashdata('message', 'User Disactivate. ');
+                } else {
+                    $pwd_verify = verifyHashedPassword($password, $user['password']);
+                    if ($pwd_verify) {
+                        $sessionArray = [
+                            'userId' => $user['id'],
+                            'userSurname' => $user['surname'],
+                            'userFirstname' => $user['firstname'],
+                            'userEmail' => $user['email'],
+                            'userPhone' => $user['phone'],
+                            'isLoggedIn' => TRUE,
+                            'isAdmin' => FALSE
+                        ];
+
+                        $this->session->set($sessionArray);
+                        $this->session->remove('isLoggedInAdmin');
+                        return (getBackUrl()) ? getBackUrl() : redirect()->to('user/order');
+                    } else {
+                        $this->session->setFlashdata('error', 'error');
+                        $this->session->setFlashdata('message', 'Password is incorrect. ');
+                    }
+                }       
             }
             else{
                 $this->session->setFlashdata('error', 'error');
@@ -229,30 +238,157 @@ class AuthenticationController extends BaseController
             return redirect()->to('login');
         }
     }
+
     // This function used to reset the password 
+    public function forgotpassword_()
+    {
+        $email = $this->request->getVar('email',FILTER_SANITIZE_EMAIL);
+       // Check activation id in database
+       $data_check = array( 'email'  =>  $email );
+       $check_data =  $this->users->where($data_check)->first();
+
+       //print("<pre>".print_r($check_data,true)."</pre>");die;
+       if ($check_data)
+       {
+           $encoded_email = urlencode($email);
+           $activationID =uniqueRef(25);
+
+           // update activation id to user db
+           $update_data = [  
+               'activation_code' => $activationID
+           ];
+           $update_user = $this->users->update($check_data->id,$update_data);
+           if($update_user) {
+
+               $dataemail["reset_link"] = site_url("authentication/resetpasswordemail/".$activationID."/".$encoded_email);
+               $dataemail["name"] = ucwords($check_data->firstname)." ".ucwords($check_data->lastname);
+               $dataemail["emailTo"] = $email;
+               $dataemail["message"] = "Reset Your Password OTF";
+            //    print("<pre>".print_r($dataemail,true)."</pre>");die;
+               $sendStatus = resetPasswordEmail($dataemail);
+
+               if($sendStatus){
+                   $data = [
+                       'status' => 200,
+                       'emailmsg' => $sendStatus,
+                       'msg' => 'Reset password link sent successfully, please check mails.' 
+                   ];
+               } else {
+                   $data = [
+                       'status' => 401,
+                       'emailmsg' => $sendStatus,
+                       'msg' => 'Email has been failed, try again.'
+                   ];
+               }
+           }
+       }
+       else
+       {
+           $data = [
+               'status' => 401,
+               'msg' => 'Email not Registered' 
+           ];
+       }
+       return $this->respond($data);
+    }
+
+    // This function used to reset the password confirmation
     public function resetPasswordConfirmUser($activation_id, $email)
     {
+        $this->data = [
+            'title' => "OTF Vendors:- Reset Password",
+            'currentMenu'   => 'Reset Password',
+            'deliveryloc'   => $this->deliveryLocate->getDeliveryLocate(),
+        ];
         // Get email and activation code from URL values at index 3-4
         $email = urldecode($email);
         
         // Check activation id in database
         $data_check = array(  
-                                 'email'  =>  $email,
-                                 'activation_code' =>  $activation_id
-                                 );
-        $check_data =  $this->users->where($data_check)->first();;
+                            'email'  =>  $email,
+                            'activation_code' =>  $activation_id
+                            );
+        $check_data =  $this->users->where($data_check)->first();
         
-        $data['email'] = $email;
-        $data['activation_code'] = $activation_id;
-        //print("<pre>".print_r($check_data,true)."</pre>");die;
+        $this->data['email'] = $email;
+        $this->data['activation_code'] = $activation_id;
+        // print("<pre>".print_r($check_data->toArray(),true)."</pre>");die;
         if ($check_data)
         {
-            $this->load->view('admin/newPassword', $data);
+            return view('main/new_password_user', $this->data);
         }
         else
         {
-            redirect('admin/authentication/login');
+            $this->session->setFlashdata('error', 'error');
+            $this->session->setFlashdata('message', 'Reset Password token is incorrect. ');
+            return redirect()->to('login');
         }
+    }
+
+    // This function used to create new password
+    public function newpassword_()
+    {
+        $email = $this->request->getVar('email',FILTER_SANITIZE_EMAIL);
+        $activation_id = $this->request->getVar('id');
+        $password = $this->request->getVar('password');
+        
+        $this->validation->setRules([
+            'email' => [
+                'label'  => 'Email',
+                'rules'  => 'required|valid_email|min_length[6]',
+                'errors' => [
+                    'required' => 'All accounts must have {field} provided',
+                    'valid_email' => 'Please check the Email field. It does not appear to be valid.',
+                    'is_unique' => 'Email already taken',
+                ],
+            ],
+            'password' => [
+                'label'  => 'Password',
+                'rules'  => 'required|min_length[6]', //trim|required|min_length[6]|max_length[20]|regex_match[/^((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})$/]',
+                'errors' => [
+                    'required' => '{field} is Required',
+                    'min_length' => '{field} is too short, must have at least {param} characters. You want to get hacked?',
+                ],
+            ],
+            'passconf' => [
+                'label'  => 'Confirm Password',
+                'rules'  => 'required|matches[password]',
+                'errors' => [
+                    'required' => '{field} is Requied',
+                    'matches' => 'Your {field} must match with Password Input',
+                ],
+            ]
+        ]);
+
+        if (!$this->validation->withRequest($this->request)->run()) {
+            return redirect()->back()->withInput()->with('errors', $this->validation->getErrors());
+        } else {
+
+            // Check activation id in database
+            $data_check = [
+                'email' => $email,
+                'activation_code' => $activation_id
+            ];
+            $check_data = $this->users->where($data_check)->first();
+
+            if ($check_data) {
+                $data_New = [
+                    'activation_code' => '',
+                    'password' => getHashedPassword($password),
+                    'status' => 1
+                ];
+                $insert_data = $this->users->update($check_data->id, $data_New);
+
+                $this->session->setFlashdata('success', 'success');
+                $this->session->setFlashdata('message', '<h4>New Password Updated</h4> Login in');
+            } else {
+                $this->session->setFlashdata('error', 'error');
+                $this->session->setFlashdata('message', '<h4>Password changed failed</h4> Due to activation code link');
+            }
+
+            return redirect()->to('login');
+        }
+
     }
 
     // This function used to activate the password 

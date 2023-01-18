@@ -36,7 +36,7 @@ Version: 1.0
         $(".locationselection").prop("disabled", false);
     });
 
-    axios.get('/deliverylocation')
+    axios.get(`${base_url}/deliverylocation`)
         .then(function(response) {
             if (response.data !== '' && response.data.constructor === Object) {} else { $('#deliveryLocateModal').modal('show'); }
         })
@@ -584,3 +584,77 @@ function checkoutView(response) {
 //   .then(function () {
 //     // always executed
 //   });
+
+// check valid email formate
+function ValidateEmail(input) {
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (input.match(validRegex)) {
+      console.log("Valid email address!");
+      return true;
+    } else {
+        console.log("Invalid email address!");
+        return false;
+    }  
+}
+// Reset Password Button
+$(document).on('click', '#resetpwd', function(e) {
+    let resetEmail = $('input[type=email][name=forgotemail]').val();
+    $('#forgotpasswordalert').html(``);
+    if(ValidateEmail(resetEmail)){
+        $('.forgotpasswordalert').html('<div class="d-flex justify-content-center"><div class="spinner-border" role="status"></div></div>')
+        axios.post(`${base_url}/forgotpassword`, {
+            email: resetEmail
+        })
+        .then(function(response) {
+            console.log(response);
+            if(response.data.status == 200){
+                $('#forgotpasswordalert').html(`
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Email Sent Successfully!</strong> ${response.data.msg}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                `);
+            }
+            else{
+                $('#forgotpasswordalert').html(`
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Error Reseting Password!</strong> ${response.data.msg}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                `); 
+                console.log(response.data.emailmsg)
+            }
+        })
+        .catch(function(error) {
+            console.log(error);
+            $('#forgotpasswordalert').html(`
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Error Reseting Password!</strong> Try again 
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                `); 
+        });
+    }
+    else{
+        $('#forgotpasswordalert').html(`
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Invalid Email!</strong> Check email fields if empty or wrong email formate.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        `);
+    }
+
+});
+
+$('#forgotpasswordModal').on('hide.bs.modal', function(event) {
+    $('#forgotpasswordalert').html(``);
+    $('input[type=email][name=forgotemail]').val('');
+});

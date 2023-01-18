@@ -76,6 +76,8 @@ $routes->setAutoRoute(true);
     $routes->post("login", "AuthenticationController::login_");
     $routes->post("deliveryaddress", 'BizController::deliveryAddress_');
     $routes->post("deliverylocation", 'BizController::deliveryLocation_');
+    $routes->post("forgotpassword", "AuthenticationController::forgotpassword_");
+    $routes->post("newpassword", "AuthenticationController::newpassword_");
     $routes->get("deliverylocation", 'BizController::getDeliveryLocation');
 
     

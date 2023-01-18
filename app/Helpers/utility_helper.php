@@ -172,16 +172,17 @@ if(!function_exists('resetPasswordEmail'))
     function resetPasswordEmail($detail)
     {
         $data["data"] = $detail;
-        // pre($detail);
-        // die;
+        // pre($detail);die;
         $email = Services::email();
         $email = setProtocol();        
         
         $email->setFrom(EMAIL_FROM, FROM_NAME);
         $email->setSubject("Reset Password");
-        $email->setMessage('cool');
-        $email->setTo($detail["email"]);
-        $status = $email->send();
+        $email->setMessage(view('email/resetpasswordemail', $data, ['saveData' => true]));
+        $email->setTo($detail["emailTo"]);
+        $email->send();
+        
+        $status = $email->printDebugger(['headers']);
         
         return $status;
     }
